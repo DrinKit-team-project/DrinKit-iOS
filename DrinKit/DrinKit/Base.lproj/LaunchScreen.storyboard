@@ -21,8 +21,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRINKIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-HP-T8A">
                                 <rect key="frame" x="111.5" y="310.5" width="152" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="152" id="Azu-aH-74h"/>
-                                    <constraint firstAttribute="height" constant="46" id="BKo-nu-rdK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="Azu-aH-74h"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="BKo-nu-rdK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="0.14901960784313725" green="0.59999999999999998" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>

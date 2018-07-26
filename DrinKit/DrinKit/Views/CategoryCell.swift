@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MenuCell: UICollectionViewCell {
+class CategoryCell: UICollectionViewCell {
     
-    @IBOutlet weak var menuType: UILabel!
+    @IBOutlet weak var categoryName: UILabel!
     
 }

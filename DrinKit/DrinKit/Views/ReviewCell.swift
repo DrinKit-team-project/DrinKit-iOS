@@ -1,0 +1,15 @@
+//
+//  ReviewCell.swift
+//  DrinKit
+//
+//  Created by 권재욱 on 2018. 7. 25..
+//  Copyright © 2018년 권재욱. All rights reserved.
+//
+
+import UIKit
+
+class ReviewCell: UITableViewCell {
+
+    @IBOutlet weak var reviewImage: UIImageView!
+    
+}

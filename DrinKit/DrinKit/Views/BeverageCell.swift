@@ -10,4 +10,6 @@ import UIKit
 
 class BeverageCell: UICollectionViewCell {
     
+    @IBOutlet weak var beverageImage: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
 }

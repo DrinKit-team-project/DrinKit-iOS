@@ -30,6 +30,7 @@
 		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
 		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
+		8EF6A9DE2109DE64001C1AE1 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
+		8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				044C226C2109997D00E69DB2 /* SearchViewController.swift */,
+				8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				044C2272210999F600E69DB2 /* LogInViewController.swift in Sources */,
 				045CC95321059A2C004450B7 /* BrandCell.swift in Sources */,
 				04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */,
+				8EF6A9DE2109DE64001C1AE1 /* SearchResultViewController.swift in Sources */,
 				04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

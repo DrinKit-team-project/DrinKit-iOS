@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RqL-jQ-B7a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UaQ-4E-B4C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SEARCH-->
+        <!--Search View Controller-->
         <scene sceneID="Bhb-ra-h5h">
             <objects>
                 <viewController id="RqL-jQ-B7a" customClass="SearchViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,20 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krN-Fm-U3e" userLabel="Main Scroll View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-wU-lj9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="GzI-0T-oWx">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="IgX-8J-a3Y"/>
-                                                </constraints>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </searchBar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xs6-gI-Jb8" userLabel="Recommend View">
-                                                <rect key="frame" x="0.0" y="55" width="375" height="140"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXL-tO-l9S">
                                                         <rect key="frame" x="8" y="8" width="93" height="20.5"/>
@@ -57,7 +50,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMb-1R-5yl" userLabel="TopRanking View">
-                                                <rect key="frame" x="0.0" y="203" width="375" height="160"/>
+                                                <rect key="frame" x="0.0" y="148" width="375" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP 리뷰 랭킹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-fD-MRr">
                                                         <rect key="frame" x="8" y="20" width="101" height="18.5"/>
@@ -101,7 +94,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="578-JE-Gjh" userLabel="NewMenu View">
-                                                <rect key="frame" x="0.0" y="371" width="375" height="160"/>
+                                                <rect key="frame" x="0.0" y="316" width="375" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW 메뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asy-Wc-UG7">
                                                         <rect key="frame" x="8" y="0.0" width="72" height="38.5"/>
@@ -147,17 +140,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="GzI-0T-oWx" firstAttribute="leading" secondItem="2H9-wU-lj9" secondAttribute="leading" id="9Pz-Ws-4yO"/>
                                             <constraint firstItem="578-JE-Gjh" firstAttribute="leading" secondItem="2H9-wU-lj9" secondAttribute="leading" id="Lgx-go-n7g"/>
                                             <constraint firstItem="578-JE-Gjh" firstAttribute="top" secondItem="NMb-1R-5yl" secondAttribute="bottom" constant="8" symbolic="YES" id="Q2q-SD-NQE"/>
                                             <constraint firstAttribute="trailing" secondItem="NMb-1R-5yl" secondAttribute="trailing" id="RQh-Xx-XhD"/>
                                             <constraint firstItem="NMb-1R-5yl" firstAttribute="leading" secondItem="2H9-wU-lj9" secondAttribute="leading" id="Rhr-gw-9iM"/>
-                                            <constraint firstAttribute="trailing" secondItem="GzI-0T-oWx" secondAttribute="trailing" id="f2J-8c-nKE"/>
-                                            <constraint firstItem="GzI-0T-oWx" firstAttribute="bottom" secondItem="xs6-gI-Jb8" secondAttribute="top" symbolic="YES" id="fg0-Ya-Cx1"/>
+                                            <constraint firstItem="xs6-gI-Jb8" firstAttribute="top" secondItem="2H9-wU-lj9" secondAttribute="top" id="c8O-z6-4NZ"/>
                                             <constraint firstItem="xs6-gI-Jb8" firstAttribute="leading" secondItem="2H9-wU-lj9" secondAttribute="leading" id="qJ4-92-07Y"/>
                                             <constraint firstAttribute="trailing" secondItem="xs6-gI-Jb8" secondAttribute="trailing" id="qnN-Tb-a1P"/>
                                             <constraint firstAttribute="trailing" secondItem="578-JE-Gjh" secondAttribute="trailing" id="v6u-eJ-lcL"/>
-                                            <constraint firstItem="GzI-0T-oWx" firstAttribute="top" secondItem="2H9-wU-lj9" secondAttribute="top" id="yeD-fE-jdd"/>
                                             <constraint firstItem="NMb-1R-5yl" firstAttribute="top" secondItem="xs6-gI-Jb8" secondAttribute="bottom" constant="8" id="zYv-dJ-jHZ"/>
                                         </constraints>
                                     </view>
@@ -183,13 +173,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UaD-xh-rre"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SEARCH" id="xvn-am-EGY" userLabel="Search"/>
+                    <navigationItem key="navigationItem" id="l3C-9s-qSb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newMenuCountButton" destination="Jce-DJ-9UZ" id="S35-Y3-Zvm"/>
                         <outlet property="newMenuImageStackView" destination="Etk-2Z-mMq" id="Juv-pc-3Kh"/>
                         <outlet property="recommendScrollView" destination="LPE-xY-ccC" id="dkC-s8-ecy"/>
-                        <outlet property="searchBar" destination="GzI-0T-oWx" id="4vg-Dg-Okx"/>
                         <outlet property="searchDisplayController" destination="j8n-O7-cM5" id="smP-Bn-7j1"/>
                         <outlet property="topReviewCountButton" destination="fRv-6G-7kZ" id="815-NW-wua"/>
                         <outlet property="topReviewImageStackView" destination="Bxy-Bx-6hV" id="ouK-mL-Ysn"/>
@@ -204,6 +193,74 @@
                         <outlet property="searchResultsDelegate" destination="RqL-jQ-B7a" id="uNy-6u-Ynq"/>
                     </connections>
                 </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="903.20000000000005" y="176.76161919040482"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="IlD-Y9-P2L">
+            <objects>
+                <viewController storyboardIdentifier="SearchResult" id="JBh-z0-eXf" customClass="SearchResultViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j98-Gg-L8g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BTP-az-pWP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" id="nrW-r9-uKf">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nrW-r9-uKf" id="2pv-uX-oYe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yXo-ZX-HGa" firstAttribute="bottom" secondItem="BTP-az-pWP" secondAttribute="bottom" id="3yO-p9-KSF"/>
+                            <constraint firstItem="yXo-ZX-HGa" firstAttribute="trailing" secondItem="BTP-az-pWP" secondAttribute="trailing" id="7DG-9I-e3h"/>
+                            <constraint firstItem="BTP-az-pWP" firstAttribute="top" secondItem="yXo-ZX-HGa" secondAttribute="top" id="ZNc-Yu-f2Q"/>
+                            <constraint firstItem="BTP-az-pWP" firstAttribute="leading" secondItem="yXo-ZX-HGa" secondAttribute="leading" id="yf4-bN-d13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yXo-ZX-HGa"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="x1L-18-fM6" id="S0N-Ac-u9o"/>
+                        <outlet property="tableView" destination="BTP-az-pWP" id="69D-ad-vu6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPV-08-Nw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="x1L-18-fM6">
+                    <connections>
+                        <outlet property="delegate" destination="JBh-z0-eXf" id="f3f-eX-tZh"/>
+                        <outlet property="searchContentsController" destination="JBh-z0-eXf" id="QNr-vn-6Cx"/>
+                        <outlet property="searchResultsDataSource" destination="JBh-z0-eXf" id="plq-9M-6pY"/>
+                        <outlet property="searchResultsDelegate" destination="JBh-z0-eXf" id="RHN-n5-KmB"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1716" y="176.76161919040482"/>
+        </scene>
+        <!--SEARCH-->
+        <scene sceneID="5eg-Xf-XOz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UaQ-4E-B4C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SEARCH" id="xvn-am-EGY" userLabel="Search"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcH-f3-dcW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RqL-jQ-B7a" kind="relationship" relationship="rootViewController" id="IZ9-bu-oAi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pg-Cu-xc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36" y="176.76161919040482"/>
         </scene>

@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045CC94C21057B46004450B7 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94B21057B46004450B7 /* UIFont+.swift */; };
+		045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94D21057E4A004450B7 /* HomeViewController.swift */; };
+		045CC95321059A2C004450B7 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC95221059A2C004450B7 /* BrandCell.swift */; };
 		04B72BCE210034850024326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCD210034850024326D /* AppDelegate.swift */; };
-		04B72BD0210034850024326D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCF210034850024326D /* ViewController.swift */; };
 		04B72BD3210034850024326D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD1210034850024326D /* Main.storyboard */; };
 		04B72BD5210034860024326D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD4210034860024326D /* Assets.xcassets */; };
 		04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD6210034860024326D /* LaunchScreen.storyboard */; };
 		04B72BE3210034860024326D /* DrinKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BE2210034860024326D /* DrinKitTests.swift */; };
 		04B72BEE210034860024326D /* DrinKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BED210034860024326D /* DrinKitUITests.swift */; };
+		04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D67AFC2108829200B94C99 /* ReviewCell.swift */; };
+		04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */; };
+		04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CD2106D3B20059DA23 /* BrandInfoViewController.swift */; };
+		04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */; };
+		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
+		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
+		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045CC94B21057B46004450B7 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		045CC94D21057E4A004450B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		045CC95221059A2C004450B7 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
 		04B72BCA210034850024326D /* DrinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B72BCD210034850024326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04B72BCF210034850024326D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04B72BD2210034850024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04B72BD4210034860024326D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B72BD7210034860024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +58,13 @@
 		04B72BE9210034860024326D /* DrinKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B72BED210034860024326D /* DrinKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinKitUITests.swift; sourceTree = "<group>"; };
 		04B72BEF210034860024326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D67AFC2108829200B94C99 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewLayout.swift; sourceTree = "<group>"; };
+		04D6B7CD2106D3B20059DA23 /* BrandInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandInfoViewController.swift; sourceTree = "<group>"; };
+		04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
+		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
+		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044C225F21096FC300E69DB2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				044C22652109703400E69DB2 /* Account */,
+				044C22622109701300E69DB2 /* HomeTab */,
+				044C22642109702A00E69DB2 /* MyDrinkTab */,
+				044C22632109701A00E69DB2 /* SearchTab */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		044C226021096FCD00E69DB2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		044C226121096FF100E69DB2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		044C22622109701300E69DB2 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				045CC94D21057E4A004450B7 /* HomeViewController.swift */,
+				04D6B7CD2106D3B20059DA23 /* BrandInfoViewController.swift */,
+				04D6B7D121070F360059DA23 /* BeveragesViewController.swift */,
+				04E2336B210778FB0026293B /* BeverageDetailViewController.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		044C22632109701A00E69DB2 /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		044C22642109702A00E69DB2 /* MyDrinkTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyDrinkTab;
+			sourceTree = "<group>";
+		};
+		044C22652109703400E69DB2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		045CC94A21057B39004450B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045CC94B21057B46004450B7 /* UIFont+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		045CC951210599F8004450B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				045CC95221059A2C004450B7 /* BrandCell.swift */,
+				04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */,
+				04D6B7D3210710320059DA23 /* BeverageCell.swift */,
+				04D67AFC2108829200B94C99 /* ReviewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		045CC95421059C9D004450B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04B72BC1210034850024326D = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +199,13 @@
 		04B72BCC210034850024326D /* DrinKit */ = {
 			isa = PBXGroup;
 			children = (
+				044C226121096FF100E69DB2 /* Utilities */,
+				045CC95421059C9D004450B7 /* Models */,
+				045CC951210599F8004450B7 /* Views */,
+				044C226021096FCD00E69DB2 /* ViewModels */,
+				044C225F21096FC300E69DB2 /* ViewControllers */,
+				045CC94A21057B39004450B7 /* Extensions */,
 				04B72BCD210034850024326D /* AppDelegate.swift */,
-				04B72BCF210034850024326D /* ViewController.swift */,
 				04B72BD1210034850024326D /* Main.storyboard */,
 				04B72BD4210034860024326D /* Assets.xcassets */,
 				04B72BD6210034860024326D /* LaunchScreen.storyboard */,
@@ -256,8 +363,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B72BD0210034850024326D /* ViewController.swift in Sources */,
+				04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */,
+				045CC94C21057B46004450B7 /* UIFont+.swift in Sources */,
+				04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */,
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,
+				04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */,
+				045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */,
+				04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */,
+				04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */,
+				045CC95321059A2C004450B7 /* BrandCell.swift in Sources */,
+				04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */,
+				04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

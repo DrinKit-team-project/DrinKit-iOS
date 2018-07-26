@@ -27,7 +27,7 @@ class BrandInfoViewController: UIViewController, UICollectionViewDelegate, UICol
         guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
         menuCell.categoryName.text = "\(indexPath.row + 1)번째 카테고리"
         menuCell.layer.borderWidth = 0.5
-        menuCell.layer.borderColor = UIColor.init(named: "LightBlue")?.cgColor
+        menuCell.layer.borderColor = UIColor.init(named: "CutomLightBlue")?.cgColor
         return menuCell
     }
     

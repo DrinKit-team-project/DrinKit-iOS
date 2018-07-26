@@ -16,8 +16,8 @@ class BeverageDetailViewController: UIViewController {
         super.viewDidLoad()
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
-        reviewTableView.estimatedRowHeight = reviewTableView.rowHeight
-        reviewTableView.rowHeight = UITableViewAutomaticDimension
+//        reviewTableView.estimatedRowHeight = reviewTableView.rowHeight
+//        reviewTableView.rowHeight = UITableViewAutomaticDimension
         
     }
     

@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044C22672109978600E69DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C22662109978600E69DB2 /* Main.storyboard */; };
+		044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C2268210998B900E69DB2 /* SearchTab.storyboard */; };
+		044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */; };
+		044C226D2109997D00E69DB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C226C2109997D00E69DB2 /* SearchViewController.swift */; };
+		044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C226E2109999500E69DB2 /* MyDrinkViewController.swift */; };
+		044C2272210999F600E69DB2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C2271210999F600E69DB2 /* LogInViewController.swift */; };
+		044C2274210999FF00E69DB2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C2273210999FF00E69DB2 /* SignUpViewController.swift */; };
 		045CC94C21057B46004450B7 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94B21057B46004450B7 /* UIFont+.swift */; };
 		045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94D21057E4A004450B7 /* HomeViewController.swift */; };
 		045CC95321059A2C004450B7 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC95221059A2C004450B7 /* BrandCell.swift */; };
 		04B72BCE210034850024326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCD210034850024326D /* AppDelegate.swift */; };
-		04B72BD3210034850024326D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD1210034850024326D /* Main.storyboard */; };
+		04B72BD3210034850024326D /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD1210034850024326D /* HomeTab.storyboard */; };
 		04B72BD5210034860024326D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD4210034860024326D /* Assets.xcassets */; };
 		04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD6210034860024326D /* LaunchScreen.storyboard */; };
 		04B72BE3210034860024326D /* DrinKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BE2210034860024326D /* DrinKitTests.swift */; };
@@ -43,12 +50,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044C22662109978600E69DB2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		044C2268210998B900E69DB2 /* SearchTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
+		044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDrinkTab.storyboard; sourceTree = "<group>"; };
+		044C226C2109997D00E69DB2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = DrinKit/ViewControllers/SearchTab/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
+		044C226E2109999500E69DB2 /* MyDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkViewController.swift; sourceTree = "<group>"; };
+		044C2271210999F600E69DB2 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		044C2273210999FF00E69DB2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		045CC94B21057B46004450B7 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		045CC94D21057E4A004450B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		045CC95221059A2C004450B7 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
 		04B72BCA210034850024326D /* DrinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B72BCD210034850024326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04B72BD2210034850024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04B72BD2210034850024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeTab.storyboard; sourceTree = "<group>"; };
 		04B72BD4210034860024326D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B72BD7210034860024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B72BD9210034860024326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +146,7 @@
 		044C22632109701A00E69DB2 /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				044C226C2109997D00E69DB2 /* SearchViewController.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -139,6 +154,7 @@
 		044C22642109702A00E69DB2 /* MyDrinkTab */ = {
 			isa = PBXGroup;
 			children = (
+				044C226E2109999500E69DB2 /* MyDrinkViewController.swift */,
 			);
 			path = MyDrinkTab;
 			sourceTree = "<group>";
@@ -146,8 +162,22 @@
 		044C22652109703400E69DB2 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				044C2273210999FF00E69DB2 /* SignUpViewController.swift */,
+				044C2271210999F600E69DB2 /* LogInViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		044C2270210999B800E69DB2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04B72BD6210034860024326D /* LaunchScreen.storyboard */,
+				044C22662109978600E69DB2 /* Main.storyboard */,
+				04B72BD1210034850024326D /* HomeTab.storyboard */,
+				044C2268210998B900E69DB2 /* SearchTab.storyboard */,
+				044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		045CC94A21057B39004450B7 /* Extensions */ = {
@@ -199,6 +229,7 @@
 		04B72BCC210034850024326D /* DrinKit */ = {
 			isa = PBXGroup;
 			children = (
+				044C2270210999B800E69DB2 /* Storyboards */,
 				044C226121096FF100E69DB2 /* Utilities */,
 				045CC95421059C9D004450B7 /* Models */,
 				045CC951210599F8004450B7 /* Views */,
@@ -206,9 +237,7 @@
 				044C225F21096FC300E69DB2 /* ViewControllers */,
 				045CC94A21057B39004450B7 /* Extensions */,
 				04B72BCD210034850024326D /* AppDelegate.swift */,
-				04B72BD1210034850024326D /* Main.storyboard */,
 				04B72BD4210034860024326D /* Assets.xcassets */,
-				04B72BD6210034860024326D /* LaunchScreen.storyboard */,
 				04B72BD9210034860024326D /* Info.plist */,
 			);
 			path = DrinKit;
@@ -337,8 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */,
+				044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */,
+				044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */,
 				04B72BD5210034860024326D /* Assets.xcassets in Resources */,
-				04B72BD3210034850024326D /* Main.storyboard in Resources */,
+				04B72BD3210034850024326D /* HomeTab.storyboard in Resources */,
+				044C22672109978600E69DB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +401,12 @@
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,
 				04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */,
 				045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */,
+				044C226D2109997D00E69DB2 /* SearchViewController.swift in Sources */,
+				044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */,
 				04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */,
+				044C2274210999FF00E69DB2 /* SignUpViewController.swift in Sources */,
 				04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */,
+				044C2272210999F600E69DB2 /* LogInViewController.swift in Sources */,
 				045CC95321059A2C004450B7 /* BrandCell.swift in Sources */,
 				04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */,
 				04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */,
@@ -409,12 +445,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04B72BD1210034850024326D /* Main.storyboard */ = {
+		04B72BD1210034850024326D /* HomeTab.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				04B72BD2210034850024326D /* Base */,
 			);
-			name = Main.storyboard;
+			name = HomeTab.storyboard;
 			sourceTree = "<group>";
 		};
 		04B72BD6210034860024326D /* LaunchScreen.storyboard */ = {

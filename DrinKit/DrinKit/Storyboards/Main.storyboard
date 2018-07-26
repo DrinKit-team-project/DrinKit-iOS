@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gr2-cy-Gu9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeTab-->
+        <scene sceneID="mej-as-he0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeTab" id="ALb-id-vsj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jake" id="SCz-Hg-kCr" userLabel="Home"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQC-0I-dpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="-350"/>
+        </scene>
+        <!--SearchTab-->
+        <scene sceneID="hm2-5B-yPG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchTab" id="QVm-OG-2XI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="e4X-qB-ClP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfa-kP-KMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="-152"/>
+        </scene>
+        <!--MyDrinkTab-->
+        <scene sceneID="vLN-7S-uO6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyDrinkTab" id="krv-sA-mcr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Drink" id="ic5-dA-9fn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6r-jc-heG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="35"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="DrC-Cs-R7O">
+            <objects>
+                <viewController id="qnC-ax-FTy" customClass="LogInViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="syQ-ug-dBY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xXU-Wp-aGc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1x1-DW-6eT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1303" y="-489"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0Dq-y8-beq">
+            <objects>
+                <tabBarController id="gr2-cy-Gu9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xqx-Uw-nMf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ALb-id-vsj" kind="relationship" relationship="viewControllers" id="V2g-Hw-VOu"/>
+                        <segue destination="QVm-OG-2XI" kind="relationship" relationship="viewControllers" id="fQr-Gk-qzt"/>
+                        <segue destination="krv-sA-mcr" kind="relationship" relationship="viewControllers" id="uee-pT-xQa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAj-jF-cG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="-152"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="nM9-Il-3D6">
+            <objects>
+                <viewController id="320-0k-4ku" customClass="SignUpViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DWk-yb-mM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uGT-kD-4jg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h01-US-0Qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1303" y="235"/>
+        </scene>
+    </scenes>
+</document>

@@ -2,34 +2,38 @@
 //  SearchViewController.swift
 //  DrinKit
 //
-//  Created by 권재욱 on 2018. 7. 26..
-//  Copyright © 2018년 권재욱. All rights reserved.
+//  Created by JakeLEE on 2018. 7. 26..
+//  Copyright © 2018년 ChocOZerO. All rights reserved.
 //
 
 import UIKit
 
 class SearchViewController: UIViewController {
+    @IBOutlet weak var recommendScrollView: UIScrollView!
+    @IBOutlet weak var topReviewCountButton: UIButton!
+    @IBOutlet weak var topReviewImageStackView: UIStackView!
+    @IBOutlet weak var newMenuCountButton: UIButton!
+    @IBOutlet weak var newMenuImageStackView: UIStackView!
+
+    private var searchController : UISearchController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        guard let searchResultVC
+            = storyboard?.instantiateViewController(withIdentifier: "SearchResult")
+                as? SearchResultViewController else { return }
+        searchController = UISearchController(searchResultsController: searchResultVC)
+        searchController?.searchResultsUpdater = searchResultVC
+        searchController?.searchBar.placeholder = "Search"
+        navigationItem.titleView = searchController?.searchBar
+        searchController?.hidesNavigationBarDuringPresentation = false
+        searchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

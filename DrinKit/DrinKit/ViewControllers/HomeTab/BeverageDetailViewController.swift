@@ -18,7 +18,7 @@ class BeverageDetailViewController: UIViewController {
         reviewTableView.dataSource = self
 //        reviewTableView.estimatedRowHeight = reviewTableView.rowHeight
 //        reviewTableView.rowHeight = UITableViewAutomaticDimension
-        
+//        
     }
     
     //    func configureSelfHeight() {

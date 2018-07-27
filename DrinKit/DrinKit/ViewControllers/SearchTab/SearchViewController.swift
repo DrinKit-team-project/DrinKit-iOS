@@ -20,11 +20,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let searchResultViewController
+        guard let searchResultVC
             = storyboard?.instantiateViewController(withIdentifier: "SearchResult")
                 as? SearchResultViewController else { return }
-        searchController = UISearchController(searchResultsController: searchResultViewController)
-        searchController?.searchResultsUpdater = searchResultViewController
+        searchController = UISearchController(searchResultsController: searchResultVC)
+        searchController?.searchResultsUpdater = searchResultVC
         searchController?.searchBar.placeholder = "Search"
         navigationItem.titleView = searchController?.searchBar
         searchController?.hidesNavigationBarDuringPresentation = false

@@ -21,8 +21,6 @@ class BeverageDetailViewController: UIViewController {
         reviewTableView.rowHeight = UITableViewAutomaticDimension
     }
     
-
-    
 }
 
 extension BeverageDetailViewController: UITableViewDelegate, UITableViewDataSource {

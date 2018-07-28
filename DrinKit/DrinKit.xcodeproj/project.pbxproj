@@ -170,8 +170,8 @@
 		044C22652109703400E69DB2 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				044C2273210999FF00E69DB2 /* SignUpViewController.swift */,
 				044C2271210999F600E69DB2 /* LogInViewController.swift */,
+				044C2273210999FF00E69DB2 /* SignUpViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";

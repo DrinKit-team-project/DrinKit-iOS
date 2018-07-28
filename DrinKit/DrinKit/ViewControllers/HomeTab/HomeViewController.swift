@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         brandCollectionView.delegate = self
         brandCollectionView.dataSource = self
         setCollectionViewFlowLayout()
-        setNumberOfBrandCellectionPages()
+        setNumberOfBrandCollectionPages()
     }
     
     //MARK: - Prepare for BrandInfoVC
@@ -88,7 +88,7 @@ extension HomeViewController {
         brandCollectionPageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
     
-    private func setNumberOfBrandCellectionPages() {
+    private func setNumberOfBrandCollectionPages() {
         brandCollectionPageControl.numberOfPages = { () -> Int in
             guard countOfBrands % 9 == 0 else { return countOfBrands / 9 + 1}
             return countOfBrands / 9

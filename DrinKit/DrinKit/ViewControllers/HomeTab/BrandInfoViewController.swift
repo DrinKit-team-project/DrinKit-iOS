@@ -36,7 +36,7 @@ extension BrandInfoViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
+        guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: Keyword.BrandInfoView.categoryCell.reuseId, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
         menuCell.categoryName.text = "\(indexPath.row + 1)번째 카테고리"
         menuCell.layer.borderWidth = 0.5
         menuCell.layer.borderColor = UIColor.init(named: "CutomLightBlue")?.cgColor

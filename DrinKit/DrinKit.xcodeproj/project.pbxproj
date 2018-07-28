@@ -24,6 +24,7 @@
 		04B72BE3210034860024326D /* DrinKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BE2210034860024326D /* DrinKitTests.swift */; };
 		04B72BEE210034860024326D /* DrinKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BED210034860024326D /* DrinKitUITests.swift */; };
 		04BDD75B210AE5B50032CAE4 /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD75A210AE5B50032CAE4 /* NSLayoutConstraint+.swift */; };
+		04D0CF1C210C46B5004C14F7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0CF1B210C46B5004C14F7 /* Keyword.swift */; };
 		04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D67AFC2108829200B94C99 /* ReviewCell.swift */; };
 		04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */; };
 		04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CD2106D3B20059DA23 /* BrandInfoViewController.swift */; };
@@ -75,6 +76,7 @@
 		04B72BED210034860024326D /* DrinKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinKitUITests.swift; sourceTree = "<group>"; };
 		04B72BEF210034860024326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BDD75A210AE5B50032CAE4 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
+		04D0CF1B210C46B5004C14F7 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		04D67AFC2108829200B94C99 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewLayout.swift; sourceTree = "<group>"; };
 		04D6B7CD2106D3B20059DA23 /* BrandInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandInfoViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		044C226121096FF100E69DB2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				04D0CF1B210C46B5004C14F7 /* Keyword.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,
 				04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */,
 				045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */,
+				04D0CF1C210C46B5004C14F7 /* Keyword.swift in Sources */,
 				044C226D2109997D00E69DB2 /* SearchViewController.swift in Sources */,
 				044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */,
 				04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */,

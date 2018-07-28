@@ -50,7 +50,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let brandCell = brandCollectionView.dequeueReusableCell(withReuseIdentifier: "BrandCell", for: indexPath) as? BrandCell else { return UICollectionViewCell() }
+        guard let brandCell = brandCollectionView.dequeueReusableCell(withReuseIdentifier: Keyword.HomeView.brandCell.reuseId, for: indexPath) as? BrandCell else { return UICollectionViewCell() }
         brandCell.brandName.text = "\(indexPath.row + 1)번째 브랜드"
         return brandCell
     }

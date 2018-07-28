@@ -28,7 +28,7 @@ extension BeveragesViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let beverageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeverageCell", for: indexPath) as? BeverageCell else { return UICollectionViewCell() }
+        guard let beverageCell = collectionView.dequeueReusableCell(withReuseIdentifier: Keyword.BeveragesView.beverageCell.reuseId, for: indexPath) as? BeverageCell else { return UICollectionViewCell() }
         beverageCell.priceLabel.text = "\(indexPath.row + 1)번째 음료"
         return beverageCell
     }

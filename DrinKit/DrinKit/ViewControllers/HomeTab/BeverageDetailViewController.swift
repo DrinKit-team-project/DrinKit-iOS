@@ -9,6 +9,8 @@
 import UIKit
 
 class BeverageDetailViewController: UIViewController {
+    
+    // MARK: - UI
     @IBOutlet weak var beverageDetailScrollView: UIScrollView!
     @IBOutlet weak var thumbnailsScrollView: UIScrollView!
     @IBOutlet weak var reviewTableView: UITableView!
@@ -23,6 +25,7 @@ class BeverageDetailViewController: UIViewController {
     
 }
 
+// MARK: - ReviewTableView
 extension BeverageDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

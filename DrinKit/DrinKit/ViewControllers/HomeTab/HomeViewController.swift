@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: - MODEL
     private let countOfBrands = 30
     
-    //MARK: - UI
+    // MARK: - UI
     @IBOutlet weak var eventScrollView: UIScrollView!
     @IBOutlet weak var eventScrollPageControl: UIPageControl!
     @IBOutlet weak var brandCollectionView: UICollectionView!
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         setNumberOfBrandCollectionPages()
     }
     
-    //MARK: - Prepare for BrandInfoVC
+    // MARK: - Prepare for BrandInfoVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let brandInfoVC = segue.destination as? BrandInfoViewController else { return }
         //        guard let selectedBrandCell = sender as? BrandCell else { return }

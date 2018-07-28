@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BrandInfoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BrandInfoViewController: UIViewController {
     
+    //MARK: - UI
     @IBOutlet weak var brandImage: UIImageView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
@@ -18,6 +19,17 @@ class BrandInfoViewController: UIViewController, UICollectionViewDelegate, UICol
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
     }
+    
+    //MARK: - Prepare for BeveragesView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let beveragesVC = segue.destination as? BeveragesViewController else { return }
+        beveragesVC.navigationItem.rightBarButtonItem?.title = "Brand-Category-Beverage"
+    }
+
+}
+
+// MARK: - CategoryCollectionView
+extension BrandInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -31,13 +43,9 @@ class BrandInfoViewController: UIViewController, UICollectionViewDelegate, UICol
         return menuCell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let beveragesVC = segue.destination as? BeveragesViewController else { return }
-        beveragesVC.navigationItem.rightBarButtonItem?.title = "Brand-Category-Beverage"
-    }
-
 }
 
+// MARK: - CategoryCollectionViewFlowLayout
 extension BrandInfoViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

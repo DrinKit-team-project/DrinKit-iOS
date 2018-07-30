@@ -48,7 +48,25 @@
                     <view key="view" contentMode="scaleToFill" id="syQ-ug-dBY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38l-nr-AiL">
+                                <rect key="frame" x="25" y="537" width="325" height="40"/>
+                                <color key="backgroundColor" name="CutomClearBlue"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="Facebook 계정 연동">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginFacebook:" destination="qnC-ax-FTy" eventType="touchUpInside" id="e4h-7E-dCk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="bottom" secondItem="38l-nr-AiL" secondAttribute="bottom" constant="90" id="Tcv-Ab-3fh"/>
+                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="trailing" secondItem="38l-nr-AiL" secondAttribute="trailing" constant="25" id="eNb-E3-Dza"/>
+                            <constraint firstItem="38l-nr-AiL" firstAttribute="leading" secondItem="xXU-Wp-aGc" secondAttribute="leading" constant="25" id="fwp-Vx-jbk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xXU-Wp-aGc"/>
                     </view>
                 </viewController>

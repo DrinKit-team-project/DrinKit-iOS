@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loginButton = FBSDKLoginButton()
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        
+//        if let accessToken = FBSDKAccessToken.current() {
+//            getFBUserData()
+//        }
+        
     }
-
-    @IBAction func loginFacebook(_ sender: UIButton){
+    
+    @objc func loginFacebook(_ sender: UIButton){
         let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { (result, error) in
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self){ (result, error) in
             if (error == nil) {
                 let fbloginresult : FBSDKLoginManagerLoginResult = result!
                 if(fbloginresult.grantedPermissions.contains("email"))

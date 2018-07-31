@@ -6,7 +6,7 @@ target 'DrinKit' do
   use_frameworks!
   
   pod 'FBSDKLoginKit'
-
+  pod 'SwiftInstagram', '~> 1.1.1'
   # Pods for DrinKit
 
   target 'DrinKitTests' do

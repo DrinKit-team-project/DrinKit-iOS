@@ -60,7 +60,7 @@
                                     <color key="titleColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginKakao:" destination="qnC-ax-FTy" eventType="touchUpInside" id="RXC-nL-5yt"/>
+                                    <action selector="loginKakao:" destination="qnC-ax-FTy" eventType="touchUpInside" id="FoW-tZ-Nz0"/>
                                 </connections>
                             </button>
                         </subviews>

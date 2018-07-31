@@ -11,16 +11,17 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
-   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loginButton = FBSDKLoginButton()
         loginButton.center = view.center
         view.addSubview(loginButton)
         
-//        if let accessToken = FBSDKAccessToken.current() {
-//            getFBUserData()
-//        }
+        //        if let accessToken = FBSDKAccessToken.current() {
+        //            getFBUserData()
+        //        }
         
     }
     
@@ -48,7 +49,38 @@ class LogInViewController: UIViewController {
             })
         }
     }
-
+    
+    @IBAction func loginKakao(_ sender: KOLoginButton) {
+        let session = KOSession.shared()
+        
+                if let session = session {
+                    if session.isOpen() {
+                        session.close()
+                    }
+        
+                    session.open { (error) in
+                        if error == nil {
+                            print("No Error")
+                            if session.isOpen() {
+                                print("Success")
+                                KOSessionTask.userMeTask(completion: { (error, me) in
+                                    print(me?.nickname)
+                                    
+                                })
+                            } else {
+                                print("fail")
+                            }
+                        } else {
+                            print(error?.localizedDescription ?? "")
+                        }
+        
+                    }
+                } else {
+                    print("Something Wrong")
+                }
+        
+            }
+    
 }
 
 

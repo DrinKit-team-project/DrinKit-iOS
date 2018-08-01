@@ -12,43 +12,16 @@ import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
     
+
+    @IBOutlet weak var facebookLoginBtn: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loginButton = FBSDKLoginButton()
-        loginButton.center = view.center
-        view.addSubview(loginButton)
-        
-        //        if let accessToken = FBSDKAccessToken.current() {
-        //            getFBUserData()
-        //        }
-        
+        facebookLoginBtn.delegate = self
+        removeHeightConstraintOfFBLoginBtn
     }
     
-    @objc func loginFacebook(_ sender: UIButton){
-        let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self){ (result, error) in
-            if (error == nil) {
-                let fbloginresult : FBSDKLoginManagerLoginResult = result!
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                }
-            }
-        }
-    }
-    
-    func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
-                    //everything works print the user data
-                    print(result as Any)
-                    self.performSegue(withIdentifier: "ToSettings", sender: self)
-                }
-            })
-        }
-    }
+
     
     @IBAction func loginKakao(_ sender: KOLoginButton) {
         let session = KOSession.shared()
@@ -80,6 +53,55 @@ class LogInViewController: UIViewController {
                 }
         
             }
+}
+
+// MARK: - Facebook LogIn
+extension LogInViewController: FBSDKLoginButtonDelegate {
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if (error != nil) {
+            print(error.localizedDescription)
+
+        } else if result.isCancelled {
+            print("User cancelled login.")
+        } else {
+            guard let grantedPermissions = result.grantedPermissions else { return }
+            guard let declinedPermissions = result.declinedPermissions else { return }
+            guard let accessToken = result.token else { return }
+
+            print("Logged in!")
+            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
+            print("FaceBook user ID = " + accessToken.userID!)
+//            getFBUserData()
+        }
+
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
+    }
+    
+    private func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    //everything works print the user data
+                    print(result as Any)
+                    self.performSegue(withIdentifier: "ToSettings", sender: self)
+                }
+            })
+        }
+    }
+    
+    private func removeHeightConstraintOfFBLoginBtn() {
+        let layoutConstraintsArr = facebookLoginBtn.constraints
+        for layoutConstraint in layoutConstraintsArr {
+            if ( layoutConstraint.constant == 28 ){
+                layoutConstraint.isActive = false
+                break
+            }
+        }
+    }
     
 }
 

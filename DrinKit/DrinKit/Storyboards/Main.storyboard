@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qnC-ax-FTy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B1r-cp-M7b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,11 +49,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-RB-Tf0" customClass="KOLoginButton">
-                                <rect key="frame" x="25" y="575" width="325" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9Y-t9-ELD" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="25" y="547" width="325" height="40"/>
                                 <color key="backgroundColor" name="CutomClearBlue"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ilW-si-pXw"/>
+                                    <constraint firstAttribute="height" constant="40" id="MdA-A0-B2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="Facebook 계정 연동">
+                                    <color key="titleColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-RB-Tf0" userLabel="Kakao Login Btn" customClass="KOLoginButton">
+                                <rect key="frame" x="25" y="597" width="325" height="40"/>
+                                <color key="backgroundColor" name="CutomClearBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bW9-LU-wTg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                                 <state key="normal" title="Kakao 계정 연동">
@@ -66,16 +77,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="trailing" secondItem="ePa-RB-Tf0" secondAttribute="trailing" constant="25" id="LPm-V9-CJy"/>
-                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="bottom" secondItem="ePa-RB-Tf0" secondAttribute="bottom" constant="42" id="QAz-4E-h4o"/>
-                            <constraint firstItem="ePa-RB-Tf0" firstAttribute="leading" secondItem="xXU-Wp-aGc" secondAttribute="leading" constant="25" id="r2g-70-qkn"/>
+                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="trailing" secondItem="ePa-RB-Tf0" secondAttribute="trailing" constant="25" id="2IV-Fe-oYH"/>
+                            <constraint firstItem="b9Y-t9-ELD" firstAttribute="leading" secondItem="xXU-Wp-aGc" secondAttribute="leading" constant="25" id="5KX-R3-8yN"/>
+                            <constraint firstItem="ePa-RB-Tf0" firstAttribute="top" secondItem="b9Y-t9-ELD" secondAttribute="bottom" constant="10" id="Eyd-Pm-2eA"/>
+                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="trailing" secondItem="b9Y-t9-ELD" secondAttribute="trailing" constant="25" id="MlM-6Y-J7R"/>
+                            <constraint firstItem="xXU-Wp-aGc" firstAttribute="bottom" secondItem="ePa-RB-Tf0" secondAttribute="bottom" constant="30" id="Q4S-3G-9PH"/>
+                            <constraint firstItem="ePa-RB-Tf0" firstAttribute="leading" secondItem="xXU-Wp-aGc" secondAttribute="leading" constant="25" id="ujF-CV-rD4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xXU-Wp-aGc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rb0-K1-g62"/>
+                    <connections>
+                        <outlet property="facebookLoginBtn" destination="b9Y-t9-ELD" id="4na-6l-zuw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1x1-DW-6eT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="-489"/>
+            <point key="canvasLocation" x="383.19999999999999" y="-835.23238380809596"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Dq-y8-beq">
@@ -119,7 +137,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h01-US-0Qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="235"/>
+            <point key="canvasLocation" x="1260" y="-835.23238380809596"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hbi-MO-JEs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B1r-cp-M7b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jLj-jK-mqo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qnC-ax-FTy" kind="relationship" relationship="rootViewController" id="9hp-31-1zp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOo-pv-B9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="-835.23238380809596"/>
         </scene>
     </scenes>
     <resources>

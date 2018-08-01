@@ -16,37 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setTabbarFont()
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        return true
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions) || true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        KOSession.handleDidBecomeActive()
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if KOSession.isKakaoAccountLoginCallback(url) {
+            return KOSession.handleOpen(url)
+        }
+        let facebookSession = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+        return facebookSession
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         if KOSession.isKakaoAccountLoginCallback(url) {
             return KOSession.handleOpen(url)
         }
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[.sourceApplication] as? String, annotation: options[.annotation])
-        return handled
-    }
-    
-    private func application(_ app: UIApplication, open url: URL, options: [String : AnyObject] = [:]) -> Bool {
-        if KOSession.isKakaoAccountLoginCallback(url) {
-            return KOSession.handleOpen(url)
-        }
-        return false
+        
+        let facebookSession = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        return facebookSession
     }
     
     private func setTabbarFont() {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.tabbarText], for: .normal)
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        FBSDKAppEvents.activateApp()
-        KOSession.handleDidBecomeActive()
-        
     }
     
 }

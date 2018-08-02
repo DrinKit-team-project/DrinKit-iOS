@@ -19,7 +19,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQC-0I-dpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="-350"/>
+            <point key="canvasLocation" x="307" y="-208"/>
         </scene>
         <!--SearchTab-->
         <scene sceneID="hm2-5B-yPG">
@@ -29,7 +29,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfa-kP-KMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="-152"/>
+            <point key="canvasLocation" x="307" y="14"/>
         </scene>
         <!--MyDrinkTab-->
         <scene sceneID="vLN-7S-uO6">
@@ -39,7 +39,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6r-jc-heG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="35"/>
+            <point key="canvasLocation" x="307" y="255"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="DrC-Cs-R7O">
@@ -124,7 +124,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAj-jF-cG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="-152"/>
+            <point key="canvasLocation" x="-556" y="15"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="nM9-Il-3D6">
@@ -190,6 +190,9 @@
                                 <state key="normal" title="사진 편집하기">
                                     <color key="titleColor" name="CutomClearBlue"/>
                                 </state>
+                                <connections>
+                                    <action selector="editingProfileImgBtnTouchedWithSender:" destination="320-0k-4ku" eventType="touchUpInside" id="742-Zy-xLw"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4we-YQ-Zgh">
                                 <rect key="frame" x="50" y="381" width="275" height="25"/>
@@ -244,6 +247,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mu3-eB-HzY" firstAttribute="top" secondItem="yiz-cq-7rQ" secondAttribute="bottom" constant="50" id="2m6-df-wD8"/>
                             <constraint firstItem="vHz-kQ-vAh" firstAttribute="leading" secondItem="uGT-kD-4jg" secondAttribute="leading" constant="25" id="6Tw-dD-YNN"/>
@@ -264,11 +268,26 @@
                             <constraint firstItem="uGT-kD-4jg" firstAttribute="trailing" secondItem="sA6-h3-PbT" secondAttribute="trailing" constant="20" id="vlg-mr-kkL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGT-kD-4jg"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BkL-nD-jpW" appends="YES" id="VnW-qh-7si"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="editingProfileImgBtn" destination="2fb-Pq-e94" id="I4O-mu-mxf"/>
+                        <outlet property="nicknameTextField" destination="mu3-eB-HzY" id="u0R-LN-pWY"/>
+                        <outlet property="profileImage" destination="yiz-cq-7rQ" id="hWc-RG-8IQ"/>
+                        <outlet property="userEmailLabel" destination="Mrt-qj-evz" id="R7a-Qt-LQs"/>
+                        <outlet property="userNameLabel" destination="Mla-lY-pAi" id="rHR-Ms-wRB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h01-US-0Qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BkL-nD-jpW">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="320-0k-4ku" id="3bm-Xa-5gQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1260" y="-835.23238380809596"/>
+            <point key="canvasLocation" x="1263" y="-835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hbi-MO-JEs">

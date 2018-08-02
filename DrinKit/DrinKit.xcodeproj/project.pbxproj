@@ -228,13 +228,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		045CC95421059C9D004450B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		04B72BC1210034850024326D = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +255,6 @@
 			children = (
 				044C2270210999B800E69DB2 /* Storyboards */,
 				044C226121096FF100E69DB2 /* Utilities */,
-				045CC95421059C9D004450B7 /* Models */,
 				045CC951210599F8004450B7 /* Views */,
 				044C226021096FCD00E69DB2 /* ViewModels */,
 				044C225F21096FC300E69DB2 /* ViewControllers */,

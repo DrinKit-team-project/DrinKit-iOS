@@ -20,38 +20,12 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         fbLoginBtn.delegate = self
         removeHeightConstraintOfFBLoginBtn()
+        if FBSDKAccessToken.currentAccessTokenIsActive() {
+            FBSDKLoginManager().logOut()
+        }
+        
     }
-    
-    @IBAction func loginKakao(_ sender: KOLoginButton) {
-        let session = KOSession.shared()
-        
-                if let session = session {
-                    if session.isOpen() {
-                        session.close()
-                    }
-        
-                    session.open { (error) in
-                        if error == nil {
-                            print("No Error")
-                            if session.isOpen() {
-                                print("Success")
-                                KOSessionTask.userMeTask(completion: { (error, me) in
-                                    print(me?.nickname as Any)
-                                    self.performSegue(withIdentifier: "ToSettings", sender: self)
-                                })
-                            } else {
-                                print("fail")
-                            }
-                        } else {
-                            print(error?.localizedDescription ?? "")
-                        }
-        
-                    }
-                } else {
-                    print("Something Wrong")
-                }
-        
-            }
+     
 }
 
 // MARK: - Facebook LogIn
@@ -60,20 +34,19 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if (error != nil) {
             print(error.localizedDescription)
-
+            
         } else if result.isCancelled {
             print("User cancelled login.")
         } else {
 //            guard let grantedPermissions = result.grantedPermissions else { return }
 //            guard let declinedPermissions = result.declinedPermissions else { return }
 //            guard let accessToken = result.token else { return }
-//
 //            print("Logged in!")
 //            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
 //            print("FaceBook user ID = " + accessToken.userID!)
             getFBUserData()
         }
-
+        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -81,11 +54,19 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     }
     
     private func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+        if((FBSDKAccessToken.current()) != nil) {
+            guard let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]) else { return }
+            request.start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
-                    //everything works print the user data
-                    print(result as Any)
+                    guard let result = result as? [String:Any] else { return }
+                    guard let url = ((result["picture"] as? [String:Any])?["data"] as? [String:Any])?["url"] as? String else { return }
+                    guard let imageURL = URL(string: url) else { return }
+                    guard let imageData = try? Data(contentsOf: imageURL) else { return }
+                    guard let userProfileImg = UIImage(data: imageData) else { return }
+                    guard let userName = result["name"] as? String else { return }
+                    guard let userEmail = result["email"] as? String else { return }
+                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
+                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
             })
@@ -104,4 +85,34 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     
 }
 
-
+// MARK: - Kakao Login
+extension LogInViewController {
+    
+    @IBAction func loginKakao(_ sender: KOLoginButton) {
+        guard let session = KOSession.shared() else { return }
+        if session.isOpen() {
+            session.close()
+        }
+        session.presentingViewController = self
+        session.open { (error) in
+            guard error == nil else { print(error?.localizedDescription ?? ""); return }
+            if session.isOpen() {
+                print("Success")
+                KOSessionTask.userMeTask(completion: { (error, me) in
+                    guard let user = me else { return }
+                    guard let imageURL = user.profileImageURL else { return }
+                    guard let data = try? Data(contentsOf: imageURL) else { return }
+                    guard let userProfileImg = UIImage(data: data) else { return }
+                    guard let userName = user.nickname else { return }
+                    guard let userEmail = user.account?.email else { return }
+                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
+                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    self.performSegue(withIdentifier: "ToSettings", sender: self)
+                })
+            } else {
+                print("fail")
+            }
+        }
+    }
+    
+}

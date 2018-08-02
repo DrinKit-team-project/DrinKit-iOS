@@ -33,6 +33,7 @@
 		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
 		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
+		04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E985392112B0B6009BB191 /* UserInfo.swift */; };
 		20A1FF55D3EFA87B858E9570 /* Pods_DrinKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */; };
 		49CBB2B56E20EAA6BDE42106 /* Pods_DrinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F0A4676CCBF47438D32DC /* Pods_DrinKit.framework */; };
 		8EF6A9DE2109DE64001C1AE1 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */; };
@@ -90,6 +91,7 @@
 		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
+		04E985392112B0B6009BB191 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		17D140E661F5DC8D0C15CDF6 /* Pods-DrinKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit.release.xcconfig"; sourceTree = "<group>"; };
 		2E8C7EFDCC326A2782DA7A03 /* Pods-DrinKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitTests/Pods-DrinKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E96BBEFCBB0C388BFE4890E /* Pods-DrinKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitUITests/Pods-DrinKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,8 +255,9 @@
 		04B72BCC210034850024326D /* DrinKit */ = {
 			isa = PBXGroup;
 			children = (
-				044C2270210999B800E69DB2 /* Storyboards */,
 				044C226121096FF100E69DB2 /* Utilities */,
+				044C2270210999B800E69DB2 /* Storyboards */,
+				04E985382112B093009BB191 /* Model */,
 				045CC951210599F8004450B7 /* Views */,
 				044C226021096FCD00E69DB2 /* ViewModels */,
 				044C225F21096FC300E69DB2 /* ViewControllers */,
@@ -282,6 +285,14 @@
 				04B72BEF210034860024326D /* Info.plist */,
 			);
 			path = DrinKitUITests;
+			sourceTree = "<group>";
+		};
+		04E985382112B093009BB191 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E985392112B0B6009BB191 /* UserInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7FF1E1754459A63BE59CF165 /* Frameworks */ = {
@@ -527,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */,
 				04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */,
 				045CC94C21057B46004450B7 /* UIFont+.swift in Sources */,
 				04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */,

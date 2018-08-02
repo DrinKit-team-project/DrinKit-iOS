@@ -12,16 +12,15 @@ import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
     
-
-    @IBOutlet weak var facebookLoginBtn: FBSDKLoginButton!
+    
+    @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
+    @IBOutlet weak var kakaoLoginBtn: KOLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        facebookLoginBtn.delegate = self
-        removeHeightConstraintOfFBLoginBtn
+        fbLoginBtn.delegate = self
+        removeHeightConstraintOfFBLoginBtn()
     }
-    
-
     
     @IBAction func loginKakao(_ sender: KOLoginButton) {
         let session = KOSession.shared()
@@ -37,8 +36,8 @@ class LogInViewController: UIViewController {
                             if session.isOpen() {
                                 print("Success")
                                 KOSessionTask.userMeTask(completion: { (error, me) in
-                                    print(me?.nickname)
-                                    
+                                    print(me?.nickname as Any)
+                                    self.performSegue(withIdentifier: "ToSettings", sender: self)
                                 })
                             } else {
                                 print("fail")
@@ -65,20 +64,20 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
         } else if result.isCancelled {
             print("User cancelled login.")
         } else {
-            guard let grantedPermissions = result.grantedPermissions else { return }
-            guard let declinedPermissions = result.declinedPermissions else { return }
-            guard let accessToken = result.token else { return }
-
-            print("Logged in!")
-            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
-            print("FaceBook user ID = " + accessToken.userID!)
-//            getFBUserData()
+//            guard let grantedPermissions = result.grantedPermissions else { return }
+//            guard let declinedPermissions = result.declinedPermissions else { return }
+//            guard let accessToken = result.token else { return }
+//
+//            print("Logged in!")
+//            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
+//            print("FaceBook user ID = " + accessToken.userID!)
+            getFBUserData()
         }
 
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
+        //LogOut Action
     }
     
     private func getFBUserData(){
@@ -94,7 +93,7 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     }
     
     private func removeHeightConstraintOfFBLoginBtn() {
-        let layoutConstraintsArr = facebookLoginBtn.constraints
+        let layoutConstraintsArr = fbLoginBtn.constraints
         for layoutConstraint in layoutConstraintsArr {
             if ( layoutConstraint.constant == 28 ){
                 layoutConstraint.isActive = false

@@ -100,7 +100,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="0Dq-y8-beq">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabbar" id="gr2-cy-Gu9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gr2-cy-Gu9" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xqx-Uw-nMf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -299,7 +299,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hbi-MO-JEs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B1r-cp-M7b" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Account" automaticallyAdjustsScrollViewInsets="NO" id="B1r-cp-M7b" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jLj-jK-mqo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

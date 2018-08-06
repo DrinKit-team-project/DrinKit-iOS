@@ -47,7 +47,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpBtnTouched(_ sender: UIButton) {
         guard let userNickname = nicknameTextField.text else { return }
         UserInformation.sharedInstance.setNickname(userNickname)
-        guard let homeTabbarController = storyboard?.instantiateViewController(withIdentifier: "HomeTabbar") as? UITabBarController else { return }
+        guard let homeTabbarController = storyboard?.instantiateViewController(withIdentifier: "Main") as? UITabBarController else { return }
         self.present(homeTabbarController, animated: true, completion: nil)
     }
     

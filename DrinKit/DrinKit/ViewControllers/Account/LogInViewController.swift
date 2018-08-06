@@ -7,29 +7,112 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
+    @IBOutlet weak var kakaoLoginBtn: KOLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fbLoginBtn.delegate = self
+        removeHeightConstraintOfFBLoginBtn()
+        if FBSDKAccessToken.currentAccessTokenIsActive() {
+            FBSDKLoginManager().logOut()
+        }
+        
     }
+     
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - Facebook LogIn
+extension LogInViewController: FBSDKLoginButtonDelegate {
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if (error != nil) {
+            print(error.localizedDescription)
+            
+        } else if result.isCancelled {
+            print("User cancelled login.")
+        } else {
+//            guard let grantedPermissions = result.grantedPermissions else { return }
+//            guard let declinedPermissions = result.declinedPermissions else { return }
+//            guard let accessToken = result.token else { return }
+//            print("Logged in!")
+//            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
+//            print("FaceBook user ID = " + accessToken.userID!)
+            getFBUserData()
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //LogOut Action
     }
-    */
+    
+    private func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil) {
+            guard let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]) else { return }
+            request.start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil) {
+                    guard let result = result as? [String:Any] else { return }
+                    guard let url = ((result["picture"] as? [String:Any])?["data"] as? [String:Any])?["url"] as? String else { return }
+                    guard let imageURL = URL(string: url),
+                          let imageData = try? Data(contentsOf: imageURL) else { return }
+                    guard let userProfileImg = UIImage(data: imageData),
+                          let userName = result["name"] as? String,
+                          let userEmail = result["email"] as? String else { return }
+                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
+                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    self.performSegue(withIdentifier: "ToSettings", sender: self)
+                }
+            })
+        }
+    }
+    
+    private func removeHeightConstraintOfFBLoginBtn() {
+        let layoutConstraintsArr = fbLoginBtn.constraints
+        for layoutConstraint in layoutConstraintsArr {
+            if ( layoutConstraint.constant == 28 ){
+                layoutConstraint.isActive = false
+                break
+            }
+        }
+    }
+    
+}
 
+// MARK: - Kakao Login
+extension LogInViewController {
+    
+    @IBAction func loginKakao(_ sender: KOLoginButton) {
+        guard let session = KOSession.shared() else { return }
+        if session.isOpen() {
+            session.close()
+        }
+        session.presentingViewController = self
+        session.open { (error) in
+            guard error == nil else { print(error?.localizedDescription ?? ""); return }
+            if session.isOpen() {
+                print("Success")
+                KOSessionTask.userMeTask(completion: { (error, me) in
+                    guard let user = me else { return }
+                    guard let imageURL = user.profileImageURL,
+                          let data = try? Data(contentsOf: imageURL) else { return }
+                    guard let userProfileImg = UIImage(data: data),
+                          let userName = user.nickname,
+                          let userEmail = user.account?.email else { return }
+                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
+                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    self.performSegue(withIdentifier: "ToSettings", sender: self)
+                })
+            } else {
+                print("fail: "  + (error?.localizedDescription ?? ""))
+            }
+        }
+    }
+    
 }

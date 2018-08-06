@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BeveragesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BeveragesViewController: UIViewController {
     
+    // MARK: - UI
     @IBOutlet weak var beverageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -17,19 +18,24 @@ class BeveragesViewController: UIViewController, UICollectionViewDelegate, UICol
         beverageCollectionView.delegate = self
         beverageCollectionView.dataSource = self
     }
+
+}
+// MARK: - BeverageCollectionView
+extension BeveragesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let beverageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeverageCell", for: indexPath) as? BeverageCell else { return UICollectionViewCell() }
+        guard let beverageCell = collectionView.dequeueReusableCell(withReuseIdentifier: Keyword.BeveragesView.beverageCell.reuseId, for: indexPath) as? BeverageCell else { return UICollectionViewCell() }
         beverageCell.priceLabel.text = "\(indexPath.row + 1)번째 음료"
         return beverageCell
     }
-
+    
 }
 
+// MARK: - BeverageCollectionViewFlowLayout
 extension BeveragesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

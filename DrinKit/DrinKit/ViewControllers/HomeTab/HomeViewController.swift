@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: - MODEL
     private let countOfBrands = 30
     
-    //MARK: - UI
+    // MARK: - UI
     @IBOutlet weak var eventScrollView: UIScrollView!
     @IBOutlet weak var eventScrollPageControl: UIPageControl!
     @IBOutlet weak var brandCollectionView: UICollectionView!
@@ -25,10 +25,10 @@ class HomeViewController: UIViewController {
         brandCollectionView.delegate = self
         brandCollectionView.dataSource = self
         setCollectionViewFlowLayout()
-        setNumberOfBrandCellectionPages()
+        setNumberOfBrandCollectionPages()
     }
     
-    //MARK: - Prepare for BrandInfoVC
+    // MARK: - Prepare for BrandInfoVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let brandInfoVC = segue.destination as? BrandInfoViewController else { return }
         //        guard let selectedBrandCell = sender as? BrandCell else { return }
@@ -50,7 +50,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let brandCell = brandCollectionView.dequeueReusableCell(withReuseIdentifier: "BrandCell", for: indexPath) as? BrandCell else { return UICollectionViewCell() }
+        guard let brandCell = brandCollectionView.dequeueReusableCell(withReuseIdentifier: Keyword.HomeView.brandCell.reuseId, for: indexPath) as? BrandCell else { return UICollectionViewCell() }
         brandCell.brandName.text = "\(indexPath.row + 1)번째 브랜드"
         return brandCell
     }
@@ -88,7 +88,7 @@ extension HomeViewController {
         brandCollectionPageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
     
-    private func setNumberOfBrandCellectionPages() {
+    private func setNumberOfBrandCollectionPages() {
         brandCollectionPageControl.numberOfPages = { () -> Int in
             guard countOfBrands % 9 == 0 else { return countOfBrands / 9 + 1}
             return countOfBrands / 9

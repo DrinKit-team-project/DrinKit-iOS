@@ -395,7 +395,7 @@
                                                 <color key="textColor" name="CutomClearBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-B1-7Ko">
+                                            <textView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-B1-7Ko">
                                                 <rect key="frame" x="22" y="421" width="331" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="4BM-gE-JrM"/>
@@ -463,7 +463,7 @@
                                                                                             <color key="textColor" name="CutomClearBlue"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Review Texts" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-3n-seh">
+                                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Review Texts" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-3n-seh">
                                                                                             <rect key="frame" x="0.0" y="20" width="225" height="60"/>
                                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <constraints>

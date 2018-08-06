@@ -9,6 +9,8 @@
 import UIKit
 
 class BeverageDetailViewController: UIViewController {
+    
+    // MARK: - UI
     @IBOutlet weak var beverageDetailScrollView: UIScrollView!
     @IBOutlet weak var thumbnailsScrollView: UIScrollView!
     @IBOutlet weak var reviewTableView: UITableView!
@@ -21,10 +23,9 @@ class BeverageDetailViewController: UIViewController {
         reviewTableView.rowHeight = UITableViewAutomaticDimension
     }
     
-
-    
 }
 
+// MARK: - ReviewTableView
 extension BeverageDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +37,7 @@ extension BeverageDetailViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let reviewCell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as? ReviewCell else { return UITableViewCell() }
+        guard let reviewCell = tableView.dequeueReusableCell(withIdentifier: Keyword.BeverageDetailView.reviewCell.reuseId) as? ReviewCell else { return UITableViewCell() }
         return reviewCell
     }
     

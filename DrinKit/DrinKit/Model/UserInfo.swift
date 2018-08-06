@@ -29,6 +29,10 @@ class UserInformation {
         nickName = userNickname
     }
     
+    func isEmpty() -> Bool {
+        return basicInformation == (UIImage(), "", "") && nickName == ""
+    }
+    
     private init() {
         basicInformation = (UIImage(), "", "")
         nickName = ""

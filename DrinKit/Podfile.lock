@@ -9,6 +9,22 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.33.0):
     - FBSDKCoreKit
+  - KakaoOpenSDK (1.9.0):
+    - KakaoOpenSDK/KakaoCommon (= 1.9.0)
+    - KakaoOpenSDK/KakaoLink (= 1.9.0)
+    - KakaoOpenSDK/KakaoMessageTemplate (= 1.9.0)
+    - KakaoOpenSDK/KakaoNavi (= 1.9.0)
+    - KakaoOpenSDK/KakaoOpenSDK (= 1.9.0)
+    - KakaoOpenSDK/KakaoS2 (= 1.9.0)
+  - KakaoOpenSDK/KakaoCommon (1.9.0)
+  - KakaoOpenSDK/KakaoLink (1.9.0):
+    - KakaoOpenSDK/KakaoCommon
+  - KakaoOpenSDK/KakaoMessageTemplate (1.9.0)
+  - KakaoOpenSDK/KakaoNavi (1.9.0):
+    - KakaoOpenSDK/KakaoCommon
+  - KakaoOpenSDK/KakaoOpenSDK (1.9.0)
+  - KakaoOpenSDK/KakaoS2 (1.9.0):
+    - KakaoOpenSDK/KakaoCommon
   - SwiftInstagram (1.1.1):
     - SwiftInstagram/Core (= 1.1.1)
   - SwiftInstagram/Core (1.1.1)
@@ -16,6 +32,7 @@ PODS:
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
+  - KakaoOpenSDK (~> 1.9)
   - SwiftInstagram (~> 1.1.1)
 
 SPEC REPOS:
@@ -23,14 +40,16 @@ SPEC REPOS:
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - KakaoOpenSDK
     - SwiftInstagram
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  KakaoOpenSDK: 6d658510bf1e51dd8765ad000130138407c72612
   SwiftInstagram: 5f60415e522d1a7721073eb3a66f254a7c40fd63
 
-PODFILE CHECKSUM: ac7cbf784291fb552d8360badc67a49b24c3e3ef
+PODFILE CHECKSUM: 5fc1165b530814b651401c5c4011037e8d4759d5
 
 COCOAPODS: 1.5.2

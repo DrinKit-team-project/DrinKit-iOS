@@ -17,7 +17,6 @@
 		045CC94C21057B46004450B7 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94B21057B46004450B7 /* UIFont+.swift */; };
 		045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94D21057E4A004450B7 /* HomeViewController.swift */; };
 		045CC95321059A2C004450B7 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC95221059A2C004450B7 /* BrandCell.swift */; };
-		048B2C4C211036370000BA9D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048B2C4B211036370000BA9D /* KakaoOpenSDK.framework */; };
 		04B72BCE210034850024326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCD210034850024326D /* AppDelegate.swift */; };
 		04B72BD3210034850024326D /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD1210034850024326D /* HomeTab.storyboard */; };
 		04B72BD5210034860024326D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD4210034860024326D /* Assets.xcassets */; };
@@ -68,7 +67,6 @@
 		045CC94B21057B46004450B7 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		045CC94D21057E4A004450B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		045CC95221059A2C004450B7 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
-		048B2C4B211036370000BA9D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		048B2C4D211038CD0000BA9D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04B72BCA210034850024326D /* DrinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B72BCD210034850024326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CBB2B56E20EAA6BDE42106 /* Pods_DrinKit.framework in Frameworks */,
-				048B2C4C211036370000BA9D /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +295,6 @@
 		7FF1E1754459A63BE59CF165 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				048B2C4B211036370000BA9D /* KakaoOpenSDK.framework */,
 				BB7F0A4676CCBF47438D32DC /* Pods_DrinKit.framework */,
 				CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */,
 				BC6DD0CBB7F186513B4B8CD2 /* Pods_DrinKitUITests.framework */,

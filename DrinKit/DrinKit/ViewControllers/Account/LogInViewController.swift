@@ -23,7 +23,6 @@ class LogInViewController: UIViewController {
         if FBSDKAccessToken.currentAccessTokenIsActive() {
             FBSDKLoginManager().logOut()
         }
-        
     }
      
 }
@@ -34,7 +33,6 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if (error != nil) {
             print(error.localizedDescription)
-            
         } else if result.isCancelled {
             print("User cancelled login.")
         } else {
@@ -49,10 +47,6 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
         
     }
     
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        //LogOut Action
-    }
-    
     private func getFBUserData(){
         if((FBSDKAccessToken.current()) != nil) {
             guard let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]) else { return }
@@ -65,8 +59,7 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                     guard let userProfileImg = UIImage(data: imageData),
                           let userName = result["name"] as? String,
                           let userEmail = result["email"] as? String else { return }
-                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
-                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail, .FACEBOOK)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
             })
@@ -81,6 +74,10 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                 break
             }
         }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //LogOut Action
     }
     
 }
@@ -105,8 +102,7 @@ extension LogInViewController {
                     guard let userProfileImg = UIImage(data: data),
                           let userName = user.nickname,
                           let userEmail = user.account?.email else { return }
-                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
-                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail, .KAKAO)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })
             } else {

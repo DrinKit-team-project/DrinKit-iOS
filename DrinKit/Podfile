@@ -8,6 +8,7 @@ target 'DrinKit' do
   pod 'FBSDKLoginKit'
   pod 'SwiftInstagram', '~> 1.1.1'
   pod 'KakaoOpenSDK', '~> 1.9'
+  pod 'Alamofire', '~> 4.7'
   # Pods for DrinKit
 
   target 'DrinKitTests' do

@@ -36,12 +36,6 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
         } else if result.isCancelled {
             print("User cancelled login.")
         } else {
-//            guard let grantedPermissions = result.grantedPermissions else { return }
-//            guard let declinedPermissions = result.declinedPermissions else { return }
-//            guard let accessToken = result.token else { return }
-//            print("Logged in!")
-//            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
-//            print("FaceBook user ID = " + accessToken.userID!)
             getFBUserData()
         }
         
@@ -59,7 +53,9 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                     guard let userProfileImg = UIImage(data: imageData),
                           let userName = result["name"] as? String,
                           let userEmail = result["email"] as? String else { return }
-                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail, .FACEBOOK)
+                    guard let session = FBSDKAccessToken.current() else { return }
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail)
+                    UserInfo.sharedInstance.setParameters(.FACEBOOK, session.userID, session.tokenString)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
             })
@@ -101,8 +97,10 @@ extension LogInViewController {
                           let data = try? Data(contentsOf: imageURL) else { return }
                     guard let userProfileImg = UIImage(data: data),
                           let userName = user.nickname,
-                          let userEmail = user.account?.email else { return }
-                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail, .KAKAO)
+                          let userEmail = user.account?.email,
+                          let userID = user.id else { return }
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail)
+                    UserInfo.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })
             } else {

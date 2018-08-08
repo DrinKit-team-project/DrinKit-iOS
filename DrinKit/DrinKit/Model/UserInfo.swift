@@ -31,6 +31,7 @@ struct UserInfo {
     private(set) var name: String
     private(set) var email: String
     private(set) var provider: Provider
+    private(set) var parameters: [String:Any]
     
     // AdditionalInfo
     private var nickName: String
@@ -42,17 +43,23 @@ struct UserInfo {
         profileImage = UIImage()
         name = ""
         email = ""
-        nickName = ""
         provider = .none
+        parameters = [:]
+        nickName = ""
         JWTToken = ""
     }
     
-    mutating func setBasicInformation(_ userProfileImage: UIImage, _ userName: String,
-                                      _ userNameEmail: String, _ userNameProvider: Provider) {
+    mutating func setBasicInformation(_ userProfileImage: UIImage, _ userName: String, _ userNameEmail: String) {
         profileImage = userProfileImage
         name = userName
         email = userNameEmail
-        provider = userNameProvider
+    }
+    
+    mutating func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
+        provider = userProvider
+        parameters["provider"] = userProvider.value
+        parameters["id"] = userID
+        parameters["token"] = userToken
     }
     
     mutating func setNickName(_ userNickName: String) {

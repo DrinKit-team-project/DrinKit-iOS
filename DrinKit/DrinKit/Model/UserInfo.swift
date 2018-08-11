@@ -58,7 +58,7 @@ struct UserInfo {
     mutating func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
         provider = userProvider
         parameters["provider"] = userProvider.value
-        parameters["id"] = userID
+        parameters["id"] = Int(userID)
         parameters["token"] = userToken
     }
     

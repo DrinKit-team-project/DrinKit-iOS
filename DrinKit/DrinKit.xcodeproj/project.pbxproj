@@ -31,6 +31,16 @@
 		04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */; };
 		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
 		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
+		04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */; };
+		04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */; };
+		04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */; };
+		04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */; };
+		04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */; };
+		04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */; };
+		04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */; };
+		04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */; };
+		04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */; };
+		04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
 		04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E985392112B0B6009BB191 /* UserInfo.swift */; };
 		20A1FF55D3EFA87B858E9570 /* Pods_DrinKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */; };
@@ -88,6 +98,16 @@
 		04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
+		04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
 		04E985392112B0B6009BB191 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		17D140E661F5DC8D0C15CDF6 /* Pods-DrinKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +272,7 @@
 		04B72BCC210034850024326D /* DrinKit */ = {
 			isa = PBXGroup;
 			children = (
+				04D8096A211EF43C0011E4F1 /* Resources */,
 				044C226121096FF100E69DB2 /* Utilities */,
 				044C2270210999B800E69DB2 /* Storyboards */,
 				04E985382112B093009BB191 /* Model */,
@@ -282,6 +303,23 @@
 				04B72BEF210034860024326D /* Info.plist */,
 			);
 			path = DrinKitUITests;
+			sourceTree = "<group>";
+		};
+		04D8096A211EF43C0011E4F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */,
+				04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */,
+				04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */,
+				04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */,
+				04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */,
+				04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */,
+				04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */,
+				04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */,
+				04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */,
+				04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		04E985382112B093009BB191 /* Model */ = {
@@ -423,10 +461,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */,
+				04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */,
+				04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */,
+				04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */,
 				04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */,
+				04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */,
+				04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */,
 				044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */,
+				04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */,
 				04B72BD5210034860024326D /* Assets.xcassets in Resources */,
+				04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */,
+				04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				04B72BD3210034850024326D /* HomeTab.storyboard in Resources */,
 				044C22672109978600E69DB2 /* Main.storyboard in Resources */,
 			);

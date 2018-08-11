@@ -18,21 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="aY5-Gv-srE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRINKIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-HP-T8A">
-                                <rect key="frame" x="111.5" y="310.5" width="152" height="46"/>
+                                <rect key="frame" x="111" y="310" width="152" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="Azu-aH-74h"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="BKo-nu-rdK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <color key="textColor" red="0.14901960784313725" green="0.59999999999999998" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aY5-Gv-srE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HZ4-Uc-4I7"/>
                             <constraint firstItem="pQb-HP-T8A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XSc-bk-BuN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aY5-Gv-srE" secondAttribute="bottom" id="Y0I-Tc-JPz"/>
                             <constraint firstItem="pQb-HP-T8A" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZV9-ef-AHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aY5-Gv-srE" secondAttribute="trailing" id="hGZ-Om-dEj"/>
+                            <constraint firstItem="aY5-Gv-srE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="moJ-cn-Sx0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,4 +48,7 @@
             <point key="canvasLocation" x="-175" y="232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="375" height="667"/>
+    </resources>
 </document>

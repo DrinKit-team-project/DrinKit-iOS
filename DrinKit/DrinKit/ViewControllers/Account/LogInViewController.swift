@@ -13,6 +13,7 @@ import FBSDKLoginKit
 class LogInViewController: UIViewController {
     
     
+    @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
     @IBOutlet weak var kakaoLoginBtn: KOLoginButton!
     
@@ -23,6 +24,8 @@ class LogInViewController: UIViewController {
         if FBSDKAccessToken.currentAccessTokenIsActive() {
             FBSDKLoginManager().logOut()
         }
+        logoView.layer.borderWidth = 3
+        logoView.layer.borderColor = UIColor.white.cgColor
     }
      
 }

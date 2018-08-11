@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginFlowHandler {
 //        initialiseServices()
 //        handleLogin(withWindow: window)
         
-//        setTabbarFont()
+        setTabbarFont()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions) || true
     }
     
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginFlowHandler {
     }
     
     private func setTabbarFont() {
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.tabbarText], for: .normal)
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.init(name: "Raleway", size: 9) ?? UIFont()], for: .normal)
     }
     
 }

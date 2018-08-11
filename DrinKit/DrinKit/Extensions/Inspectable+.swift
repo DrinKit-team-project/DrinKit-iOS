@@ -9,18 +9,6 @@
 import Foundation
 import UIKit
 
-extension UIFont {
-    
-    class var Arial: UIFont {
-        return UIFont(name: "Arial-BoldMT", size: 20.0)!
-    }
-    
-    class var tabbarText: UIFont {
-        return UIFont(name: "ArialMT", size: 10.0)!
-    }
-    
-}
-
 extension UITextField {
     @IBInspectable var placeholderColor: UIColor {
         get {

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginFlowHandler {
 //        initialiseServices()
 //        handleLogin(withWindow: window)
         
-        setTabbarFont()
+//        setTabbarFont()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions) || true
     }
     

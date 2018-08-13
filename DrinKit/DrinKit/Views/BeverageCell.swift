@@ -10,6 +10,13 @@ import UIKit
 
 class BeverageCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var beverageNameKR: UILabel!
+    @IBOutlet weak var beverageNameEN: UILabel!
     @IBOutlet weak var beverageImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    @IBAction func myDrinkBtn(_ sender: UIButton) {
+    }
 }

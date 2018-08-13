@@ -12,8 +12,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+        <array key="NotoSansCJKkr-Light.otf">
+            <string>NotoSansCJKkr-Light</string>
+        </array>
         <array key="NotoSansCJKkr-Medium.otf">
             <string>NotoSansCJKkr-Medium</string>
+        </array>
+        <array key="NotoSansCJKkr-Regular.otf">
+            <string>NotoSansCJKkr-Regular</string>
+        </array>
+        <array key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </array>
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -127,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="553" y="699"/>
         </scene>
-        <!--Title-->
+        <!--Brand Name-->
         <scene sceneID="pNw-88-BUD">
             <objects>
                 <viewController id="f1q-ja-BTj" customClass="BrandInfoViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,75 +153,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-Mb-GcQ">
-                                <rect key="frame" x="0.0" y="292" width="375" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-MX-yzi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="147"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ubS-Mb-GcQ" secondAttribute="height" multiplier="1:1" id="uWv-gu-JBd"/>
+                                    <constraint firstAttribute="height" constant="147" id="xKW-kR-nbP"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lcX-k2-7zx">
-                                    <size key="itemSize" width="114" height="106"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="noG-2L-0rc" customClass="CategoryCell" customModule="DrinKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="106"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="114" height="106"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-1P-rE6">
+                                <rect key="frame" x="0.0" y="211" width="375" height="456"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="87" id="91p-wF-VQr" customClass="CategoryCell" customModule="DrinKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="91p-wF-VQr" id="cnh-SR-3S0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-cE-fZD">
-                                                    <rect key="frame" x="35" y="44" width="44.5" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                                    <color key="textColor" name="CutomClearBlue"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CategoryKR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1Z-jA-MYq">
+                                                    <rect key="frame" x="133" y="20" width="109" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CategoryEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6Z-Z4-l9p">
+                                                    <rect key="frame" x="153.5" y="49" width="68.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="12"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="DMc-cE-fZD" firstAttribute="centerX" secondItem="noG-2L-0rc" secondAttribute="centerX" id="DWq-mj-Fao"/>
-                                            <constraint firstItem="DMc-cE-fZD" firstAttribute="centerY" secondItem="noG-2L-0rc" secondAttribute="centerY" id="quB-PD-My8"/>
-                                        </constraints>
+                                            <constraints>
+                                                <constraint firstItem="I6Z-Z4-l9p" firstAttribute="top" secondItem="a1Z-jA-MYq" secondAttribute="bottom" constant="1.5" id="5bA-Rn-6xP"/>
+                                                <constraint firstItem="a1Z-jA-MYq" firstAttribute="centerX" secondItem="cnh-SR-3S0" secondAttribute="centerX" id="Tct-yU-g6v"/>
+                                                <constraint firstAttribute="bottom" secondItem="I6Z-Z4-l9p" secondAttribute="bottom" constant="22.600000000000001" id="aBS-6P-eB0"/>
+                                                <constraint firstItem="a1Z-jA-MYq" firstAttribute="top" secondItem="cnh-SR-3S0" secondAttribute="top" constant="19.899999999999999" id="qZt-FJ-kTi"/>
+                                                <constraint firstItem="I6Z-Z4-l9p" firstAttribute="centerX" secondItem="cnh-SR-3S0" secondAttribute="centerX" id="x77-Gj-BXv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Background"/>
                                         <connections>
-                                            <outlet property="categoryName" destination="DMc-cE-fZD" id="6Tx-8f-RtA"/>
-                                            <segue destination="lGb-MG-nnf" kind="show" id="dZo-em-Hgm"/>
+                                            <outlet property="categoryEN" destination="I6Z-Z4-l9p" id="eRS-1E-PYU"/>
+                                            <outlet property="categoryKR" destination="a1Z-jA-MYq" id="ofc-Yx-dXF"/>
+                                            <segue destination="lGb-MG-nnf" kind="show" id="6IU-98-Brf"/>
                                         </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-MX-yzi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="228"/>
-                                <color key="backgroundColor" name="CutomLightBlue"/>
-                            </imageView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0yV-p6-uGP" firstAttribute="trailing" secondItem="ubS-Mb-GcQ" secondAttribute="trailing" id="0aC-i6-Mof"/>
                             <constraint firstItem="Wa2-MX-yzi" firstAttribute="top" secondItem="0yV-p6-uGP" secondAttribute="top" id="2MX-BH-Htu"/>
-                            <constraint firstItem="ubS-Mb-GcQ" firstAttribute="leading" secondItem="0yV-p6-uGP" secondAttribute="leading" id="E6c-pp-9g5"/>
                             <constraint firstItem="0yV-p6-uGP" firstAttribute="trailing" secondItem="Wa2-MX-yzi" secondAttribute="trailing" id="Q1e-N2-7vA"/>
                             <constraint firstItem="Wa2-MX-yzi" firstAttribute="leading" secondItem="0yV-p6-uGP" secondAttribute="leading" id="jbv-Ye-srn"/>
-                            <constraint firstItem="ubS-Mb-GcQ" firstAttribute="top" secondItem="Wa2-MX-yzi" secondAttribute="bottom" id="kbw-Lw-oHn"/>
-                            <constraint firstItem="0yV-p6-uGP" firstAttribute="bottom" secondItem="ubS-Mb-GcQ" secondAttribute="bottom" id="ki0-3V-596"/>
+                            <constraint firstItem="U0r-1P-rE6" firstAttribute="top" secondItem="Wa2-MX-yzi" secondAttribute="bottom" id="krv-IB-zwZ"/>
+                            <constraint firstItem="U0r-1P-rE6" firstAttribute="leading" secondItem="0yV-p6-uGP" secondAttribute="leading" id="rER-yA-jsn"/>
+                            <constraint firstItem="0yV-p6-uGP" firstAttribute="trailing" secondItem="U0r-1P-rE6" secondAttribute="trailing" id="sKO-m7-oGe"/>
+                            <constraint firstItem="0yV-p6-uGP" firstAttribute="bottom" secondItem="U0r-1P-rE6" secondAttribute="bottom" id="sbA-nU-Y4g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0yV-p6-uGP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="w3f-RJ-hi7">
+                    <navigationItem key="navigationItem" title="Brand Name" id="w3f-RJ-hi7">
                         <barButtonItem key="backBarButtonItem" title=" " id="uZn-hZ-SYC"/>
                     </navigationItem>
                     <connections>
                         <outlet property="brandImage" destination="Wa2-MX-yzi" id="Ugb-st-P0a"/>
-                        <outlet property="categoryCollectionView" destination="ubS-Mb-GcQ" id="THL-1Z-bsS"/>
+                        <outlet property="categoryTableView" destination="U0r-1P-rE6" id="WJ8-tn-GPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bb5-gS-4Ju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="699"/>
+            <point key="canvasLocation" x="1432.8" y="698.5007496251875"/>
         </scene>
-        <!--Beverages View Controller-->
+        <!--MENU-->
         <scene sceneID="RrV-gt-H51">
             <objects>
                 <viewController id="lGb-MG-nnf" customClass="BeveragesViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -212,8 +236,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ryL-Sh-PXC">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="97" width="375" height="570"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Alz-hn-gac">
                                     <size key="itemSize" width="150" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -229,32 +253,64 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-d5-BfN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <rect key="frame" x="10" y="51" width="130" height="99"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="PPd-d5-BfN" secondAttribute="height" multiplier="1:1" id="szl-Hd-F57"/>
-                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skY-Yu-bMc">
-                                                    <rect key="frame" x="0.0" y="150" width="150" height="30"/>
-                                                    <color key="backgroundColor" name="CutomPowderBlue"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="j9e-5w-fiK"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="103" y="150" width="37" height="30"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                                    <color key="textColor" name="Price"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVF-hw-beF" userLabel="BeverageNameKR">
+                                                    <rect key="frame" x="10" y="9" width="40" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="aJe-fy-n4i"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Light" family="Noto Sans CJK KR" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-iY-Ug3" userLabel="BeverageNameEN">
+                                                    <rect key="frame" x="10" y="33" width="30" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="a6q-Ei-Wf3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Light" family="Noto Sans CJK KR" pointSize="12"/>
+                                                    <color key="textColor" name="BeverageNameEN"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-G3-fZe">
+                                                    <rect key="frame" x="10" y="157.5" width="15" height="15"/>
+                                                    <color key="backgroundColor" name="BeverageNameEN"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="NSL-gm-VDz"/>
+                                                        <constraint firstAttribute="height" constant="15" id="UHs-vd-Jl8"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="myDrinkBtn:" destination="GZO-2O-UzI" eventType="touchUpInside" id="msF-hH-BiI"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="PPd-d5-BfN" secondAttribute="trailing" id="07z-BC-QPQ"/>
-                                            <constraint firstItem="PPd-d5-BfN" firstAttribute="top" secondItem="GZO-2O-UzI" secondAttribute="top" id="1fq-AB-UdJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="skY-Yu-bMc" secondAttribute="trailing" id="K5b-Eg-oTf"/>
-                                            <constraint firstItem="PPd-d5-BfN" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" id="TNa-km-M15"/>
-                                            <constraint firstItem="skY-Yu-bMc" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" id="Xgr-pM-BID"/>
-                                            <constraint firstAttribute="bottom" secondItem="skY-Yu-bMc" secondAttribute="bottom" id="k0n-q1-HSV"/>
-                                            <constraint firstItem="skY-Yu-bMc" firstAttribute="top" secondItem="PPd-d5-BfN" secondAttribute="bottom" id="phq-Q6-dF2"/>
+                                            <constraint firstItem="tVF-hw-beF" firstAttribute="top" secondItem="GZO-2O-UzI" secondAttribute="top" constant="9" id="AVE-LE-rch"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jdd-iY-Ug3" secondAttribute="trailing" symbolic="YES" id="FXe-7c-etc"/>
+                                            <constraint firstAttribute="trailing" secondItem="PPd-d5-BfN" secondAttribute="trailing" constant="10" id="HiP-Yw-T8S"/>
+                                            <constraint firstItem="skY-Yu-bMc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GZO-2O-UzI" secondAttribute="leading" symbolic="YES" id="Lwp-Jb-Aa0"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tVF-hw-beF" secondAttribute="trailing" symbolic="YES" id="P4j-RA-2Z7"/>
+                                            <constraint firstItem="PPd-d5-BfN" firstAttribute="top" secondItem="Jdd-iY-Ug3" secondAttribute="bottom" id="W8C-yi-xUa"/>
+                                            <constraint firstItem="skY-Yu-bMc" firstAttribute="top" secondItem="PPd-d5-BfN" secondAttribute="bottom" id="X6I-qt-XWZ"/>
+                                            <constraint firstItem="Jdd-iY-Ug3" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" constant="10" id="Y6w-WK-lCI"/>
+                                            <constraint firstItem="Jdd-iY-Ug3" firstAttribute="top" secondItem="tVF-hw-beF" secondAttribute="bottom" id="biy-s8-Iio"/>
+                                            <constraint firstAttribute="trailing" secondItem="skY-Yu-bMc" secondAttribute="trailing" constant="10" id="dS2-OS-7oG"/>
+                                            <constraint firstAttribute="bottom" secondItem="skY-Yu-bMc" secondAttribute="bottom" id="dgK-gw-B5J"/>
+                                            <constraint firstItem="eg6-G3-fZe" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" constant="10" id="dkg-rv-VG0"/>
+                                            <constraint firstItem="eg6-G3-fZe" firstAttribute="centerY" secondItem="skY-Yu-bMc" secondAttribute="centerY" id="s2h-Mn-jnR"/>
+                                            <constraint firstItem="PPd-d5-BfN" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" constant="10" id="t7I-YM-jgw"/>
+                                            <constraint firstItem="tVF-hw-beF" firstAttribute="leading" secondItem="GZO-2O-UzI" secondAttribute="leading" constant="10" id="wdd-dJ-GdC"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -266,33 +322,48 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="beverageImage" destination="PPd-d5-BfN" id="cS2-Zs-D5I"/>
+                                            <outlet property="beverageNameEN" destination="Jdd-iY-Ug3" id="KRv-Ir-cPN"/>
+                                            <outlet property="beverageNameKR" destination="tVF-hw-beF" id="YBA-l1-5Uj"/>
                                             <outlet property="priceLabel" destination="skY-Yu-bMc" id="Siy-Ue-Wwn"/>
                                             <segue destination="I7d-Tu-gmO" kind="show" id="muV-dZ-rBx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPH-Z9-b54">
+                                <rect key="frame" x="326.5" y="71" width="33.5" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="68R-4v-K6Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="13"/>
+                                <color key="textColor" name="DrinkInfoPath"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="rlw-om-OeO" firstAttribute="trailing" secondItem="ryL-Sh-PXC" secondAttribute="trailing" id="B6b-cS-ChQ"/>
-                            <constraint firstItem="ryL-Sh-PXC" firstAttribute="top" secondItem="rlw-om-OeO" secondAttribute="top" id="G3a-YT-Lr5"/>
+                            <constraint firstItem="lPH-Z9-b54" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7oP-Pf-rel" secondAttribute="leading" constant="20" symbolic="YES" id="EGF-mW-r0E"/>
+                            <constraint firstItem="ryL-Sh-PXC" firstAttribute="top" secondItem="rlw-om-OeO" secondAttribute="top" constant="33" id="G3a-YT-Lr5"/>
                             <constraint firstItem="ryL-Sh-PXC" firstAttribute="leading" secondItem="rlw-om-OeO" secondAttribute="leading" id="LNR-O4-yof"/>
                             <constraint firstItem="rlw-om-OeO" firstAttribute="bottom" secondItem="ryL-Sh-PXC" secondAttribute="bottom" id="a2k-h3-cKR"/>
+                            <constraint firstItem="ryL-Sh-PXC" firstAttribute="top" secondItem="lPH-Z9-b54" secondAttribute="bottom" constant="7" id="bkT-Pj-pGB"/>
+                            <constraint firstItem="lPH-Z9-b54" firstAttribute="top" secondItem="rlw-om-OeO" secondAttribute="top" constant="7" id="eHn-4T-O4Q"/>
+                            <constraint firstItem="rlw-om-OeO" firstAttribute="trailing" secondItem="lPH-Z9-b54" secondAttribute="trailing" constant="15" id="qxw-bt-ecQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rlw-om-OeO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bwb-Xx-xun">
+                    <navigationItem key="navigationItem" title="MENU" id="Bwb-Xx-xun">
                         <barButtonItem key="backBarButtonItem" title=" " id="wGN-Mm-5SW"/>
-                        <barButtonItem key="rightBarButtonItem" title="Text" id="0pO-3s-7mG"/>
                     </navigationItem>
                     <connections>
                         <outlet property="beverageCollectionView" destination="ryL-Sh-PXC" id="jab-lF-aaF"/>
+                        <outlet property="drinkInfoPath" destination="lPH-Z9-b54" id="5eB-Nj-Xva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBv-iV-YfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263" y="699"/>
+            <point key="canvasLocation" x="2261.5999999999999" y="698.5007496251875"/>
         </scene>
         <!--Beverage Detail View Controller-->
         <scene sceneID="exT-i0-WyI">
@@ -306,11 +377,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BH-Tx-ane" userLabel="DetailContentsView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="838.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-3O-lqs" userLabel="ThumbnailsView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                                                <color key="backgroundColor" name="CutomLightBlue"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="dJq-u7-BgW"/>
                                                 </constraints>
@@ -319,33 +390,38 @@
                                                 <rect key="frame" x="0.0" y="250" width="375" height="90"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9od-qa-EPe" userLabel="BeverageNameView">
-                                                        <rect key="frame" x="25" y="12" width="154" height="41"/>
+                                                        <rect key="frame" x="25" y="13" width="165" height="43.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeverageName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eR-0H-9Uw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="123" height="19"/>
-                                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                                                <color key="textColor" name="CutomClearBlue"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeverageName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eR-0H-9Uw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="MAu-sj-dqy"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeverageEnglishName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-sx-NUN">
-                                                                <rect key="frame" x="0.0" y="24" width="153.5" height="17"/>
-                                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                                <color key="textColor" name="CutomClearBlue"/>
+                                                                <rect key="frame" x="0.0" y="29" width="130" height="14.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="14.5" id="ZdY-Fl-lKz"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="12"/>
+                                                                <color key="textColor" name="BeverageDetailNameEN"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-Z2-lDD" userLabel="KcalView">
-                                                        <rect key="frame" x="308" y="37" width="42" height="17"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                        <color key="textColor" name="CutomClearBlue"/>
+                                                        <rect key="frame" x="319.5" y="37" width="30.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="11"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Tag " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuv-O9-jVt">
-                                                        <rect key="frame" x="25" y="59" width="51" height="19"/>
-                                                        <color key="backgroundColor" name="CutomClearBlue"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="25" y="66.5" width="51" height="14.5"/>
+                                                        <color key="backgroundColor" name="TagBackground"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="10"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -360,76 +436,76 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" name="CutomIceBlue"/>
+                                                <color key="backgroundColor" name="BeverageBasicInfo"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="hb9-Z2-lDD" secondAttribute="bottom" constant="36.5" id="08Q-cw-FEF"/>
                                                     <constraint firstAttribute="trailing" secondItem="hb9-Z2-lDD" secondAttribute="trailing" constant="25" id="FkJ-7b-tM8"/>
                                                     <constraint firstItem="hb9-Z2-lDD" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9od-qa-EPe" secondAttribute="trailing" constant="129.5" id="Fq5-YC-cP0"/>
-                                                    <constraint firstItem="yuv-O9-jVt" firstAttribute="top" secondItem="9od-qa-EPe" secondAttribute="bottom" constant="6" id="Iuw-Fk-316"/>
+                                                    <constraint firstItem="yuv-O9-jVt" firstAttribute="top" secondItem="9od-qa-EPe" secondAttribute="bottom" constant="10" id="Iuw-Fk-316"/>
                                                     <constraint firstItem="hb9-Z2-lDD" firstAttribute="top" secondItem="WHs-2b-4wJ" secondAttribute="top" constant="36.5" id="X9H-v2-A51"/>
-                                                    <constraint firstAttribute="bottom" secondItem="yuv-O9-jVt" secondAttribute="bottom" constant="12" id="XbQ-nH-xga"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yuv-O9-jVt" secondAttribute="bottom" constant="9" id="XbQ-nH-xga"/>
                                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="yuv-O9-jVt" secondAttribute="trailing" constant="299" id="bqU-Ot-vSP"/>
                                                     <constraint firstAttribute="height" constant="90" id="bzE-ki-twI"/>
                                                     <constraint firstItem="yuv-O9-jVt" firstAttribute="leading" secondItem="WHs-2b-4wJ" secondAttribute="leading" constant="25" id="hlv-CU-r26"/>
                                                     <constraint firstItem="9od-qa-EPe" firstAttribute="leading" secondItem="WHs-2b-4wJ" secondAttribute="leading" constant="25" id="hpZ-iv-d1t"/>
-                                                    <constraint firstItem="9od-qa-EPe" firstAttribute="top" secondItem="WHs-2b-4wJ" secondAttribute="top" constant="12" id="ymd-1i-DeX"/>
+                                                    <constraint firstItem="9od-qa-EPe" firstAttribute="top" secondItem="WHs-2b-4wJ" secondAttribute="top" constant="13" id="ymd-1i-DeX"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OlV-xu-ffh" userLabel="AdditionalInfoView">
-                                                <rect key="frame" x="27" y="350" width="59" height="42"/>
+                                                <rect key="frame" x="27" y="350" width="50" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORV-I6-fEZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="25.5" height="15"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
-                                                        <color key="textColor" name="CutomClearBlue"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="19.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
+                                                        <color key="textColor" name="BeverageDetailNameEN"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4f-ch-xCi">
-                                                        <rect key="frame" x="0.0" y="15" width="59" height="27"/>
-                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
-                                                        <color key="textColor" name="CutomClearBlue"/>
+                                                        <rect key="frame" x="0.0" y="12" width="50" height="30"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
+                                                        <color key="textColor" name="Tabbar"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품소개글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7P-dE-kri">
-                                                <rect key="frame" x="25" y="402" width="74" height="19"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                <color key="textColor" name="CutomClearBlue"/>
+                                                <rect key="frame" x="25" y="402" width="74" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="13"/>
+                                                <color key="textColor" name="BeverageDescription"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-B1-7Ko">
-                                                <rect key="frame" x="22" y="421" width="331" height="65"/>
+                                                <rect key="frame" x="22" y="421.5" width="331" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="4BM-gE-JrM"/>
                                                 </constraints>
-                                                <color key="textColor" name="CutomClearBlue"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                <color key="textColor" name="BeverageDescription"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmG-UV-6C2" userLabel="LineView">
-                                                <rect key="frame" x="25" y="496" width="325" height="2"/>
-                                                <color key="backgroundColor" name="CutomClearBlue"/>
+                                                <rect key="frame" x="25" y="496.5" width="325" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="soE-Aq-KFy"/>
+                                                    <constraint firstAttribute="height" constant="1" id="soE-Aq-KFy"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 리뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwv-nO-Wsq">
-                                                <rect key="frame" x="27" y="508" width="83" height="20.5"/>
-                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
-                                                <color key="textColor" name="CutomClearBlue"/>
+                                                <rect key="frame" x="27" y="507.5" width="73.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="15"/>
+                                                <color key="textColor" name="Background"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onp-RF-cAv">
-                                                <rect key="frame" x="249" y="504" width="101" height="28"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                                <state key="normal" title="More Reviews &gt;">
-                                                    <color key="titleColor" name="CutomClearBlue"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onp-RF-cAv">
+                                                <rect key="frame" x="239.5" y="503.5" width="110.5" height="29"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="11"/>
+                                                <state key="normal" title="More Reviews  &gt;">
+                                                    <color key="titleColor" name="BeverageNameEN"/>
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-bw-MT7" userLabel="ReviewContentsView">
-                                                <rect key="frame" x="25" y="538.5" width="325" height="300"/>
+                                                <rect key="frame" x="25" y="540" width="325" height="300"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-Pk-zDI">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="300"/>
@@ -447,7 +523,7 @@
                                                                             <subviews>
                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fY2-9n-GbN">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                                                    <color key="backgroundColor" red="0.73725490199999999" green="0.87843137250000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <color key="backgroundColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="fY2-9n-GbN" secondAttribute="height" multiplier="1:1" id="eVE-SG-Ltp"/>
                                                                                         <constraint firstAttribute="width" constant="80" id="nRg-sX-dtB"/>
@@ -462,8 +538,8 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="20" id="7bs-AW-eww"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                                                                            <color key="textColor" name="CutomClearBlue"/>
+                                                                                            <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="14"/>
+                                                                                            <color key="textColor" name="Background"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Review Texts" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-3n-seh">
@@ -472,8 +548,8 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="60" id="GjU-4q-89D"/>
                                                                                             </constraints>
-                                                                                            <color key="textColor" name="CutomClearBlue"/>
-                                                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                                                            <color key="textColor" name="BeverageNameEN"/>
+                                                                                            <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                                         </textView>
                                                                                     </subviews>
@@ -580,7 +656,7 @@
                         <color key="barTintColor" name="Background"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
-                            <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -600,17 +676,33 @@
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="CutomClearBlue">
-            <color red="0.0" green="0.60392156862745094" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BeverageBasicInfo">
+            <color red="0.15299999713897705" green="0.15299999713897705" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="CutomIceBlue">
-            <color red="0.94499999284744263" green="0.97600001096725464" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BeverageDescription">
+            <color red="0.3919999897480011" green="0.3919999897480011" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="CutomLightBlue">
-            <color red="0.77909576892852783" green="0.90633183717727661" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BeverageDetailNameEN">
+            <color red="0.65499997138977051" green="0.56099998950958252" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="CutomPowderBlue">
-            <color red="0.7369999885559082" green="0.87800002098083496" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BeverageNameEN">
+            <color red="0.52499997615814209" green="0.52499997615814209" blue="0.52499997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BeverageNameEN">
+            <color red="0.52499997615814209" green="0.52499997615814209" blue="0.52499997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DrinkInfoPath">
+            <color red="0.91399997472763062" green="0.77300000190734863" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Price">
+            <color red="0.40400001406669617" green="0.2630000114440918" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tabbar">
+            <color red="0.097999997437000275" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TagBackground">
+            <color red="0.81599998474121094" green="0.81599998474121094" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

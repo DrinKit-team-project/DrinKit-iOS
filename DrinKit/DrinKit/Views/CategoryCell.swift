@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
+class CategoryCell: UITableViewCell {
     
-    @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var categoryKR: UILabel!
+    @IBOutlet weak var categoryEN: UILabel!
     
 }

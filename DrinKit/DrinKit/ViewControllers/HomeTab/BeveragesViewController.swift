@@ -10,13 +10,18 @@ import UIKit
 
 class BeveragesViewController: UIViewController {
     
+    //MARK: - Data
+    var drinkPath: String!
+    
     // MARK: - UI
     @IBOutlet weak var beverageCollectionView: UICollectionView!
+    @IBOutlet weak var drinkInfoPath: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         beverageCollectionView.delegate = self
         beverageCollectionView.dataSource = self
+        drinkInfoPath.text = drinkPath
     }
 
 }
@@ -29,7 +34,8 @@ extension BeveragesViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let beverageCell = collectionView.dequeueReusableCell(withReuseIdentifier: Keyword.BeveragesView.beverageCell.reuseId, for: indexPath) as? BeverageCell else { return UICollectionViewCell() }
-        beverageCell.priceLabel.text = "\(indexPath.row + 1)번째 음료"
+        beverageCell.beverageNameKR.text = "\(indexPath.row + 1)번째 음료"
+        beverageCell.beverageNameEN.text = "\(indexPath.row + 1)번째 음료"
         return beverageCell
     }
     
@@ -52,6 +58,6 @@ extension BeveragesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
+        return UIEdgeInsets(top: 0, left: 15, bottom: 20, right: 15)
     }
 }

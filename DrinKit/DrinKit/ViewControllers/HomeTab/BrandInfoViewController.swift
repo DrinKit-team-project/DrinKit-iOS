@@ -12,56 +12,36 @@ class BrandInfoViewController: UIViewController {
     
     //MARK: - UI
     @IBOutlet weak var brandImage: UIImageView!
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var categoryTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
+        categoryTableView.delegate = self
+        categoryTableView.dataSource = self
+        
     }
     
     //MARK: - Prepare for BeveragesView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let beveragesVC = segue.destination as? BeveragesViewController else { return }
-        beveragesVC.navigationItem.rightBarButtonItem?.title = "Brand-Category-Beverage"
+        beveragesVC.drinkPath = "Brand-Category-Beverage"
     }
 
 }
 
-// MARK: - CategoryCollectionView
-extension BrandInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+// MARK: - CategoryTableView
+extension BrandInfoViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: Keyword.BrandInfoView.categoryCell.reuseId, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-        menuCell.categoryName.text = "\(indexPath.row + 1)번째 카테고리"
-        menuCell.layer.borderWidth = 0.5
-        menuCell.layer.borderColor = UIColor.init(named: "CutomLightBlue")?.cgColor
-        return menuCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let categoryCell = categoryTableView.dequeueReusableCell(withIdentifier: Keyword.BrandInfoView.categoryCell.reuseId, for: indexPath) as? CategoryCell else { return UITableViewCell() }
+        categoryCell.categoryKR.text = "\(indexPath.row + 1)번째 카테고리"
+        categoryCell.categoryEN.text = "Category"
+        return categoryCell
     }
     
-}
-
-// MARK: - CategoryCollectionViewFlowLayout
-extension BrandInfoViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = UIScreen.main.bounds.width / 2.0
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
 }

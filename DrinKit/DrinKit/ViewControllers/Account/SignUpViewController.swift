@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Alamofire
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -33,7 +36,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func setBasicInfoTexts() {
-        let userBasicInfo = UserInformation.sharedInstance.basicInformation
+        let userBasicInfo = UserInfo.sharedInstance
         profileImage.image = userBasicInfo.profileImage
         userNameLabel.text = userBasicInfo.name
         userEmailLabel.text = userBasicInfo.email
@@ -46,13 +49,24 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpBtnTouched(_ sender: UIButton) {
         guard let userNickname = nicknameTextField.text else { return }
-        UserInformation.sharedInstance.setNickname(userNickname)
+        UserInfo.sharedInstance.setNickName(userNickname)
+        Alamofire.request(
+            "ec2-13-125-126-150.ap-northeast-2.compute.amazonaws.com/social",
+            method: .post,
+            parameters: UserInfo.sharedInstance.parameters,
+            encoding: URLEncoding.default,
+            headers: ["Content-Type":"application/json"])
+            .responseJSON { (response) in
+                guard let data = response.result.value as? [String:Any] else { return }
+                guard let userJWT = data["token"] as? String else { return }
+                UserInfo.sharedInstance.setJWTToken(userJWT)
+                print(UserInfo.sharedInstance.JWTToken)
+        }
         guard let homeTabbarController = storyboard?.instantiateViewController(withIdentifier: "Main") as? UITabBarController else { return }
         self.present(homeTabbarController, animated: true, completion: nil)
     }
     
 }
-
 
 // MARK: - Edit Profile Image
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -71,5 +85,4 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
             dismiss(animated: true, completion: nil)
         }
     }
-    
 }

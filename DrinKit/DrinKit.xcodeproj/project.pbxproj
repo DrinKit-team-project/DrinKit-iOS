@@ -14,7 +14,7 @@
 		044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C226E2109999500E69DB2 /* MyDrinkViewController.swift */; };
 		044C2272210999F600E69DB2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C2271210999F600E69DB2 /* LogInViewController.swift */; };
 		044C2274210999FF00E69DB2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C2273210999FF00E69DB2 /* SignUpViewController.swift */; };
-		045CC94C21057B46004450B7 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94B21057B46004450B7 /* UIFont+.swift */; };
+		045CC94C21057B46004450B7 /* Inspectable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94B21057B46004450B7 /* Inspectable+.swift */; };
 		045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94D21057E4A004450B7 /* HomeViewController.swift */; };
 		045CC95321059A2C004450B7 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC95221059A2C004450B7 /* BrandCell.swift */; };
 		04B72BCE210034850024326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCD210034850024326D /* AppDelegate.swift */; };
@@ -24,6 +24,7 @@
 		04B72BE3210034860024326D /* DrinKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BE2210034860024326D /* DrinKitTests.swift */; };
 		04B72BEE210034860024326D /* DrinKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BED210034860024326D /* DrinKitUITests.swift */; };
 		04BDD75B210AE5B50032CAE4 /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD75A210AE5B50032CAE4 /* NSLayoutConstraint+.swift */; };
+		04CD311C2121323600B5294F /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CD311B2121323400B5294F /* Raleway-Medium.ttf */; };
 		04D0CF1C210C46B5004C14F7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0CF1B210C46B5004C14F7 /* Keyword.swift */; };
 		04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D67AFC2108829200B94C99 /* ReviewCell.swift */; };
 		04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */; };
@@ -31,8 +32,19 @@
 		04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */; };
 		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
 		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
+		04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */; };
+		04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */; };
+		04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */; };
+		04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */; };
+		04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */; };
+		04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */; };
+		04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */; };
+		04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */; };
+		04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */; };
+		04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
 		04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E985392112B0B6009BB191 /* UserInfo.swift */; };
+		04F297E7212196550008A5A6 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */; };
 		20A1FF55D3EFA87B858E9570 /* Pods_DrinKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */; };
 		49CBB2B56E20EAA6BDE42106 /* Pods_DrinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F0A4676CCBF47438D32DC /* Pods_DrinKit.framework */; };
 		8EF6A9DE2109DE64001C1AE1 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */; };
@@ -64,7 +76,7 @@
 		044C226E2109999500E69DB2 /* MyDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkViewController.swift; sourceTree = "<group>"; };
 		044C2271210999F600E69DB2 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		044C2273210999FF00E69DB2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		045CC94B21057B46004450B7 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		045CC94B21057B46004450B7 /* Inspectable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspectable+.swift"; sourceTree = "<group>"; };
 		045CC94D21057E4A004450B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		045CC95221059A2C004450B7 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
 		048B2C4D211038CD0000BA9D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -81,6 +93,7 @@
 		04B72BED210034860024326D /* DrinKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinKitUITests.swift; sourceTree = "<group>"; };
 		04B72BEF210034860024326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BDD75A210AE5B50032CAE4 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
+		04CD311B2121323400B5294F /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		04D0CF1B210C46B5004C14F7 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		04D67AFC2108829200B94C99 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -88,8 +101,19 @@
 		04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
+		04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
 		04E985392112B0B6009BB191 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		17D140E661F5DC8D0C15CDF6 /* Pods-DrinKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit.release.xcconfig"; sourceTree = "<group>"; };
 		2E8C7EFDCC326A2782DA7A03 /* Pods-DrinKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitTests/Pods-DrinKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E96BBEFCBB0C388BFE4890E /* Pods-DrinKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitUITests/Pods-DrinKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,7 +234,7 @@
 		045CC94A21057B39004450B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				045CC94B21057B46004450B7 /* UIFont+.swift */,
+				045CC94B21057B46004450B7 /* Inspectable+.swift */,
 				04BDD75A210AE5B50032CAE4 /* NSLayoutConstraint+.swift */,
 			);
 			path = Extensions;
@@ -252,6 +276,7 @@
 		04B72BCC210034850024326D /* DrinKit */ = {
 			isa = PBXGroup;
 			children = (
+				04D8096A211EF43C0011E4F1 /* Resources */,
 				044C226121096FF100E69DB2 /* Utilities */,
 				044C2270210999B800E69DB2 /* Storyboards */,
 				04E985382112B093009BB191 /* Model */,
@@ -282,6 +307,25 @@
 				04B72BEF210034860024326D /* Info.plist */,
 			);
 			path = DrinKitUITests;
+			sourceTree = "<group>";
+		};
+		04D8096A211EF43C0011E4F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */,
+				04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */,
+				04CD311B2121323400B5294F /* Raleway-Medium.ttf */,
+				04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */,
+				04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */,
+				04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */,
+				04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */,
+				04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */,
+				04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */,
+				04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */,
+				04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */,
+				04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		04E985382112B093009BB191 /* Model */ = {
@@ -424,9 +468,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */,
+				04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */,
+				04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */,
+				04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */,
+				04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */,
+				04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */,
+				04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */,
+				04CD311C2121323600B5294F /* Raleway-Medium.ttf in Resources */,
+				04F297E7212196550008A5A6 /* Raleway-SemiBold.ttf in Resources */,
 				044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */,
+				04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */,
 				04B72BD5210034860024326D /* Assets.xcassets in Resources */,
+				04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */,
+				04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				04B72BD3210034850024326D /* HomeTab.storyboard in Resources */,
 				044C22672109978600E69DB2 /* Main.storyboard in Resources */,
 			);
@@ -492,6 +548,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -499,6 +556,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -536,7 +594,7 @@
 			files = (
 				04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */,
 				04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */,
-				045CC94C21057B46004450B7 /* UIFont+.swift in Sources */,
+				045CC94C21057B46004450B7 /* Inspectable+.swift in Sources */,
 				04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */,
 				04BDD75B210AE5B50032CAE4 /* NSLayoutConstraint+.swift in Sources */,
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,

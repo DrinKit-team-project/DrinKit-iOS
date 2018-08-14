@@ -13,6 +13,7 @@ import FBSDKLoginKit
 class LogInViewController: UIViewController {
     
     
+    @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
     @IBOutlet weak var kakaoLoginBtn: KOLoginButton!
     
@@ -23,7 +24,8 @@ class LogInViewController: UIViewController {
         if FBSDKAccessToken.currentAccessTokenIsActive() {
             FBSDKLoginManager().logOut()
         }
-        
+        logoView.layer.borderWidth = 3
+        logoView.layer.borderColor = UIColor.white.cgColor
     }
      
 }
@@ -34,23 +36,12 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if (error != nil) {
             print(error.localizedDescription)
-            
         } else if result.isCancelled {
             print("User cancelled login.")
         } else {
-//            guard let grantedPermissions = result.grantedPermissions else { return }
-//            guard let declinedPermissions = result.declinedPermissions else { return }
-//            guard let accessToken = result.token else { return }
-//            print("Logged in!")
-//            print("grantedPermissions = \(grantedPermissions), declinedPermissions = \(declinedPermissions), accessToken = \(accessToken.tokenString)")
-//            print("FaceBook user ID = " + accessToken.userID!)
             getFBUserData()
         }
         
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        //LogOut Action
     }
     
     private func getFBUserData(){
@@ -65,8 +56,9 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                     guard let userProfileImg = UIImage(data: imageData),
                           let userName = result["name"] as? String,
                           let userEmail = result["email"] as? String else { return }
-                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
-                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                    guard let session = FBSDKAccessToken.current() else { return }
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail)
+                    UserInfo.sharedInstance.setParameters(.FACEBOOK, session.userID, session.tokenString)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
             })
@@ -81,6 +73,10 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                 break
             }
         }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //LogOut Action
     }
     
 }
@@ -104,9 +100,10 @@ extension LogInViewController {
                           let data = try? Data(contentsOf: imageURL) else { return }
                     guard let userProfileImg = UIImage(data: data),
                           let userName = user.nickname,
-                          let userEmail = user.account?.email else { return }
-                    let userBasicInfo = BasicInformation(userProfileImg, userName, userEmail)
-                    UserInformation.sharedInstance.setBasicInformation(userBasicInfo)
+                          let userEmail = user.account?.email,
+                          let userID = user.id else { return }
+                    UserInfo.sharedInstance.setBasicInformation(userProfileImg, userName, userEmail)
+                    UserInfo.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })
             } else {

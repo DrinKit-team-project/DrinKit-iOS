@@ -9,33 +9,65 @@
 import Foundation
 import UIKit
 
-import Foundation
-import UIKit
+struct UserInfo {
+    
+    enum Provider {
 
-typealias BasicInformation = (profileImage: UIImage, name: String, email: String)
+        case FACEBOOK
+        case KAKAO
+        case none
 
-class UserInformation {
-    
-    var basicInformation: BasicInformation
-    var nickName: String
-    
-    static let sharedInstance: UserInformation = UserInformation()
-    
-    func setBasicInformation(_ userBasicInformation: BasicInformation) {
-        basicInformation = userBasicInformation
+        var value: String {
+            switch self {
+            case .FACEBOOK: return "FACEBOOK"
+            case .KAKAO: return "KAKAO"
+            case .none: return "None"
+            }
+        }
     }
     
-    func setNickname(_ userNickname: String) {
-        nickName = userNickname
-    }
+    // BasicInfo
+    private(set) var profileImage: UIImage
+    private(set) var name: String
+    private(set) var email: String
+    private(set) var provider: Provider
+    private(set) var parameters: [String:Any]
     
-    func isEmpty() -> Bool {
-        return basicInformation == (UIImage(), "", "") && nickName == ""
-    }
+    // AdditionalInfo
+    private var nickName: String
+    private(set) var JWTToken: String
+    
+    static var sharedInstance: UserInfo = UserInfo()
     
     private init() {
-        basicInformation = (UIImage(), "", "")
+        profileImage = UIImage()
+        name = ""
+        email = ""
+        provider = .none
+        parameters = [:]
         nickName = ""
+        JWTToken = ""
+    }
+    
+    mutating func setBasicInformation(_ userProfileImage: UIImage, _ userName: String, _ userNameEmail: String) {
+        profileImage = userProfileImage
+        name = userName
+        email = userNameEmail
+    }
+    
+    mutating func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
+        provider = userProvider
+        parameters["provider"] = userProvider.value
+        parameters["id"] = Int(userID)
+        parameters["token"] = userToken
+    }
+    
+    mutating func setNickName(_ userNickName: String) {
+        nickName = userNickName
+    }
+    
+    mutating func setJWTToken(_ userJWT: String) {
+        JWTToken = userJWT
     }
     
 }

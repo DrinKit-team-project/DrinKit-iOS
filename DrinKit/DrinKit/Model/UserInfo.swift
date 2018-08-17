@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct UserInfo {
+class UserInfo {
     
     enum Provider {
 
@@ -27,13 +27,13 @@ struct UserInfo {
     }
     
     // BasicInfo
-    private(set) var profileImage: UIImage
     private(set) var name: String
     private(set) var email: String
     private(set) var provider: Provider
     private(set) var parameters: [String:Any]
     
     // AdditionalInfo
+    private(set) var profileImage: UIImage
     private var nickName: String
     private(set) var JWTToken: String
     
@@ -49,24 +49,27 @@ struct UserInfo {
         JWTToken = ""
     }
     
-    mutating func setBasicInformation(_ userProfileImage: UIImage, _ userName: String, _ userNameEmail: String) {
-        profileImage = userProfileImage
+    func setBasicInformation(_ userName: String, _ userNameEmail: String) {
         name = userName
         email = userNameEmail
     }
     
-    mutating func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
+    func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
         provider = userProvider
         parameters["provider"] = userProvider.value
         parameters["id"] = Int(userID)
         parameters["token"] = userToken
     }
     
-    mutating func setNickName(_ userNickName: String) {
+    func setProfileImage(_ userProfileImage: UIImage) {
+        profileImage = userProfileImage
+    }
+ 
+    func setNickName(_ userNickName: String) {
         nickName = userNickName
     }
     
-    mutating func setJWTToken(_ userJWT: String) {
+    func setJWTToken(_ userJWT: String) {
         JWTToken = userJWT
     }
     

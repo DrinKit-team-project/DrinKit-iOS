@@ -6,9 +6,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.33.0):
+  - FBSDKCoreKit (4.35.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.33.0):
+  - FBSDKLoginKit (4.35.0):
     - FBSDKCoreKit
   - KakaoOpenSDK (1.9.0):
     - KakaoOpenSDK/KakaoCommon (= 1.9.0)
@@ -49,11 +49,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
-  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
+  FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
   KakaoOpenSDK: 6d658510bf1e51dd8765ad000130138407c72612
   SwiftInstagram: 5f60415e522d1a7721073eb3a66f254a7c40fd63
 
-PODFILE CHECKSUM: d10df78c6d6819a5a88fc020f9cd05ec14511ea6
+PODFILE CHECKSUM: b7cbd981e7444192e9242f4a1f9041678c8fab8e
 
 COCOAPODS: 1.5.2

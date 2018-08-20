@@ -97,9 +97,6 @@ extension LogInViewController {
                 print("Success")
                 KOSessionTask.userMeTask(completion: { (error, me) in
                     guard let user = me else { return }
-//                    guard let imageURL = user.profileImageURL,
-//                          let data = try? Data(contentsOf: imageURL),
-//                          let userProfileImg = UIImage(data: data) else { return }
                     guard let userName = user.nickname,
                           let userEmail = user.account?.email,
                           let userID = user.id else { return }

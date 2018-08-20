@@ -29,7 +29,7 @@ class UserInfo {
     // BasicInfo
     private(set) var name: String
     private(set) var email: String
-    private(set) var provider: Provider
+    private var provider: Provider
     private(set) var parameters: [String:Any]
     
     // AdditionalInfo
@@ -57,7 +57,7 @@ class UserInfo {
     func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
         provider = userProvider
         parameters["provider"] = userProvider.value
-        parameters["id"] = Int(userID)
+        parameters["id"] = userID
         parameters["token"] = userToken
     }
     

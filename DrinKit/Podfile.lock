@@ -29,6 +29,7 @@ PODS:
   - SwiftInstagram (1.1.1):
     - SwiftInstagram/Core (= 1.1.1)
   - SwiftInstagram/Core (1.1.1)
+  - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - KakaoOpenSDK (~> 1.9)
   - SwiftInstagram (~> 1.1.1)
+  - XLPagerTabStrip (~> 8.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -45,6 +47,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - KakaoOpenSDK
     - SwiftInstagram
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -53,7 +56,8 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
   KakaoOpenSDK: 6d658510bf1e51dd8765ad000130138407c72612
   SwiftInstagram: 5f60415e522d1a7721073eb3a66f254a7c40fd63
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: b7cbd981e7444192e9242f4a1f9041678c8fab8e
+PODFILE CHECKSUM: 3253a1b695b2b805696c569e28e83785166867f6
 
 COCOAPODS: 1.5.2

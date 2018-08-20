@@ -50,23 +50,26 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpBtnTouched(_ sender: UIButton) {
         guard let userNickname = nicknameTextField.text else { return }
         UserInfo.sharedInstance.setNickName(userNickname)
-        Alamofire.request(
-            "ec2-13-125-126-150.ap-northeast-2.compute.amazonaws.com/social",
-            method: .post,
-            parameters: UserInfo.sharedInstance.parameters,
-            encoding: URLEncoding.default,
-            headers: ["Content-Type":"application/json"])
-            .responseJSON { (response) in
-                guard let data = response.result.value as? [String:Any] else { return }
-                guard let userJWT = data["token"] as? String else { return }
-                UserInfo.sharedInstance.setJWTToken(userJWT)
-                print(UserInfo.sharedInstance.JWTToken)
-        }
+        print(UserInfo.sharedInstance.parameters)
+//        Alamofire.request(
+//            "http://ec2-13-125-230-80.ap-northeast-2.compute.amazonaws.com:8080/social",
+//            method: .post ,
+//            parameters: UserInfo.sharedInstance.parameters,
+//            encoding: JSONEncoding.default,
+//            headers: ["Content-Type":"application/json"])
+//            .responseJSON { (response) in
+//                guard let data = response.result.value as? [String:Any] else { return }
+//                guard let userJWT = data["token"] as? String else { return }
+//                UserInfo.sharedInstance.setJWTToken(userJWT)
+//                print(UserInfo.sharedInstance.JWTToken)
+//                print(UserInfo.sharedInstance)
+//        }
         guard let homeTabbarController = storyboard?.instantiateViewController(withIdentifier: "Main") as? UITabBarController else { return }
         self.present(homeTabbarController, animated: true, completion: nil)
     }
     
 }
+
 
 // MARK: - Edit Profile Image
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

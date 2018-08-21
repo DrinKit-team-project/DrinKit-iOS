@@ -11,17 +11,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NotoSansCJKkr-Bold.otf">
-            <string>NotoSansCJKkr-Bold</string>
+        <array key="NotoSans-Bold.otf">
+            <string>NotoSansKR-Bold</string>
         </array>
-        <array key="NotoSansCJKkr-Light.otf">
-            <string>NotoSansCJKkr-Light</string>
+        <array key="NotoSans-Light.otf">
+            <string>NotoSansKR-Light</string>
         </array>
-        <array key="NotoSansCJKkr-Regular.otf">
-            <string>NotoSansCJKkr-Regular</string>
+        <array key="NotoSans-Regular.otf">
+            <string>NotoSansKR-Regular</string>
         </array>
-        <array key="NotoSansCJKkr-Thin.otf">
-            <string>NotoSansCJKkr-Thin</string>
+        <array key="NotoSans-Thin.otf">
+            <string>NotoSansKR-Thin</string>
         </array>
         <array key="Raleway-Bold.ttf">
             <string>Raleway-Bold</string>
@@ -93,8 +93,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한 눈에 보는 카페 메뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfw-kv-uU4">
-                                <rect key="frame" x="123.00000000000001" y="387.33333333333331" width="169.33333333333337" height="26.666666666666686"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Light" family="Noto Sans CJK KR" pointSize="18"/>
+                                <rect key="frame" x="125.00000000000001" y="387.33333333333331" width="165.33333333333337" height="26.666666666666686"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -203,7 +203,7 @@
                                     <constraint firstAttribute="height" constant="30" id="OHi-qa-cPx"/>
                                 </constraints>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -217,7 +217,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6hB-vr-zSa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="17"/>
                                 <state key="normal" title="완료">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -253,7 +253,7 @@
                                     <constraint firstAttribute="width" constant="82" id="V5y-HM-cWQ"/>
                                     <constraint firstAttribute="height" constant="20" id="wS2-TD-Ygo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Thin" family="Noto Sans CJK KR" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Thin" family="Noto Sans KR" pointSize="14"/>
                                 <state key="normal" title="사진 편집하기">
                                     <color key="titleColor" name="EditingPhoto"/>
                                 </state>
@@ -262,7 +262,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4we-YQ-Zgh">
-                                <rect key="frame" x="66.333333333333343" y="415.66666666666669" width="281.66666666666663" height="25"/>
+                                <rect key="frame" x="66.333333333333314" y="415.66666666666669" width="282" height="25"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-IB-jvv" userLabel="UserNameView">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="25"/>
@@ -281,14 +281,14 @@
                                                     <constraint firstAttribute="width" constant="80" id="4sA-3R-tBg"/>
                                                     <constraint firstAttribute="height" constant="25" id="5Ws-Ov-SH9"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2yM-8v-Aq2" userLabel="UserEmailView">
-                                        <rect key="frame" x="115.00000000000001" y="0.0" width="166.66666666666669" height="25"/>
+                                        <rect key="frame" x="115" y="0.0" width="167" height="25"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-lV-T0u">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -299,13 +299,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DrinKit@email.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-qj-evz">
-                                                <rect key="frame" x="30" y="0.0" width="136.66666666666666" height="25"/>
+                                                <rect key="frame" x="30" y="0.0" width="137" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="A1n-ne-Fe9"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Tpi-Ma-opK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>

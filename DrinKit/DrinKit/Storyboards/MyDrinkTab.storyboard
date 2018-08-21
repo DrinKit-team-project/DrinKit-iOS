@@ -12,17 +12,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NotoSansCJKkr-Bold.otf">
-            <string>NotoSansCJKkr-Bold</string>
+        <array key="NotoSans-Bold.otf">
+            <string>NotoSansKR-Bold</string>
         </array>
-        <array key="NotoSansCJKkr-Light.otf">
-            <string>NotoSansCJKkr-Light</string>
+        <array key="NotoSans-Light.otf">
+            <string>NotoSansKR-Light</string>
         </array>
-        <array key="NotoSansCJKkr-Medium.otf">
-            <string>NotoSansCJKkr-Medium</string>
+        <array key="NotoSans-Medium.otf">
+            <string>NotoSansKR-Medium</string>
         </array>
-        <array key="NotoSansCJKkr-Regular.otf">
-            <string>NotoSansCJKkr-Regular</string>
+        <array key="NotoSans-Regular.otf">
+            <string>NotoSansKR-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="27" id="ABN-K8-7U4"/>
                                     <constraint firstAttribute="width" constant="50" id="BbN-5d-T0V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -152,7 +152,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="8qh-If-exz"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="14"/>
                                                                     <color key="textColor" name="Background"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -163,7 +163,7 @@
                                                                         <constraint firstAttribute="height" constant="60" id="XyK-Dh-KHl"/>
                                                                     </constraints>
                                                                     <color key="textColor" name="BeverageNameEN"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
                                                             </subviews>
@@ -235,7 +235,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-Kc-44a">
                                                     <rect key="frame" x="103" y="150" width="37" height="30"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
                                                     <color key="textColor" name="Price"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -244,7 +244,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="KFv-h7-JjP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Light" family="Noto Sans CJK KR" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -253,7 +253,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="g9a-ct-7tj"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Light" family="Noto Sans CJK KR" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="12"/>
                                                     <color key="textColor" name="BeverageNameEN"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

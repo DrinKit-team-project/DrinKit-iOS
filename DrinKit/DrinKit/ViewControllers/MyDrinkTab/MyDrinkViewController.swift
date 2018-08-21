@@ -31,7 +31,7 @@ class MyDrinkViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = UIColor.init(named: "ButtonBarBackground")!
         settings.style.buttonBarItemBackgroundColor = UIColor.init(named: "ButtonBarBackground")!
         settings.style.selectedBarBackgroundColor = UIColor.init(named: "Background")!
-        settings.style.buttonBarItemFont = UIFont.init(name: "NotoSansCJKkr-Medium", size: 16)!
+        settings.style.buttonBarItemFont = UIFont.init(name: "NotoSansKR-Medium", size: 16)!
         
         settings.style.selectedBarHeight = 3.0
         settings.style.buttonBarMinimumLineSpacing = 0

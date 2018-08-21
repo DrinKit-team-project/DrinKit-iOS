@@ -18,6 +18,13 @@
 		045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC94D21057E4A004450B7 /* HomeViewController.swift */; };
 		045CC95321059A2C004450B7 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC95221059A2C004450B7 /* BrandCell.swift */; };
 		04AF6F3A212BA70A0033AB84 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF6F39212BA70A0033AB84 /* AccountManager.swift */; };
+		04AF6F44212BD1AB0033AB84 /* NotoSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F3D212BD1A70033AB84 /* NotoSans-Medium.otf */; };
+		04AF6F45212BD1AB0033AB84 /* NotoSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F3E212BD1A80033AB84 /* NotoSans-Regular.otf */; };
+		04AF6F46212BD1AB0033AB84 /* NotoSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F3F212BD1A90033AB84 /* NotoSans-Bold.otf */; };
+		04AF6F47212BD1AB0033AB84 /* NotoSans-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F40212BD1A90033AB84 /* NotoSans-DemiLight.otf */; };
+		04AF6F48212BD1AB0033AB84 /* NotoSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F41212BD1A90033AB84 /* NotoSans-Black.otf */; };
+		04AF6F49212BD1AB0033AB84 /* NotoSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F42212BD1AA0033AB84 /* NotoSans-Thin.otf */; };
+		04AF6F4A212BD1AB0033AB84 /* NotoSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04AF6F43212BD1AB0033AB84 /* NotoSans-Light.otf */; };
 		04B72BCE210034850024326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B72BCD210034850024326D /* AppDelegate.swift */; };
 		04B72BD3210034850024326D /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD1210034850024326D /* HomeTab.storyboard */; };
 		04B72BD5210034860024326D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B72BD4210034860024326D /* Assets.xcassets */; };
@@ -34,15 +41,6 @@
 		04D6B7D221070F360059DA23 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D121070F360059DA23 /* BeveragesViewController.swift */; };
 		04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B7D3210710320059DA23 /* BeverageCell.swift */; };
 		04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */; };
-		04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */; };
-		04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */; };
-		04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */; };
-		04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */; };
-		04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */; };
-		04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */; };
-		04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */; };
-		04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */; };
-		04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */; };
 		04E012C6212A8C7E00D1A2C7 /* MyDrinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E012C5212A8C7E00D1A2C7 /* MyDrinkListViewController.swift */; };
 		04E012C8212A8C9500D1A2C7 /* MyReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E012C7212A8C9500D1A2C7 /* MyReviewListViewController.swift */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
@@ -84,6 +82,13 @@
 		045CC95221059A2C004450B7 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
 		048B2C4D211038CD0000BA9D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04AF6F39212BA70A0033AB84 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		04AF6F3D212BD1A70033AB84 /* NotoSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.otf"; sourceTree = "<group>"; };
+		04AF6F3E212BD1A80033AB84 /* NotoSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.otf"; sourceTree = "<group>"; };
+		04AF6F3F212BD1A90033AB84 /* NotoSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.otf"; sourceTree = "<group>"; };
+		04AF6F40212BD1A90033AB84 /* NotoSans-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-DemiLight.otf"; sourceTree = "<group>"; };
+		04AF6F41212BD1A90033AB84 /* NotoSans-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Black.otf"; sourceTree = "<group>"; };
+		04AF6F42212BD1AA0033AB84 /* NotoSans-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Thin.otf"; sourceTree = "<group>"; };
+		04AF6F43212BD1AB0033AB84 /* NotoSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Light.otf"; sourceTree = "<group>"; };
 		04B72BCA210034850024326D /* DrinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B72BCD210034850024326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B72BD2210034850024326D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeTab.storyboard; sourceTree = "<group>"; };
@@ -106,15 +111,6 @@
 		04D6B7D121070F360059DA23 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		04D6B7D3210710320059DA23 /* BeverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCell.swift; sourceTree = "<group>"; };
 		04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
-		04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
-		04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
-		04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
-		04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
-		04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
-		04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
-		04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
-		04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
-		04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		04E012C5212A8C7E00D1A2C7 /* MyDrinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkListViewController.swift; sourceTree = "<group>"; };
 		04E012C7212A8C9500D1A2C7 /* MyReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewListViewController.swift; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
@@ -320,18 +316,16 @@
 		04D8096A211EF43C0011E4F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04AF6F41212BD1A90033AB84 /* NotoSans-Black.otf */,
+				04AF6F3F212BD1A90033AB84 /* NotoSans-Bold.otf */,
+				04AF6F40212BD1A90033AB84 /* NotoSans-DemiLight.otf */,
+				04AF6F43212BD1AB0033AB84 /* NotoSans-Light.otf */,
+				04AF6F3D212BD1A70033AB84 /* NotoSans-Medium.otf */,
+				04AF6F3E212BD1A80033AB84 /* NotoSans-Regular.otf */,
+				04AF6F42212BD1AA0033AB84 /* NotoSans-Thin.otf */,
 				04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */,
 				04D8096B211EF6450011E4F1 /* Raleway-Bold.ttf */,
 				04CD311B2121323400B5294F /* Raleway-Medium.ttf */,
-				04D8096F211EF6740011E4F1 /* NotoSansCJKkr-Black.otf */,
-				04D80970211EF6750011E4F1 /* NotoSansCJKkr-Bold.otf */,
-				04D80971211EF6760011E4F1 /* NotoSansCJKkr-DemiLight.otf */,
-				04D80972211EF6760011E4F1 /* NotoSansCJKkr-Light.otf */,
-				04D80973211EF6770011E4F1 /* NotoSansCJKkr-Medium.otf */,
-				04D80974211EF6770011E4F1 /* NotoSansCJKkr-Regular.otf */,
-				04D80975211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf */,
-				04D8096D211EF6730011E4F1 /* NotoSansMonoCJKkr-Bold.otf */,
-				04D8096E211EF6740011E4F1 /* NotoSansMonoCJKkr-Regular.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -477,22 +471,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B72BD8210034860024326D /* LaunchScreen.storyboard in Resources */,
-				04D80978211EF6780011E4F1 /* NotoSansCJKkr-Black.otf in Resources */,
-				04D8097C211EF6780011E4F1 /* NotoSansCJKkr-Medium.otf in Resources */,
-				04D80979211EF6780011E4F1 /* NotoSansCJKkr-Bold.otf in Resources */,
+				04AF6F48212BD1AB0033AB84 /* NotoSans-Black.otf in Resources */,
 				04D8096C211EF6450011E4F1 /* Raleway-Bold.ttf in Resources */,
-				04D80976211EF6780011E4F1 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */,
-				04D8097E211EF6780011E4F1 /* NotoSansCJKkr-Thin.otf in Resources */,
+				04AF6F45212BD1AB0033AB84 /* NotoSans-Regular.otf in Resources */,
 				04CD311C2121323600B5294F /* Raleway-Medium.ttf in Resources */,
+				04AF6F4A212BD1AB0033AB84 /* NotoSans-Light.otf in Resources */,
 				04F297E7212196550008A5A6 /* Raleway-SemiBold.ttf in Resources */,
 				044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */,
-				04D8097B211EF6780011E4F1 /* NotoSansCJKkr-Light.otf in Resources */,
+				04AF6F49212BD1AB0033AB84 /* NotoSans-Thin.otf in Resources */,
 				04B72BD5210034860024326D /* Assets.xcassets in Resources */,
-				04D8097D211EF6780011E4F1 /* NotoSansCJKkr-Regular.otf in Resources */,
-				04D8097A211EF6780011E4F1 /* NotoSansCJKkr-DemiLight.otf in Resources */,
-				04D80977211EF6780011E4F1 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
+				04AF6F46212BD1AB0033AB84 /* NotoSans-Bold.otf in Resources */,
+				04AF6F44212BD1AB0033AB84 /* NotoSans-Medium.otf in Resources */,
 				04B72BD3210034850024326D /* HomeTab.storyboard in Resources */,
+				04AF6F47212BD1AB0033AB84 /* NotoSans-DemiLight.otf in Resources */,
 				044C22672109978600E69DB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,7 +724,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -786,7 +778,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

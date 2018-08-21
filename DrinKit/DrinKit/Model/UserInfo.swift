@@ -9,68 +9,20 @@
 import Foundation
 import UIKit
 
-class UserInfo {
+struct UserInfo: Codable {
     
-    enum Provider {
-
-        case FACEBOOK
-        case KAKAO
-        case none
-
-        var value: String {
-            switch self {
-            case .FACEBOOK: return "FACEBOOK"
-            case .KAKAO: return "KAKAO"
-            case .none: return "None"
-            }
-        }
-    }
+    var name: String
+    var email: String
+    var provider: String
+    var nickName: String
+    var JWTToken: String
     
-    // BasicInfo
-    private(set) var name: String
-    private(set) var email: String
-    private var provider: Provider
-    private(set) var parameters: [String:Any]
-    
-    // AdditionalInfo
-    private(set) var profileImage: UIImage
-    private var nickName: String
-    private(set) var JWTToken: String
-    
-    static var sharedInstance: UserInfo = UserInfo()
-    
-    private init() {
-        profileImage = UIImage()
+    init() {
         name = ""
         email = ""
-        provider = .none
-        parameters = [:]
+        provider = ""
         nickName = ""
         JWTToken = ""
-    }
-    
-    func setBasicInformation(_ userName: String, _ userNameEmail: String) {
-        name = userName
-        email = userNameEmail
-    }
-    
-    func setParameters(_ userProvider: Provider, _ userID: String, _ userToken: String) {
-        provider = userProvider
-        parameters["provider"] = userProvider.value
-        parameters["id"] = userID
-        parameters["token"] = userToken
-    }
-    
-    func setProfileImage(_ userProfileImage: UIImage) {
-        profileImage = userProfileImage
-    }
- 
-    func setNickName(_ userNickName: String) {
-        nickName = userNickName
-    }
-    
-    func setJWTToken(_ userJWT: String) {
-        JWTToken = userJWT
     }
     
 }

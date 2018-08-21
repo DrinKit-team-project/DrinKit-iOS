@@ -58,8 +58,8 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
                           let userName = result["name"] as? String,
                           let userEmail = result["email"] as? String else { return }
                     guard let session = FBSDKAccessToken.current() else { return }
-                    UserInfo.sharedInstance.setBasicInformation(userName, userEmail)
-                    UserInfo.sharedInstance.setParameters(.FACEBOOK, session.userID, session.tokenString)
+                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail)
+                    AccountManager.sharedInstance.setParameters(.FACEBOOK, session.userID, session.tokenString)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
             })
@@ -100,8 +100,8 @@ extension LogInViewController {
                     guard let userName = user.nickname,
                           let userEmail = user.account?.email,
                           let userID = user.id else { return }
-                    UserInfo.sharedInstance.setBasicInformation(userName, userEmail)
-                    UserInfo.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
+                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail)
+                    AccountManager.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })
             } else {

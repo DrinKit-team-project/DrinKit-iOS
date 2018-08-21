@@ -36,10 +36,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func setBasicInfoTexts() {
-        let userBasicInfo = UserInfo.sharedInstance
+        let userBasicInfo = AccountManager.sharedInstance
         profileImage.image = userBasicInfo.profileImage
-        userNameLabel.text = userBasicInfo.name
-        userEmailLabel.text = userBasicInfo.email
+        userNameLabel.text = AccountManager.sharedInstance.userInfo.name
+        userEmailLabel.text = AccountManager.sharedInstance.userInfo.email
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -49,8 +49,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpBtnTouched(_ sender: UIButton) {
         guard let userNickname = nicknameTextField.text else { return }
-        UserInfo.sharedInstance.setNickName(userNickname)
-        print(UserInfo.sharedInstance.parameters)
+        AccountManager.sharedInstance.setNickName(userNickname)
+        print(AccountManager.sharedInstance.parameters)
 //        Alamofire.request(
 //            "http://ec2-13-125-230-80.ap-northeast-2.compute.amazonaws.com:8080/social",
 //            method: .post ,
@@ -64,6 +64,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 //                print(UserInfo.sharedInstance.JWTToken)
 //                print(UserInfo.sharedInstance)
 //        }
+        AccountManager.sharedInstance.save()
         guard let homeTabbarController = storyboard?.instantiateViewController(withIdentifier: "Main") as? UITabBarController else { return }
         self.present(homeTabbarController, animated: true, completion: nil)
     }

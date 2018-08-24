@@ -32,8 +32,7 @@ class AccountManager {
     private(set) var userInfo = UserInfo()
     private(set) var parameters: [String:Any] = [:]
     
-    private init() {
-    }
+    private init() { }
     
     func setBasicInformation(_ userName: String, _ userNameEmail: String) {
         userInfo.name = userName
@@ -72,6 +71,5 @@ class AccountManager {
         userInfo = loadedUserInfo
         return true
     }
-
     
 }

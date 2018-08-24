@@ -14,7 +14,13 @@ class BeverageCell: UICollectionViewCell {
     @IBOutlet weak var beverageNameEN: UILabel!
     @IBOutlet weak var beverageImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var myDrinkBtn: UIButton!
     
-    @IBAction func myDrinkBtn(_ sender: UIButton) {
+    @IBAction func myDrinkBtnTouched(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            myDrinkBtn.isSelected = true
+        }
     }
 }

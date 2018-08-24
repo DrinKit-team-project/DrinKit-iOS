@@ -53,7 +53,7 @@
                                 <cells/>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-Yt-WHr">
-                                <rect key="frame" x="147" y="60" width="80" height="80"/>
+                                <rect key="frame" x="147.5" y="60" width="80" height="80"/>
                                 <color key="backgroundColor" name="BeverageNameEN"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="1FG-a7-ulg"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8x-iX-yrK">
-                                <rect key="frame" x="162" y="150" width="50" height="27"/>
+                                <rect key="frame" x="162.5" y="150" width="50" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="ABN-K8-7U4"/>
                                     <constraint firstAttribute="width" constant="50" id="BbN-5d-T0V"/>
@@ -119,17 +119,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-JU-I30">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-JU-I30">
                                 <rect key="frame" x="25" y="20" width="325" height="647"/>
                                 <color key="backgroundColor" name="MyDrinkListBackground"/>
                                 <color key="sectionIndexBackgroundColor" name="MyDrinkListBackground"/>
                                 <color key="sectionIndexTrackingBackgroundColor" name="MyDrinkListBackground"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="100" id="KZg-2G-9sF" customClass="ReviewCell" customModule="DrinKit" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="100" id="KZg-2G-9sF" customClass="ReviewCell" customModule="DrinKit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="325" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZg-2G-9sF" id="Xjv-e8-l7k">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KNV-Ef-RZk">
@@ -257,15 +257,16 @@
                                                     <color key="textColor" name="BeverageNameEN"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-W7-ch4">
-                                                    <rect key="frame" x="10" y="158" width="15" height="15"/>
-                                                    <color key="backgroundColor" name="BeverageNameEN"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-W7-ch4">
+                                                    <rect key="frame" x="10" y="157.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="T81-05-dYv"/>
                                                         <constraint firstAttribute="width" constant="15" id="Z5N-Wl-EhF"/>
                                                     </constraints>
+                                                    <state key="normal" image="EmptyHeart"/>
+                                                    <state key="selected" image="FullHeart"/>
                                                     <connections>
-                                                        <action selector="myDrinkBtn:" destination="Y0L-4e-reO" eventType="touchUpInside" id="QqH-vw-KPA"/>
+                                                        <action selector="myDrinkBtnTouched:" destination="Y0L-4e-reO" eventType="touchUpInside" id="QqH-vw-KPA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -300,6 +301,7 @@
                                             <outlet property="beverageImage" destination="aLr-g0-CkE" id="Ojd-xN-Wmx"/>
                                             <outlet property="beverageNameEN" destination="rmU-5y-cPP" id="eoR-vQ-o4O"/>
                                             <outlet property="beverageNameKR" destination="ygs-9d-EWb" id="sXy-mX-lca"/>
+                                            <outlet property="myDrinkBtn" destination="wv1-W7-ch4" id="T8w-m6-YZG"/>
                                             <outlet property="priceLabel" destination="GNs-Kc-44a" id="68i-Xe-eNY"/>
                                         </connections>
                                     </collectionViewCell>
@@ -325,6 +327,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EmptyHeart" width="54" height="48"/>
+        <image name="FullHeart" width="54" height="48"/>
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

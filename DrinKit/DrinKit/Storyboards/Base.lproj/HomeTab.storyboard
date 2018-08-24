@@ -159,7 +159,7 @@
                                     <constraint firstAttribute="height" constant="147" id="xKW-kR-nbP"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-1P-rE6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-1P-rE6">
                                 <rect key="frame" x="0.0" y="211" width="375" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -168,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="91p-wF-VQr" id="cnh-SR-3S0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CategoryKR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1Z-jA-MYq">
@@ -280,15 +280,16 @@
                                                     <color key="textColor" name="BeverageNameEN"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-G3-fZe">
-                                                    <rect key="frame" x="10" y="157.5" width="15" height="15"/>
-                                                    <color key="backgroundColor" name="BeverageNameEN"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-G3-fZe">
+                                                    <rect key="frame" x="10" y="158" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="NSL-gm-VDz"/>
                                                         <constraint firstAttribute="height" constant="15" id="UHs-vd-Jl8"/>
                                                     </constraints>
+                                                    <state key="normal" image="EmptyHeart"/>
+                                                    <state key="selected" image="FullHeart"/>
                                                     <connections>
-                                                        <action selector="myDrinkBtn:" destination="GZO-2O-UzI" eventType="touchUpInside" id="msF-hH-BiI"/>
+                                                        <action selector="myDrinkBtnTouched:" destination="GZO-2O-UzI" eventType="touchUpInside" id="msF-hH-BiI"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -323,6 +324,7 @@
                                             <outlet property="beverageImage" destination="PPd-d5-BfN" id="cS2-Zs-D5I"/>
                                             <outlet property="beverageNameEN" destination="Jdd-iY-Ug3" id="KRv-Ir-cPN"/>
                                             <outlet property="beverageNameKR" destination="tVF-hw-beF" id="YBA-l1-5Uj"/>
+                                            <outlet property="myDrinkBtn" destination="eg6-G3-fZe" id="v2g-Vi-Z7E"/>
                                             <outlet property="priceLabel" destination="skY-Yu-bMc" id="Siy-Ue-Wwn"/>
                                             <segue destination="I7d-Tu-gmO" kind="show" id="muV-dZ-rBx"/>
                                         </connections>
@@ -378,13 +380,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BH-Tx-ane" userLabel="DetailContentsView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-3O-lqs" userLabel="ThumbnailsView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="dJq-u7-BgW"/>
-                                                </constraints>
-                                            </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-2b-4wJ" userLabel="BasicInfoView">
                                                 <rect key="frame" x="0.0" y="250" width="375" height="90"/>
                                                 <subviews>
@@ -506,15 +501,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-bw-MT7" userLabel="ReviewContentsView">
                                                 <rect key="frame" x="25" y="540" width="325" height="300"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-Pk-zDI">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-Pk-zDI">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="300"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="100" id="kyP-to-Vxk" customClass="ReviewCell" customModule="DrinKit" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="100" id="kyP-to-Vxk" customClass="ReviewCell" customModule="DrinKit" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="325" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kyP-to-Vxk" id="03l-q5-s6N">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="99.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3bT-oH-rHz">
@@ -579,6 +574,13 @@
                                                     <constraint firstAttribute="height" constant="300" id="cgp-Q7-dC9"/>
                                                 </constraints>
                                             </view>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-3O-lqs" userLabel="ThumbnailsView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="dJq-u7-BgW"/>
+                                                </constraints>
+                                            </scrollView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -669,6 +671,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EmptyHeart" width="54" height="48"/>
+        <image name="FullHeart" width="54" height="48"/>
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

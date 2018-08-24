@@ -26,6 +26,7 @@ PODS:
   - KakaoOpenSDK/KakaoOpenSDK (1.9.0)
   - KakaoOpenSDK/KakaoS2 (1.9.0):
     - KakaoOpenSDK/KakaoCommon
+  - Kingfisher (4.8.1)
   - SwiftInstagram (1.1.1):
     - SwiftInstagram/Core (= 1.1.1)
   - SwiftInstagram/Core (1.1.1)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - KakaoOpenSDK (~> 1.9)
+  - Kingfisher (~> 4.0)
   - SwiftInstagram (~> 1.1.1)
   - Toaster
   - XLPagerTabStrip (~> 8.0)
@@ -48,6 +50,7 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - KakaoOpenSDK
+    - Kingfisher
     - SwiftInstagram
     - Toaster
     - XLPagerTabStrip
@@ -58,10 +61,11 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
   FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
   KakaoOpenSDK: 6d658510bf1e51dd8765ad000130138407c72612
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   SwiftInstagram: 5f60415e522d1a7721073eb3a66f254a7c40fd63
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: f125b8271153be6d21902553a6b61918ef6d702b
+PODFILE CHECKSUM: f29521043d53605a936fe6bfc363608b63a4ba0a
 
 COCOAPODS: 1.5.2

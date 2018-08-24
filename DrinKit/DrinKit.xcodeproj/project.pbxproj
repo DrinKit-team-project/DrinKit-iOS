@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042EC1E4212FAE5C00F1273D /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EC1E3212FAE5C00F1273D /* Cafe.swift */; };
+		042EC1E6212FB04400F1273D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EC1E5212FB04400F1273D /* Menu.swift */; };
+		042EC1E8212FB04B00F1273D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EC1E7212FB04B00F1273D /* Review.swift */; };
+		042EC1EA212FB05300F1273D /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EC1E9212FB05300F1273D /* Tag.swift */; };
+		042EC1EC212FB06800F1273D /* PricePerSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EC1EB212FB06800F1273D /* PricePerSize.swift */; };
 		044C22672109978600E69DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C22662109978600E69DB2 /* Main.storyboard */; };
 		044C2269210998B900E69DB2 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C2268210998B900E69DB2 /* SearchTab.storyboard */; };
 		044C226B210998C100E69DB2 /* MyDrinkTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */; };
@@ -70,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042EC1E3212FAE5C00F1273D /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		042EC1E5212FB04400F1273D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		042EC1E7212FB04B00F1273D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		042EC1E9212FB05300F1273D /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		042EC1EB212FB06800F1273D /* PricePerSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerSize.swift; sourceTree = "<group>"; };
 		044C22662109978600E69DB2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		044C2268210998B900E69DB2 /* SearchTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
 		044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDrinkTab.storyboard; sourceTree = "<group>"; };
@@ -335,6 +345,11 @@
 			children = (
 				04AF6F39212BA70A0033AB84 /* AccountManager.swift */,
 				04E985392112B0B6009BB191 /* UserInfo.swift */,
+				042EC1E3212FAE5C00F1273D /* Cafe.swift */,
+				042EC1E5212FB04400F1273D /* Menu.swift */,
+				042EC1E7212FB04B00F1273D /* Review.swift */,
+				042EC1E9212FB05300F1273D /* Tag.swift */,
+				042EC1EB212FB06800F1273D /* PricePerSize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,12 +616,16 @@
 				04AF6F3A212BA70A0033AB84 /* AccountManager.swift in Sources */,
 				04E012C8212A8C9500D1A2C7 /* MyReviewListViewController.swift in Sources */,
 				04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */,
+				042EC1EC212FB06800F1273D /* PricePerSize.swift in Sources */,
 				045CC94C21057B46004450B7 /* Inspectable+.swift in Sources */,
 				04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */,
 				04BDD75B210AE5B50032CAE4 /* NSLayoutConstraint+.swift in Sources */,
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,
 				04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */,
 				045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */,
+				042EC1E8212FB04B00F1273D /* Review.swift in Sources */,
+				042EC1E4212FAE5C00F1273D /* Cafe.swift in Sources */,
+				042EC1EA212FB05300F1273D /* Tag.swift in Sources */,
 				04D0CF1C210C46B5004C14F7 /* Keyword.swift in Sources */,
 				044C226D2109997D00E69DB2 /* SearchViewController.swift in Sources */,
 				044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */,
@@ -614,6 +633,7 @@
 				04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */,
 				044C2274210999FF00E69DB2 /* SignUpViewController.swift in Sources */,
 				04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */,
+				042EC1E6212FB04400F1273D /* Menu.swift in Sources */,
 				044C2272210999F600E69DB2 /* LogInViewController.swift in Sources */,
 				045CC95321059A2C004450B7 /* BrandCell.swift in Sources */,
 				04D6B7D4210710320059DA23 /* BeverageCell.swift in Sources */,

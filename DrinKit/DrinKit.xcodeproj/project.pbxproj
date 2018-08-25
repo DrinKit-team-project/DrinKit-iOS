@@ -49,6 +49,7 @@
 		04E012C6212A8C7E00D1A2C7 /* MyDrinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E012C5212A8C7E00D1A2C7 /* MyDrinkListViewController.swift */; };
 		04E012C8212A8C9500D1A2C7 /* MyReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E012C7212A8C9500D1A2C7 /* MyReviewListViewController.swift */; };
 		04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2336B210778FB0026293B /* BeverageDetailViewController.swift */; };
+		04E47D0C2130088A00FB0CFC /* Cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E47D0B2130088A00FB0CFC /* Cafes.swift */; };
 		04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E985392112B0B6009BB191 /* UserInfo.swift */; };
 		04F297E7212196550008A5A6 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */; };
 		20A1FF55D3EFA87B858E9570 /* Pods_DrinKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */; };
@@ -124,6 +125,7 @@
 		04E012C5212A8C7E00D1A2C7 /* MyDrinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinkListViewController.swift; sourceTree = "<group>"; };
 		04E012C7212A8C9500D1A2C7 /* MyReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewListViewController.swift; sourceTree = "<group>"; };
 		04E2336B210778FB0026293B /* BeverageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewController.swift; sourceTree = "<group>"; };
+		04E47D0B2130088A00FB0CFC /* Cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafes.swift; sourceTree = "<group>"; };
 		04E985392112B0B6009BB191 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		17D140E661F5DC8D0C15CDF6 /* Pods-DrinKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				042EC1E7212FB04B00F1273D /* Review.swift */,
 				042EC1E9212FB05300F1273D /* Tag.swift */,
 				042EC1EB212FB06800F1273D /* PricePerSize.swift */,
+				04E47D0B2130088A00FB0CFC /* Cafes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				045CC94C21057B46004450B7 /* Inspectable+.swift in Sources */,
 				04D6B7CC2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift in Sources */,
 				04BDD75B210AE5B50032CAE4 /* NSLayoutConstraint+.swift in Sources */,
+				04E47D0C2130088A00FB0CFC /* Cafes.swift in Sources */,
 				04B72BCE210034850024326D /* AppDelegate.swift in Sources */,
 				04E2336C210778FB0026293B /* BeverageDetailViewController.swift in Sources */,
 				045CC94E21057E4A004450B7 /* HomeViewController.swift in Sources */,

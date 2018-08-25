@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,7 +161,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="2H9-wU-lj9" firstAttribute="height" secondItem="YUE-wU-Jao" secondAttribute="height" priority="250" id="0Ol-R5-8av"/>
                             <constraint firstItem="UaD-xh-rre" firstAttribute="trailing" secondItem="krN-Fm-U3e" secondAttribute="trailing" id="7H1-Gv-whq"/>
@@ -263,4 +264,9 @@
             <point key="canvasLocation" x="-36" y="176.76161919040482"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

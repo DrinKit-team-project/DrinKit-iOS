@@ -4,11 +4,27 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSans-Bold.otf">
+            <string>NotoSansKR-Bold</string>
+        </array>
+        <array key="NotoSans-Light.otf">
+            <string>NotoSansKR-Light</string>
+        </array>
+        <array key="NotoSans-Medium.otf">
+            <string>NotoSansKR-Medium</string>
+        </array>
+        <array key="NotoSans-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MY DRINK-->
         <scene sceneID="M2K-a2-tK2">
@@ -17,15 +33,316 @@
                     <view key="view" contentMode="scaleToFill" id="Y9m-Fb-TJF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8f-Io-oDh">
+                                <rect key="frame" x="0.0" y="264" width="375" height="354"/>
+                                <color key="backgroundColor" name="TagBackground"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-H3-Bav" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="200" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1vl-so-g42"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kD8-Ra-LSr">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-Yt-WHr">
+                                <rect key="frame" x="147.5" y="60" width="80" height="80"/>
+                                <color key="backgroundColor" name="BeverageNameEN"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1FG-a7-ulg"/>
+                                    <constraint firstAttribute="height" constant="80" id="xPs-g2-gGD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8x-iX-yrK">
+                                <rect key="frame" x="162.5" y="150" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="ABN-K8-7U4"/>
+                                    <constraint firstAttribute="width" constant="50" id="BbN-5d-T0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="SXh-H3-Bav" firstAttribute="leading" secondItem="k6f-Im-hH4" secondAttribute="leading" id="6wD-MX-3iS"/>
+                            <constraint firstItem="z8f-Io-oDh" firstAttribute="bottom" secondItem="k6f-Im-hH4" secondAttribute="bottom" id="7lC-57-G4M"/>
+                            <constraint firstItem="SXh-H3-Bav" firstAttribute="top" secondItem="Y9m-Fb-TJF" secondAttribute="centerY" multiplier="0.6" id="7rI-dV-c3k"/>
+                            <constraint firstItem="p8x-iX-yrK" firstAttribute="top" secondItem="hB3-Yt-WHr" secondAttribute="bottom" constant="10" id="C0I-4e-Mlk"/>
+                            <constraint firstItem="z8f-Io-oDh" firstAttribute="top" secondItem="SXh-H3-Bav" secondAttribute="top" constant="64" id="O7n-B8-ey0"/>
+                            <constraint firstItem="z8f-Io-oDh" firstAttribute="leading" secondItem="k6f-Im-hH4" secondAttribute="leading" id="Qwt-lH-B5P"/>
+                            <constraint firstItem="p8x-iX-yrK" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="SoF-9l-MXY"/>
+                            <constraint firstItem="hB3-Yt-WHr" firstAttribute="centerY" secondItem="SXh-H3-Bav" secondAttribute="top" multiplier="0.5" id="bFU-75-0Ld"/>
+                            <constraint firstItem="hB3-Yt-WHr" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="mfB-11-asA"/>
+                            <constraint firstItem="z8f-Io-oDh" firstAttribute="trailing" secondItem="k6f-Im-hH4" secondAttribute="trailing" id="p1U-Hb-Ii9"/>
+                            <constraint firstItem="k6f-Im-hH4" firstAttribute="trailing" secondItem="SXh-H3-Bav" secondAttribute="trailing" id="y0H-oi-xuw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k6f-Im-hH4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MY DRINK" id="o6r-Ny-HrQ" userLabel="My Drink"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="SXh-H3-Bav" id="8tX-xO-NCy"/>
+                        <outlet property="containerView" destination="z8f-Io-oDh" id="tVA-HR-lGr"/>
+                        <outlet property="profileImageView" destination="hB3-Yt-WHr" id="POj-2S-8HC"/>
+                        <outlet property="userNameLabel" destination="p8x-iX-yrK" id="7FW-th-ztA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wb-dC-u8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-577" y="-60"/>
+            <point key="canvasLocation" x="-578.39999999999998" y="-60.719640179910051"/>
+        </scene>
+        <!--My Drink-->
+        <scene sceneID="EG0-7R-Zhd">
+            <objects>
+                <viewController storyboardIdentifier="MyReviewList" title="My Drink" id="WOX-cA-7d9" customClass="MyReviewListViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2w0-iu-I8S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-JU-I30">
+                                <rect key="frame" x="25" y="20" width="325" height="647"/>
+                                <color key="backgroundColor" name="MyDrinkListBackground"/>
+                                <color key="sectionIndexBackgroundColor" name="MyDrinkListBackground"/>
+                                <color key="sectionIndexTrackingBackgroundColor" name="MyDrinkListBackground"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="100" id="KZg-2G-9sF" customClass="ReviewCell" customModule="DrinKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="325" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZg-2G-9sF" id="Xjv-e8-l7k">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KNV-Ef-RZk">
+                                                    <rect key="frame" x="0.0" y="10" width="315" height="80"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-YP-9CG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="AcM-gY-BKT"/>
+                                                                <constraint firstAttribute="height" constant="80" identifier="ReviewImageHeight" id="CkC-V4-Ouh"/>
+                                                                <constraint firstAttribute="width" secondItem="wzg-YP-9CG" secondAttribute="height" multiplier="1:1" id="q7d-kJ-kCE"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UEh-RT-O5R">
+                                                            <rect key="frame" x="90" y="0.0" width="225" height="80"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="928-z1-ZBe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="8qh-If-exz"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="14"/>
+                                                                    <color key="textColor" name="Background"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Review Texts" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-lm-GQq">
+                                                                    <rect key="frame" x="0.0" y="20" width="225" height="60"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="60" id="XyK-Dh-KHl"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" name="BeverageNameEN"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KNV-Ef-RZk" firstAttribute="leading" secondItem="Xjv-e8-l7k" secondAttribute="leading" id="89L-Za-N95"/>
+                                                <constraint firstItem="KNV-Ef-RZk" firstAttribute="centerY" secondItem="Xjv-e8-l7k" secondAttribute="centerY" id="Ld4-Xe-K2V"/>
+                                                <constraint firstAttribute="trailing" secondItem="KNV-Ef-RZk" secondAttribute="trailing" constant="10" id="glQ-J1-jAa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MyDrinkListBackground"/>
+                                        <connections>
+                                            <outlet property="reviewImage" destination="wzg-YP-9CG" id="reW-MO-o11"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="MyDrinkListBackground"/>
+                        <constraints>
+                            <constraint firstItem="wJR-JU-I30" firstAttribute="leading" secondItem="2w0-iu-I8S" secondAttribute="leading" constant="25" id="Dz4-IH-gnu"/>
+                            <constraint firstItem="wJR-JU-I30" firstAttribute="top" secondItem="9hQ-mm-a6K" secondAttribute="top" id="Pcj-R8-qGr"/>
+                            <constraint firstItem="9hQ-mm-a6K" firstAttribute="trailing" secondItem="wJR-JU-I30" secondAttribute="trailing" constant="25" id="gop-md-Les"/>
+                            <constraint firstItem="9hQ-mm-a6K" firstAttribute="bottom" secondItem="wJR-JU-I30" secondAttribute="bottom" id="unP-b0-bjD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9hQ-mm-a6K"/>
+                    </view>
+                    <connections>
+                        <outlet property="myReviewTableView" destination="wJR-JU-I30" id="ml2-k3-9VL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk8-nE-heC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="412"/>
+        </scene>
+        <!--My Drink List View Controller-->
+        <scene sceneID="pDl-QA-Izi">
+            <objects>
+                <viewController storyboardIdentifier="MyDrinkList" id="d61-8H-sWI" customClass="MyDrinkListViewController" customModule="DrinKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0q-rq-8Se">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-HO-8nL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" name="MyDrinkListBackground"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSf-7V-SIJ">
+                                    <size key="itemSize" width="150" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeverageCell" id="Y0L-4e-reO" customClass="BeverageCell" customModule="DrinKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-g0-CkE">
+                                                    <rect key="frame" x="10" y="51" width="130" height="99"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-Kc-44a">
+                                                    <rect key="frame" x="103" y="150" width="37" height="30"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
+                                                    <color key="textColor" name="Price"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygs-9d-EWb" userLabel="BeverageNameKR">
+                                                    <rect key="frame" x="10" y="9" width="40" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="KFv-h7-JjP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmU-5y-cPP" userLabel="BeverageNameEN">
+                                                    <rect key="frame" x="10" y="33" width="30" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="g9a-ct-7tj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="12"/>
+                                                    <color key="textColor" name="BeverageNameEN"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-W7-ch4">
+                                                    <rect key="frame" x="10" y="157.5" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="T81-05-dYv"/>
+                                                        <constraint firstAttribute="width" constant="15" id="Z5N-Wl-EhF"/>
+                                                    </constraints>
+                                                    <state key="normal" image="EmptyHeart"/>
+                                                    <state key="selected" image="FullHeart"/>
+                                                    <connections>
+                                                        <action selector="myDrinkBtnTouched:" destination="Y0L-4e-reO" eventType="touchUpInside" id="QqH-vw-KPA"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aLr-g0-CkE" secondAttribute="trailing" constant="10" id="6Ef-be-mqh"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ygs-9d-EWb" secondAttribute="trailing" symbolic="YES" id="915-RX-hef"/>
+                                            <constraint firstItem="wv1-W7-ch4" firstAttribute="centerY" secondItem="GNs-Kc-44a" secondAttribute="centerY" id="A2F-zN-ksw"/>
+                                            <constraint firstItem="ygs-9d-EWb" firstAttribute="leading" secondItem="Y0L-4e-reO" secondAttribute="leading" constant="10" id="Dp3-mt-5dh"/>
+                                            <constraint firstItem="aLr-g0-CkE" firstAttribute="leading" secondItem="Y0L-4e-reO" secondAttribute="leading" constant="10" id="HTE-CG-ZFj"/>
+                                            <constraint firstItem="rmU-5y-cPP" firstAttribute="top" secondItem="ygs-9d-EWb" secondAttribute="bottom" id="Pmc-st-Qra"/>
+                                            <constraint firstItem="wv1-W7-ch4" firstAttribute="leading" secondItem="Y0L-4e-reO" secondAttribute="leading" constant="10" id="QK5-XX-ant"/>
+                                            <constraint firstItem="rmU-5y-cPP" firstAttribute="leading" secondItem="Y0L-4e-reO" secondAttribute="leading" constant="10" id="eIH-AN-HlU"/>
+                                            <constraint firstItem="GNs-Kc-44a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y0L-4e-reO" secondAttribute="leading" symbolic="YES" id="evT-IK-MV8"/>
+                                            <constraint firstItem="GNs-Kc-44a" firstAttribute="top" secondItem="aLr-g0-CkE" secondAttribute="bottom" id="hO8-Co-RnU"/>
+                                            <constraint firstAttribute="bottom" secondItem="GNs-Kc-44a" secondAttribute="bottom" id="jvd-eu-cVr"/>
+                                            <constraint firstItem="ygs-9d-EWb" firstAttribute="top" secondItem="Y0L-4e-reO" secondAttribute="top" constant="9" id="kEe-zc-6Js"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rmU-5y-cPP" secondAttribute="trailing" symbolic="YES" id="maI-t1-MmF"/>
+                                            <constraint firstAttribute="trailing" secondItem="GNs-Kc-44a" secondAttribute="trailing" constant="10" id="omj-bG-sw9"/>
+                                            <constraint firstItem="aLr-g0-CkE" firstAttribute="top" secondItem="rmU-5y-cPP" secondAttribute="bottom" id="r3v-N0-Dea"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="beverageImage" destination="aLr-g0-CkE" id="Ojd-xN-Wmx"/>
+                                            <outlet property="beverageNameEN" destination="rmU-5y-cPP" id="eoR-vQ-o4O"/>
+                                            <outlet property="beverageNameKR" destination="ygs-9d-EWb" id="sXy-mX-lca"/>
+                                            <outlet property="myDrinkBtn" destination="wv1-W7-ch4" id="T8w-m6-YZG"/>
+                                            <outlet property="priceLabel" destination="GNs-Kc-44a" id="68i-Xe-eNY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d9W-HO-8nL" firstAttribute="top" secondItem="Ssk-o5-wyD" secondAttribute="top" id="64l-W1-6vG"/>
+                            <constraint firstItem="d9W-HO-8nL" firstAttribute="leading" secondItem="Ssk-o5-wyD" secondAttribute="leading" id="Bq2-tZ-hYO"/>
+                            <constraint firstItem="Ssk-o5-wyD" firstAttribute="trailing" secondItem="d9W-HO-8nL" secondAttribute="trailing" id="J6P-11-t2j"/>
+                            <constraint firstItem="Ssk-o5-wyD" firstAttribute="bottom" secondItem="d9W-HO-8nL" secondAttribute="bottom" id="qkc-al-Cwh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssk-o5-wyD"/>
+                    </view>
+                    <connections>
+                        <outlet property="MyDrinkCollectionView" destination="d9W-HO-8nL" id="dV0-l0-jge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QR7-bB-Pbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247.19999999999999" y="-308.09595202398805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EmptyHeart" width="54" height="48"/>
+        <image name="FullHeart" width="54" height="48"/>
+        <namedColor name="Background">
+            <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BeverageNameEN">
+            <color red="0.52499997620000005" green="0.52499997620000005" blue="0.52499997620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MyDrinkListBackground">
+            <color red="0.93699997663497925" green="0.90600001811981201" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Price">
+            <color red="0.40400001410000003" green="0.26300001140000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TagBackground">
+            <color red="0.81599998474121094" green="0.81599998474121094" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginFlowHandler {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        window = UIWindow.init(frame: UIScreen.main.bounds)
-//        initialiseServices()
-//        handleLogin(withWindow: window)
-        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        handleLogin(withWindow: window)
         setTabbarFont()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions) || true
     }
@@ -54,13 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginFlowHandler {
 
 // MARK: - LoginFlowHandler
 
-enum AppStoryboard: String {
+enum MainStoryboard: String {
     
-    case main = "Main"
-    case account = "Account"
+    case mainVC = "Main"
+    case accountVC = "Account"
     
-    var instance: UIStoryboard {
-        return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+    var instance: UIViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: self.rawValue)
     }
     
 }
@@ -76,13 +74,12 @@ extension LoginFlowHandler {
     
     func handleLogin(withWindow window: UIWindow?) {
         
-//        if let _ = AppState.shared.currentUserId {
-//            //User has logged in before, cache and continue
-//            self.showMainApp(withWindow: window)
-//        } else {
-//            //No user information, show login flow
-//            self.showLogin(withWindow: window)
-//        }
+        if AccountManager.sharedInstance.load() {
+            self.showMainApp(withWindow: window)
+        } else {
+            self.showLogin(withWindow: window)
+        }
+        
     }
     
     func handleLogout(withWindow window: UIWindow?) {
@@ -93,13 +90,13 @@ extension LoginFlowHandler {
     func showLogin(withWindow window: UIWindow?) {
         window?.subviews.forEach { $0.removeFromSuperview() }
         window?.rootViewController = nil
-        window?.rootViewController = AppStoryboard.account.instance.instantiateInitialViewController()
+        window?.rootViewController =  MainStoryboard.accountVC.instance
         window?.makeKeyAndVisible()
     }
     
     func showMainApp(withWindow window: UIWindow?) {
         window?.rootViewController = nil
-        window?.rootViewController = AppStoryboard.main.instance.instantiateInitialViewController()
+        window?.rootViewController = MainStoryboard.mainVC.instance
         window?.makeKeyAndVisible()
     }
 }

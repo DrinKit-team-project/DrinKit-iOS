@@ -14,13 +14,11 @@ class AccountManager {
         
         case FACEBOOK
         case KAKAO
-        case none
         
         var value: String {
             switch self {
             case .FACEBOOK: return "FACEBOOK"
             case .KAKAO: return "KAKAO"
-            case .none: return "None"
             }
         }
         

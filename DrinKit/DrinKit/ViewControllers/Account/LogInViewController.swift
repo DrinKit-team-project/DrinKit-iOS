@@ -97,10 +97,9 @@ extension LogInViewController {
                 print("Success")
                 KOSessionTask.userMeTask(completion: { (error, me) in
                     guard let user = me else { return }
-                    guard let userName = user.nickname,
-                          let userEmail = user.account?.email,
-                          let userID = user.id else { return }
-                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail)
+                    guard let userName = user.nickname, let userID = user.id else { return }
+                    let userEmail = user.account?.email
+                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail ?? "")
                     AccountManager.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })

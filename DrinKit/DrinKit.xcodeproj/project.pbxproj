@@ -54,6 +54,8 @@
 		04F297E7212196550008A5A6 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F297E6212196540008A5A6 /* Raleway-SemiBold.ttf */; };
 		20A1FF55D3EFA87B858E9570 /* Pods_DrinKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF73E2AC54DD6C43DD0781F /* Pods_DrinKitTests.framework */; };
 		49CBB2B56E20EAA6BDE42106 /* Pods_DrinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F0A4676CCBF47438D32DC /* Pods_DrinKit.framework */; };
+		8EB9DF4A21311F3500CAD2C7 /* RecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9DF4921311F3500CAD2C7 /* RecommendedCollectionViewCell.swift */; };
+		8EB9DF4C2131337D00CAD2C7 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9DF4B2131337D00CAD2C7 /* SearchResultTableViewCell.swift */; };
 		8EF6A9DE2109DE64001C1AE1 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */; };
 		EB93AA3086B2EED544773515 /* Pods_DrinKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DD0CBB7F186513B4B8CD2 /* Pods_DrinKitUITests.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +135,8 @@
 		4E96BBEFCBB0C388BFE4890E /* Pods-DrinKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitUITests/Pods-DrinKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A1EA532F7A885BEBDDDCA98 /* Pods-DrinKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitTests/Pods-DrinKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD5924FA6F5D0153CCE3095 /* Pods-DrinKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKit/Pods-DrinKit.debug.xcconfig"; sourceTree = "<group>"; };
+		8EB9DF4921311F3500CAD2C7 /* RecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
+		8EB9DF4B2131337D00CAD2C7 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		8EF6A9DD2109DE64001C1AE1 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		A5294CA6A003FE56FBBBC33D /* Pods-DrinKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinKitUITests/Pods-DrinKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB7F0A4676CCBF47438D32DC /* Pods_DrinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +268,8 @@
 				04D6B7CF2106EB5F0059DA23 /* CategoryCell.swift */,
 				04D6B7D3210710320059DA23 /* BeverageCell.swift */,
 				04D67AFC2108829200B94C99 /* ReviewCell.swift */,
+				8EB9DF4921311F3500CAD2C7 /* RecommendedCollectionViewCell.swift */,
+				8EB9DF4B2131337D00CAD2C7 /* SearchResultTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 			files = (
 				04E9853A2112B0B6009BB191 /* UserInfo.swift in Sources */,
 				04AF6F3A212BA70A0033AB84 /* AccountManager.swift in Sources */,
+				8EB9DF4C2131337D00CAD2C7 /* SearchResultTableViewCell.swift in Sources */,
 				04E012C8212A8C9500D1A2C7 /* MyReviewListViewController.swift in Sources */,
 				04D67AFD2108829200B94C99 /* ReviewCell.swift in Sources */,
 				042EC1EC212FB06800F1273D /* PricePerSize.swift in Sources */,
@@ -637,6 +644,7 @@
 				044C226F2109999500E69DB2 /* MyDrinkViewController.swift in Sources */,
 				04E012C6212A8C7E00D1A2C7 /* MyDrinkListViewController.swift in Sources */,
 				04D6B7CE2106D3B20059DA23 /* BrandInfoViewController.swift in Sources */,
+				8EB9DF4A21311F3500CAD2C7 /* RecommendedCollectionViewCell.swift in Sources */,
 				044C2274210999FF00E69DB2 /* SignUpViewController.swift in Sources */,
 				04D6B7D02106EB5F0059DA23 /* CategoryCell.swift in Sources */,
 				042EC1E6212FB04400F1273D /* Menu.swift in Sources */,

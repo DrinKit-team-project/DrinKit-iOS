@@ -11,12 +11,18 @@ import UIKit
 class SearchResultViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    private var searchResult: [String] = ["test"]
+    private var searchResult: [String] = ["test1", "test2"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.tableHeaderView = nil
         print("result view controller")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.autoresizesSubviews = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +34,7 @@ class SearchResultViewController: UIViewController {
 
 extension SearchResultViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else { return }
-        print(searchText)
+        
     }
 }
 
@@ -39,8 +44,8 @@ extension SearchResultViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell") else { return UITableViewCell() }
-        cell.textLabel?.text = searchResult[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell") as? SearchResultTableViewCell else { return UITableViewCell() }
+        cell.searchedTextLabel.text = searchResult[indexPath.row]
         return cell
     }
 }

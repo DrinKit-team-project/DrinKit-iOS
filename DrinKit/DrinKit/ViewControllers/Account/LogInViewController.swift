@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
@@ -50,15 +49,16 @@ extension LogInViewController: FBSDKLoginButtonDelegate {
             request.start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil) {
                     guard let result = result as? [String:Any] else { return }
-//                    guard let url = ((result["picture"] as? [String:Any])?["data"] as? [String:Any])?["url"] as? String else { return }
-//                    guard let imageURL = URL(string: url),
-//                          let imageData = try? Data(contentsOf: imageURL) else { return }
-//                    guard let userProfileImg = UIImage(data: imageData),
-                    guard
+                    guard let url = ((result["picture"] as? [String:Any])?["data"] as? [String:Any])?["url"] as? String else { return }
+                    guard let imageURL = URL(string: url),
+                          let imageData = try? Data(contentsOf: imageURL) else { return }
+                    guard let userProfileImg = UIImage(data: imageData),
                           let userName = result["name"] as? String,
                           let userEmail = result["email"] as? String else { return }
                     guard let session = FBSDKAccessToken.current() else { return }
-                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail)
+                    AccountManager.sharedInstance.setProfileImage(userProfileImg)
+                    AccountManager.sharedInstance.setName(userName)
+                    AccountManager.sharedInstance.setEmail(userEmail)
                     AccountManager.sharedInstance.setParameters(.FACEBOOK, session.userID, session.tokenString)
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 }
@@ -97,10 +97,18 @@ extension LogInViewController {
                 print("Success")
                 KOSessionTask.userMeTask(completion: { (error, me) in
                     guard let user = me else { return }
-                    guard let userName = user.nickname, let userID = user.id else { return }
-                    let userEmail = user.account?.email
-                    AccountManager.sharedInstance.setBasicInformation(userName, userEmail ?? "")
-                    AccountManager.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
+                    if let userName = user.nickname, let userID = user.id {
+                        AccountManager.sharedInstance.setName(userName)
+                        AccountManager.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
+                    }
+                    if let imageURL = user.thumbnailImageURL,
+                        let imageData = try? Data(contentsOf: imageURL),
+                        let userProfileImage = UIImage(data: imageData)  {
+                        AccountManager.sharedInstance.setProfileImage(userProfileImage)
+                    }
+                    if let userEmail = user.account?.email {
+                        AccountManager.sharedInstance.setEmail(userEmail)
+                    }
                     self.performSegue(withIdentifier: "ToSettings", sender: self)
                 })
             } else {

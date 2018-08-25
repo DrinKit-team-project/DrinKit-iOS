@@ -32,9 +32,12 @@ class AccountManager {
     
     private init() { }
     
-    func setBasicInformation(_ userName: String, _ userNameEmail: String) {
+    func setName(_ userName: String) {
         userInfo.name = userName
-        userInfo.email = userNameEmail
+    }
+    
+    func setEmail(_ userEmail: String) {
+        userInfo.email = userEmail
     }
     
     func setProfileImage(_ userProfileImage: UIImage) {

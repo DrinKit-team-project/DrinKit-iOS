@@ -182,6 +182,7 @@
 		044C226021096FCD00E69DB2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				04E47D0B2130088A00FB0CFC /* Cafes.swift */,
 				04D6B7CB2106C4D20059DA23 /* HorizontalCollectionViewLayout.swift */,
 			);
 			path = ViewModels;
@@ -352,7 +353,6 @@
 				042EC1E7212FB04B00F1273D /* Review.swift */,
 				042EC1E9212FB05300F1273D /* Tag.swift */,
 				042EC1EB212FB06800F1273D /* PricePerSize.swift */,
-				04E47D0B2130088A00FB0CFC /* Cafes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

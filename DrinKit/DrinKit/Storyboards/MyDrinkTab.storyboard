@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k6f-Im-hH4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY DRINK" id="o6r-Ny-HrQ" userLabel="My Drink"/>
+                    <tabBarItem key="tabBarItem" title="MY DRINK" image="MyDrinkNotSelected" selectedImage="MyDrinkSelected" id="o6r-Ny-HrQ" userLabel="My Drink"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonBarView" destination="SXh-H3-Bav" id="8tX-xO-NCy"/>
@@ -329,6 +329,8 @@
     <resources>
         <image name="EmptyHeart" width="54" height="48"/>
         <image name="FullHeart" width="54" height="48"/>
+        <image name="MyDrinkNotSelected" width="32" height="26"/>
+        <image name="MyDrinkSelected" width="32" height="24"/>
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

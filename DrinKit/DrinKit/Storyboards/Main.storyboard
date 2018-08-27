@@ -158,17 +158,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xqx-Uw-nMf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" name="Tabbar"/>
                         <color key="selectedImageTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="ALb-id-vsj" kind="relationship" relationship="viewControllers" id="V2g-Hw-VOu"/>
@@ -228,7 +219,7 @@
                                     <action selector="signUpBtnTouched:" destination="320-0k-4ku" eventType="touchUpInside" id="quM-2J-eBu"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-cq-7rQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-cq-7rQ">
                                 <rect key="frame" x="147" y="191" width="120" height="120"/>
                                 <color key="backgroundColor" name="BeverageNameEN"/>
                                 <constraints>
@@ -262,7 +253,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4we-YQ-Zgh">
-                                <rect key="frame" x="66.333333333333314" y="415.66666666666669" width="282" height="25"/>
+                                <rect key="frame" x="72" y="415.66666666666669" width="271.66666666666669" height="25"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-IB-jvv" userLabel="UserNameView">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="25"/>
@@ -288,7 +279,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2yM-8v-Aq2" userLabel="UserEmailView">
-                                        <rect key="frame" x="115" y="0.0" width="167" height="25"/>
+                                        <rect key="frame" x="114.99999999999999" y="0.0" width="156.66666666666663" height="25"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-lV-T0u">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -299,7 +290,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DrinKit@email.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-qj-evz">
-                                                <rect key="frame" x="30" y="0.0" width="137" height="25"/>
+                                                <rect key="frame" x="30.000000000000007" y="0.0" width="126.66666666666669" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="A1n-ne-Fe9"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Tpi-Ma-opK"/>

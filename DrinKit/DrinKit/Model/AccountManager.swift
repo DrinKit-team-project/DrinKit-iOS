@@ -26,7 +26,7 @@ class AccountManager {
     
     static var sharedInstance = AccountManager()
     
-    private(set) var profileImage = UIImage()
+    private(set) var profileImage = UIImage(named: "baseProfileImage")
     private(set) var userInfo = UserInfo()
     private(set) var parameters: [String:Any] = [:]
     

@@ -243,11 +243,11 @@
 		044C2270210999B800E69DB2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */,
 				04B72BD6210034860024326D /* LaunchScreen.storyboard */,
 				044C22662109978600E69DB2 /* Main.storyboard */,
-				04B72BD1210034850024326D /* HomeTab.storyboard */,
 				044C2268210998B900E69DB2 /* SearchTab.storyboard */,
-				044C226A210998C100E69DB2 /* MyDrinkTab.storyboard */,
+				04B72BD1210034850024326D /* HomeTab.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

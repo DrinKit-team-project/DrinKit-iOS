@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchControllerDelegate {
+    
     @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var recommendCollectionView: UIScrollView!
     @IBOutlet weak var topReviewCountButton: UIButton!
@@ -20,20 +21,25 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let searchResultVC = storyboard?.instantiateViewController(withIdentifier: "SearchResult")
-            as? SearchResultViewController else { return }
+        guard let searchResultVC = storyboard?.instantiateViewController(withIdentifier: "SearchResult") as? SearchResultViewController else { return }
         searchController = UISearchController(searchResultsController: searchResultVC)
-        searchController.searchBar.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        searchController.delegate = self
         searchController.searchResultsUpdater = searchResultVC
         searchController.searchBar.placeholder = "Search"
-        searchBarView.addSubview(searchController.searchBar)
         searchController.searchBar.barTintColor = UIColor(named: "Background")
         searchController.searchBar.tintColor = UIColor.white
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.showsScopeBar = false
-        searchController.definesPresentationContext = true
-        searchController.extendedLayoutIncludesOpaqueBars = false
+        searchBarView.addSubview(searchController.searchBar)
+        self.definesPresentationContext = true
+        self.extendedLayoutIncludesOpaqueBars = false
+    }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+            DispatchQueue.main.async {
+                self.searchController.searchResultsController?.view.isHidden = false
+            }
     }
 
     override func didReceiveMemoryWarning() {

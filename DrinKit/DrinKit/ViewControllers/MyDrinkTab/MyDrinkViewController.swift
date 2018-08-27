@@ -12,7 +12,10 @@ import XLPagerTabStrip
 class MyDrinkViewController: ButtonBarPagerTabStripViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var editingProfileImgBtn: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var editingNicknameBtn: UIButton!
+    
     
     override func viewDidLoad() {
         addBottomLineToUserNameLabel()

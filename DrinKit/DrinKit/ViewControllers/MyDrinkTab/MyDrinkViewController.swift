@@ -104,6 +104,7 @@ extension MyDrinkViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.profileImageView.image = image
             AccountManager.sharedInstance.setProfileImage(image)
+            AccountManager.sharedInstance.save()
             dismiss(animated: true, completion: nil)
         }
     }

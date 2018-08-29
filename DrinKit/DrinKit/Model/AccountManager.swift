@@ -63,6 +63,11 @@ class AccountManager {
         let encoder = JSONEncoder()
         guard let encodedUserInfo = try? encoder.encode(userInfo) else { return }
         UserDefaults.standard.set(encodedUserInfo, forKey: "UserInfo")
+        guard let documentDirectoryPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return }
+        guard let profileImage = profileImage else { return }
+        guard let data = UIImageJPEGRepresentation(profileImage, 1.0) else { return }
+        let fileName = documentDirectoryPath.appendingPathComponent("profileImage.jpeg")
+        try? data.write(to: fileName)
     }
     
     func load() -> Bool {
@@ -70,6 +75,10 @@ class AccountManager {
         let decoder = JSONDecoder()
         guard let loadedUserInfo = try? decoder.decode(UserInfo.self, from: savedUserInfo) else { return false }
         userInfo = loadedUserInfo
+        guard let documentDirectoryPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return false }
+        let fileName = documentDirectoryPath.appendingPathComponent("profileImage.jpeg")
+        guard let baseProfileImage = FileManager.default.contents(atPath: fileName.path) else { return false }
+        profileImage = UIImage(data: baseProfileImage)
         return true
     }
     

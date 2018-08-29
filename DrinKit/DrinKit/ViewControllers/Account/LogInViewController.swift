@@ -101,7 +101,7 @@ extension LogInViewController {
                         AccountManager.sharedInstance.setName(userName)
                         AccountManager.sharedInstance.setParameters(.KAKAO, userID, session.token.accessToken)
                     }
-                    if let imageURL = user.thumbnailImageURL,
+                    if let imageURL = user.profileImageURL,
                         let imageData = try? Data(contentsOf: imageURL),
                         let userProfileImage = UIImage(data: imageData)  {
                         AccountManager.sharedInstance.setProfileImage(userProfileImage)

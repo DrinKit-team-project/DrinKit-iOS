@@ -379,9 +379,6 @@
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Background">
-            <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="BeverageNameEN">
             <color red="0.52499997620000005" green="0.52499997620000005" blue="0.52499997620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

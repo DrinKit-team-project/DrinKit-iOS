@@ -24,6 +24,9 @@
         <array key="NotoSans-Regular.otf">
             <string>NotoSansKR-Regular</string>
         </array>
+        <array key="NotoSans-Thin.otf">
+            <string>NotoSansKR-Thin</string>
+        </array>
     </customFonts>
     <scenes>
         <!--MY DRINK-->
@@ -40,11 +43,10 @@
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-H3-Bav" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="200" width="375" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="1vl-so-g42"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kD8-Ra-LSr">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kD8-Ra-LSr">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -52,8 +54,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-Yt-WHr">
-                                <rect key="frame" x="147.5" y="60" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-Yt-WHr">
+                                <rect key="frame" x="147.5" y="50" width="80" height="80"/>
                                 <color key="backgroundColor" name="BeverageNameEN"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="1FG-a7-ulg"/>
@@ -71,45 +73,87 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8x-iX-yrK">
-                                <rect key="frame" x="162.5" y="150" width="50" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOm-yL-wvj">
+                                <rect key="frame" x="146" y="135" width="82" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="ABN-K8-7U4"/>
-                                    <constraint firstAttribute="width" constant="50" id="BbN-5d-T0V"/>
+                                    <constraint firstAttribute="height" constant="20" id="EEO-A0-ZES"/>
+                                    <constraint firstAttribute="width" constant="82" id="ymq-qd-74d"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Thin" family="Noto Sans KR" pointSize="14"/>
+                                <state key="normal" title="사진 편집하기">
+                                    <color key="titleColor" name="EditingPhoto"/>
+                                </state>
+                                <connections>
+                                    <action selector="editingProfileImgBtnTouchedWithSender:" destination="kkc-fL-l6r" eventType="touchUpInside" id="NXZ-Dx-jTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF8-xg-ShI">
+                                <rect key="frame" x="212.5" y="155" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="r3n-7c-ttc"/>
+                                    <constraint firstAttribute="height" constant="27" id="tL0-RA-pkS"/>
+                                </constraints>
+                                <state key="normal" image="EditNickNameBtn"/>
+                                <connections>
+                                    <action selector="editingNicknameBtnTouched:" destination="kkc-fL-l6r" eventType="touchUpInside" id="YjW-pv-Ek3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21s-kN-COB">
+                                <rect key="frame" x="162" y="155" width="50" height="27"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="VDW-Jn-jc4"/>
+                                    <constraint firstAttribute="height" constant="27" id="urJ-zw-ZhM"/>
+                                </constraints>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="21s-kN-COB" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="2gb-KH-EuF"/>
+                            <constraint firstItem="kOm-yL-wvj" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="3jc-9I-RMn"/>
                             <constraint firstItem="SXh-H3-Bav" firstAttribute="leading" secondItem="k6f-Im-hH4" secondAttribute="leading" id="6wD-MX-3iS"/>
                             <constraint firstItem="z8f-Io-oDh" firstAttribute="bottom" secondItem="k6f-Im-hH4" secondAttribute="bottom" id="7lC-57-G4M"/>
                             <constraint firstItem="SXh-H3-Bav" firstAttribute="top" secondItem="Y9m-Fb-TJF" secondAttribute="centerY" multiplier="0.6" id="7rI-dV-c3k"/>
-                            <constraint firstItem="p8x-iX-yrK" firstAttribute="top" secondItem="hB3-Yt-WHr" secondAttribute="bottom" constant="10" id="C0I-4e-Mlk"/>
+                            <constraint firstItem="21s-kN-COB" firstAttribute="top" secondItem="kOm-yL-wvj" secondAttribute="bottom" id="Aep-Ia-DUx"/>
+                            <constraint firstItem="kOm-yL-wvj" firstAttribute="top" secondItem="hB3-Yt-WHr" secondAttribute="bottom" constant="5" id="DGa-Xd-TYU"/>
                             <constraint firstItem="z8f-Io-oDh" firstAttribute="top" secondItem="SXh-H3-Bav" secondAttribute="top" constant="64" id="O7n-B8-ey0"/>
                             <constraint firstItem="z8f-Io-oDh" firstAttribute="leading" secondItem="k6f-Im-hH4" secondAttribute="leading" id="Qwt-lH-B5P"/>
-                            <constraint firstItem="p8x-iX-yrK" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="SoF-9l-MXY"/>
-                            <constraint firstItem="hB3-Yt-WHr" firstAttribute="centerY" secondItem="SXh-H3-Bav" secondAttribute="top" multiplier="0.5" id="bFU-75-0Ld"/>
+                            <constraint firstItem="21s-kN-COB" firstAttribute="centerY" secondItem="EF8-xg-ShI" secondAttribute="centerY" id="gqx-RI-Mhl"/>
+                            <constraint firstItem="EF8-xg-ShI" firstAttribute="leading" secondItem="21s-kN-COB" secondAttribute="trailing" constant="0.5" id="lfh-oC-cn1"/>
                             <constraint firstItem="hB3-Yt-WHr" firstAttribute="centerX" secondItem="k6f-Im-hH4" secondAttribute="centerX" id="mfB-11-asA"/>
+                            <constraint firstItem="hB3-Yt-WHr" firstAttribute="bottom" secondItem="SXh-H3-Bav" secondAttribute="top" multiplier="0.65" id="n2E-5Z-Goq"/>
                             <constraint firstItem="z8f-Io-oDh" firstAttribute="trailing" secondItem="k6f-Im-hH4" secondAttribute="trailing" id="p1U-Hb-Ii9"/>
                             <constraint firstItem="k6f-Im-hH4" firstAttribute="trailing" secondItem="SXh-H3-Bav" secondAttribute="trailing" id="y0H-oi-xuw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k6f-Im-hH4"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XxF-a2-MME" appends="YES" id="uvy-0a-kzk"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY DRINK" id="o6r-Ny-HrQ" userLabel="My Drink"/>
+                    <tabBarItem key="tabBarItem" title="MY DRINK" image="MyDrinkNotSelected" selectedImage="MyDrinkSelected" id="o6r-Ny-HrQ" userLabel="My Drink"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="buttonBarView" destination="SXh-H3-Bav" id="8tX-xO-NCy"/>
+                        <outlet property="buttonBarView" destination="SXh-H3-Bav" id="oAF-6L-9B6"/>
                         <outlet property="containerView" destination="z8f-Io-oDh" id="tVA-HR-lGr"/>
+                        <outlet property="editingNicknameBtn" destination="EF8-xg-ShI" id="MYm-FV-rIb"/>
+                        <outlet property="editingProfileImgBtn" destination="kOm-yL-wvj" id="z6H-3z-LCQ"/>
+                        <outlet property="nicknameTextField" destination="21s-kN-COB" id="B6h-6F-i8c"/>
                         <outlet property="profileImageView" destination="hB3-Yt-WHr" id="POj-2S-8HC"/>
-                        <outlet property="userNameLabel" destination="p8x-iX-yrK" id="7FW-th-ztA"/>
+                        <outlet property="tapGestureForDismissingKeyboard" destination="XxF-a2-MME" id="SlN-nD-Xkj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wb-dC-u8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer enabled="NO" id="XxF-a2-MME">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="kkc-fL-l6r" id="9r3-ym-QvN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-578.39999999999998" y="-60.719640179910051"/>
+            <point key="canvasLocation" x="-694" y="-84"/>
         </scene>
         <!--My Drink-->
         <scene sceneID="EG0-7R-Zhd">
@@ -327,13 +371,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EditNickNameBtn" width="16" height="16"/>
         <image name="EmptyHeart" width="54" height="48"/>
         <image name="FullHeart" width="54" height="48"/>
+        <image name="MyDrinkNotSelected" width="32" height="26"/>
+        <image name="MyDrinkSelected" width="32" height="24"/>
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BeverageNameEN">
             <color red="0.52499997620000005" green="0.52499997620000005" blue="0.52499997620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EditingPhoto">
+            <color red="1" green="0.84700000289999999" blue="0.35299998519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MyDrinkListBackground">
             <color red="0.93699997663497925" green="0.90600001811981201" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

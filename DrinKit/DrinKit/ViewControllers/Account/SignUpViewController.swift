@@ -23,7 +23,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         nicknameTextField.delegate = self
-        nicknameTextField.addTarget(self, action: #selector(changeStatusOfSignUpButton), for: .editingChanged)
+        nicknameTextField.addTarget(self,
+                                    action: #selector(changeStatusOfSignUpButton),
+                                    for: .editingChanged)
         setBasicInfoTexts()
     }
     
@@ -86,6 +88,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.profileImage.image = image
+            AccountManager.sharedInstance.setProfileImage(image)
             dismiss(animated: true, completion: nil)
         }
     }

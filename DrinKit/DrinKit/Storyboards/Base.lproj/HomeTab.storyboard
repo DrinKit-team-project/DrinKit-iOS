@@ -647,8 +647,8 @@
         <scene sceneID="VFP-Em-swQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9e-Yr-HBL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HOME" id="7sI-lb-nRf">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="HomeNotSelected" selectedImage="HomeSelected" id="7sI-lb-nRf">
+                        <color key="badgeColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZDc-vk-kzE">
@@ -673,6 +673,8 @@
     <resources>
         <image name="EmptyHeart" width="54" height="48"/>
         <image name="FullHeart" width="54" height="48"/>
+        <image name="HomeNotSelected" width="26" height="31"/>
+        <image name="HomeSelected" width="27" height="31"/>
         <namedColor name="Background">
             <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

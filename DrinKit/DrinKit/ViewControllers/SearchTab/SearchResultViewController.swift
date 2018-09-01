@@ -16,7 +16,7 @@ class SearchResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.tableHeaderView = nil
+        tableView.contentInsetAdjustmentBehavior = .never
         print("result view controller")
     }
 

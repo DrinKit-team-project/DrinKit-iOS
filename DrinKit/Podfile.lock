@@ -37,7 +37,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - FBSDKCoreKit
   - FBSDKLoginKit
-  - KakaoOpenSDK (~> 1.9)
+  - KakaoOpenSDK
   - Kingfisher (~> 4.0)
   - SwiftInstagram (~> 1.1.1)
   - Toaster
@@ -66,6 +66,6 @@ SPEC CHECKSUMS:
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: f29521043d53605a936fe6bfc363608b63a4ba0a
+PODFILE CHECKSUM: 60af25bc82abfb12a382bdd26b09069f320aee9b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2

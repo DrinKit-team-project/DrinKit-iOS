@@ -10,10 +10,12 @@ import Foundation
 
 struct Cafe: Decodable {
     
+    let cagegoryNames: [String]
+    let deleted: Bool
+    let id: Int
     let name: String
     let imageURL: String
-    let menus: [Menu]
-    let cagegoryNames: [String]
+    let menus: [Menu]?
     
 }
 

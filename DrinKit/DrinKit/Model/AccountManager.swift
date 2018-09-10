@@ -11,7 +11,6 @@ import Foundation
 class AccountManager {
     
     enum Provider {
-        
         case FACEBOOK
         case KAKAO
         
@@ -21,7 +20,6 @@ class AccountManager {
             case .KAKAO: return "KAKAO"
             }
         }
-        
     }
     
     static var sharedInstance = AccountManager()
@@ -48,7 +46,8 @@ class AccountManager {
         userInfo.nickName = userNickName
     }
     
-    func setJWTToken(_ userJWT: String) {
+    func setIDAndJWTToken(_ userID: Int, _ userJWT: String) {
+        userInfo.id = userID
         userInfo.JWTToken = userJWT
     }
     
@@ -60,9 +59,11 @@ class AccountManager {
     }
     
     func save() {
+        //Save UserInfo to UserDefaults
         let encoder = JSONEncoder()
         guard let encodedUserInfo = try? encoder.encode(userInfo) else { return }
         UserDefaults.standard.set(encodedUserInfo, forKey: "UserInfo")
+        //Save ProfileImage to Cache Directory
         guard let documentDirectoryPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return }
         guard let profileImage = profileImage else { return }
         guard let data = UIImageJPEGRepresentation(profileImage, 1.0) else { return }
@@ -71,10 +72,12 @@ class AccountManager {
     }
     
     func load() -> Bool {
+        //Load UserInfo from UserDefaults
         guard let savedUserInfo = UserDefaults.standard.object(forKey: "UserInfo") as? Data else { return false }
         let decoder = JSONDecoder()
         guard let loadedUserInfo = try? decoder.decode(UserInfo.self, from: savedUserInfo) else { return false }
         userInfo = loadedUserInfo
+        //Load ProfileImage from Cache Directory
         guard let documentDirectoryPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return false }
         let fileName = documentDirectoryPath.appendingPathComponent("profileImage.jpeg")
         guard let baseProfileImage = FileManager.default.contents(atPath: fileName.path) else { return false }

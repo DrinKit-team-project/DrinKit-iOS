@@ -11,6 +11,7 @@ import UIKit
 
 struct UserInfo: Codable {
     
+    var id: Int
     var name: String
     var email: String
     var provider: String
@@ -18,6 +19,7 @@ struct UserInfo: Codable {
     var JWTToken: String
     
     init() {
+        id = 0
         name = ""
         email = ""
         provider = ""

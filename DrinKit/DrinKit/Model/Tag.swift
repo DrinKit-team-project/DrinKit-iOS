@@ -10,6 +10,8 @@ import Foundation
 
 struct Tag: Decodable {
     
+    let id: Int
+    let searchCount: Int
     let tagName: String
     let menus: [Menu]
     

@@ -10,9 +10,13 @@ import Foundation
 
 struct Review: Decodable {
     
-    let ratings: Double
     let contents: String
-    let drinkImgUrl: String
+    let delted: Bool
+    let id: Int
     let menu: Menu
+    let ratings: Double
+    let uploadFileResponse: UploadFileRespose
+    let writer: Writer
     
 }
+

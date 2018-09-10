@@ -10,7 +10,7 @@ import Foundation
 
 struct PricePerSize: Decodable {
     
-    let size: String
     let cost: Int
+    let size: String
     
 }

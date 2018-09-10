@@ -10,16 +10,18 @@ import Foundation
 
 struct Menu: Decodable {
     
-    let krName: String
-    let enName: String
+    let cafe: Cafe
     let calories: Int
     let category: String
+    let deleted: Bool
     let description: String
-    let totalRatings: Double
-    let cafe: Cafe
-    let reviews: [Review]
-    let pricePerSizes: [PricePerSize]
-    let tagList: [Tag]
+    let enName: String
+    let id: Int
     let imageURLs: [String]
+    let krName: String
+    let pricePerSizes: [PricePerSize]
+    let reviewCount: Int
+    let tagList: [Tag]
+    let totalRatings: Double
     
 }

@@ -16,7 +16,7 @@ class ReviewCell: UITableViewCell {
     @IBOutlet weak var reviewTextView: UITextView!
 
     func setReviewCell(with review: Review) {
-        NetworkManager.shared.downloadImage(urlString: review.drinkImgUrl, imageView: reviewImage) {
+        NetworkManager.shared.downloadImage(urlString: review.uploadFileResponse.fileDownloadUri, imageView: reviewImage) {
             [weak self] in
             self?.reviewImage.setNeedsDisplay()
         }

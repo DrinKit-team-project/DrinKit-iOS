@@ -11,8 +11,8 @@ import UIKit
 class ReviewCell: UITableViewCell {
 
     @IBOutlet weak var reviewImage: UIImageView!
+    @IBOutlet weak var reviewInfoView: UIView!
     @IBOutlet weak var reviewIdLabel: UILabel!
-    @IBOutlet weak var reviewStarStackView: UIStackView!
     @IBOutlet weak var reviewTextView: UITextView!
 
     func setReviewCell(with review: Review) {
@@ -22,14 +22,20 @@ class ReviewCell: UITableViewCell {
         }
         reviewIdLabel.text = review.menu.krName
         reviewTextView.text = review.contents
-        let fullStarCount = Int(review.ratings)
-        for index in 0..<fullStarCount {
-            guard let imageView = reviewStarStackView.arrangedSubviews[index] as? UIImageView else { break }
-            imageView.image = #imageLiteral(resourceName: "FullStar")
-        }
-        if review.ratings - Double(fullStarCount) != 0 {
-            guard let imageView = reviewStarStackView.arrangedSubviews[fullStarCount] as? UIImageView else { return }
-            imageView.image = #imageLiteral(resourceName: "HalfAlphaStar")
+        setStarRatingView(review.ratings)
+    }
+
+    func setStarRatingView(_ ratings: Double) {
+        reviewInfoView.subviews.filter({$0 is StarRatingView}).forEach({$0.removeFromSuperview()})
+        let starRatingView = StarRatingView()
+        starRatingView.isUserInteractionEnabled = false
+        starRatingView.rating = ratings
+        starRatingView.text = "\(ratings)"
+        starRatingView.setStarSize(15)
+        reviewInfoView.addSubview(starRatingView)
+        starRatingView.snp.makeConstraints { (make) in
+            make.trailing.equalTo(reviewInfoView.snp.trailing)
+            make.bottom.equalTo(reviewInfoView.snp.bottom)
         }
     }
 }

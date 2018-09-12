@@ -14,15 +14,16 @@ class BeverageDetailViewController: UIViewController {
     @IBOutlet weak var beverageDetailScrollView: UIScrollView!
     @IBOutlet weak var thumbnailsScrollView: UIScrollView!
     @IBOutlet weak var reviewTableView: UITableView!
-    @IBOutlet weak var reviewStarStackView: UIStackView!
-    @IBOutlet weak var reviewScoreLabel: UILabel!
-
+    @IBOutlet weak var starRatingBackgroundView: UIView!
+    
+    
     private var reviews = [Review]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
         setReviews()
+        setStarRatingView()
     }
 
     private func setTableView() {
@@ -39,6 +40,19 @@ class BeverageDetailViewController: UIViewController {
             self.reviews = model
             self.reviewTableView.reloadData()
         }
+    }
+    
+    private func setStarRatingView() {
+        let starRatingView = StarRatingView()
+        starRatingView.isUserInteractionEnabled = false
+        starRatingView.setColors(textColor: UIColor(named: "BeverageDescription")!, backgroundColor: .white)
+        starRatingView.setStarSize(15)
+        starRatingBackgroundView.addSubview(starRatingView)
+        starRatingBackgroundView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(starRatingView.snp.centerX)
+            make.centerY.equalTo(starRatingView.snp.centerY)
+        }
+        
     }
 }
 

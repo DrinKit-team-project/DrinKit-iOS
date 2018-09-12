@@ -4,6 +4,7 @@ platform :ios, '11.0'
 target 'DrinKit' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'SnapKit', '~> 4.0.0'
   pod 'Toaster'
   pod 'Kingfisher', '~> 4.0'
   pod 'XLPagerTabStrip', '~> 8.0'  
@@ -12,6 +13,7 @@ target 'DrinKit' do
   pod 'SwiftInstagram', '~> 1.1.1'
   pod 'KakaoOpenSDK'
   pod 'Alamofire', '~> 4.7'
+  pod 'Cosmos', '~> 16.0'
   # Pods for DrinKit
 
   target 'DrinKitTests' do
@@ -30,6 +32,8 @@ post_install do |installer|
       installer.pods_project.targets.each do |target|
            target.build_configurations.each do |config|
                 config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
+    config.build_settings.delete('CODE_SIGNING_ALLOWED')
+    config.build_settings.delete('CODE_SIGNING_REQUIRED')
            end
       end
  end

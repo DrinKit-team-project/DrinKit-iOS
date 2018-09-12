@@ -13,10 +13,15 @@ class BrandCell: UICollectionViewCell {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var brandName: UILabel!
     
-    func set() {
+    func set(_ cafe: Cafe) {
         logoImage.layer.borderWidth = 1
         logoImage.layer.borderColor = UIColor.white.cgColor
         logoImage.layer.cornerRadius = logoImage.frame.width / 2
+        NetworkManager.shared.downloadImage(urlString: cafe.imageURL, imageView: logoImage) {
+            [weak self] in
+            self?.logoImage.setNeedsDisplay()
+        }
+        brandName.text = cafe.name
     }
 
 }

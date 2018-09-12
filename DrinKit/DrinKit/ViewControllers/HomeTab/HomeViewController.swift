@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - MODEL
     private let countOfBrands = 30
+//    private var cafes: Cafes = Cafes()
     
     // MARK: - UI
     @IBOutlet weak var eventScrollView: UIScrollView!
@@ -31,9 +32,11 @@ class HomeViewController: UIViewController {
     // MARK: - Prepare for BrandInfoVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let brandInfoVC = segue.destination as? BrandInfoViewController else { return }
-        //        guard let selectedBrandCell = sender as? BrandCell else { return }
-        //        guard let indexPath = brandCollectionView.indexPath(for: selectedBrandCell) else { return }
-        brandInfoVC.title = "Brand Name"
+//        guard let selectedBrandCell = sender as? BrandCell else { return }
+//        guard let indexPath = brandCollectionView.indexPath(for: selectedBrandCell) else { return }
+//        brandInfoVC.title = cafes[indexPath.row].name
+//        brandInfoVC.cafe = cafes[indexPath.row]
+        brandInfoVC.title = "BrandName"
     }
     
 }
@@ -46,11 +49,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return cafes.count
         return countOfBrands
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let brandCell = brandCollectionView.dequeueReusableCell(withReuseIdentifier: Keyword.HomeView.brandCell.reuseId, for: indexPath) as? BrandCell else { return UICollectionViewCell() }
+//        brandCell.set(cafes[indexPath.row])
         brandCell.brandName.text = "\(indexPath.row + 1)번째 브랜드"
         return brandCell
     }

@@ -27,6 +27,9 @@ class AccountManager {
     private(set) var profileImage = UIImage(named: "baseProfileImage")
     private(set) var userInfo = UserInfo()
     private(set) var parameters: [String:Any] = [:]
+    var JWTToken: String {
+        return "Bearer " + userInfo.JWTToken
+    }
     
     private init() { }
     

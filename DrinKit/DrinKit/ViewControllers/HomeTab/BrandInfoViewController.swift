@@ -10,6 +10,9 @@ import UIKit
 
 class BrandInfoViewController: UIViewController {
     
+    //MARK: - Model
+//    var cafe: Cafe!
+    
     //MARK: - UI
     @IBOutlet weak var brandImage: UIImageView!
     @IBOutlet weak var categoryTableView: UITableView!

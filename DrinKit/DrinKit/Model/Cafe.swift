@@ -10,7 +10,7 @@ import Foundation
 
 struct Cafe: Decodable {
     
-    let cagegoryNames: [String]
+    let categoryNames: [String]
     let deleted: Bool
     let id: Int
     let name: String

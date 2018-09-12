@@ -11,7 +11,7 @@ import Foundation
 struct Review: Decodable {
     
     let contents: String
-    let delted: Bool
+    let deleted: Bool
     let id: Int
     let menu: Menu
     let ratings: Double

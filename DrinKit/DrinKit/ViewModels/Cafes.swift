@@ -20,17 +20,12 @@ class Cafes {
     }
     
     init() {
-        Alamofire.request("").responseJSON { (response) in
-            guard let data = response.data else { return }
-            self.allCafes = self.decode(data)
-        }
-    }
-    
-    private func decode(_ data : Data) -> [Cafe] {
-        do {
-            return try JSONDecoder().decode([Cafe].self, from : data)
-        } catch {
-            return []
+        NetworkManager.shared.request(
+            urlString: "http://ec2-13-125-68-133.ap-northeast-2.compute.amazonaws.com:8080/api/cafes",
+            targetType: [Cafe].self) { [weak self] (model: [Cafe]?) in
+            guard let `self` = self else { return }
+            guard let model = model else { return }
+            self.allCafes = model
         }
     }
     
